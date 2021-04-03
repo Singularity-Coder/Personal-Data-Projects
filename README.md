@@ -1,4 +1,4 @@
-![alt text](https://github.com/Singularity-Coder/ode-Snippets-Python/blob/main/assets/banner_python.png)
+![alt text](https://github.com/Singularity-Coder/Code-Snippets-Python/blob/main/assets/banner_python.png)
 # Code-Snippets-Python
 List of Python topics and their code snippets!
 

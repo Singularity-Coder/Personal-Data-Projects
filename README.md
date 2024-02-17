@@ -101,9 +101,23 @@ print("Hi. I am " + person_name + ". I will be " + person_age.__str__() + " next
 ```
 
 
-## Collections
+## Collections (Arrays)
+There are four collection data types in the Python programming language:
+1. List is a collection which is ordered and changeable. Allows duplicate members.
+2. Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+3. Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+4. Dictionary is a collection which is ordered** and changeable. No duplicate members.
+### List
 ```Python
-
+list1 = ["apple", "banana", "cherry"]
+list2 = [1, 5, 7, 9, 3]
+list3 = [True, False, False]
+list4 = ["abc", 34, True, 40, "male"]
+print(list1)
+```
+### Tuple
+```Python
+tuple1 = ("abc", 34, True, 40, "male")
 ```
 
 

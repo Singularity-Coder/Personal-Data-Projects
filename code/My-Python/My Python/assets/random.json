@@ -1,0 +1,40 @@
+{
+	"url": "https://extendsclass.com/json-generator.html",
+    "random": "39",
+	"random float": "31.994",
+	"bool": "true",
+	"date": "1988-03-05",
+	"regEx": "helloooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo world",
+	"enum": "online",
+	"firstname": "Rosene",
+	"lastname": "Ingra",
+	"city": "Ottawa",
+	"country": "Kenya",
+	"countryCode": "CD",
+	"email uses current data": "Rosene.Ingra@gmail.com",
+	"email from expression": "Rosene.Ingra@yopmail.com",
+	"array": [
+		"Ellette",
+		"Florencia",
+		"Lanae",
+		"Antonietta",
+		"Dorthy"
+	],
+	"array of objects": [
+		{
+			"index": "0",
+			"index start at 5": "5"
+		},
+		{
+			"index": "1",
+			"index start at 5": "6"
+		},
+		{
+			"index": "2",
+			"index start at 5": "7"
+		}
+	],
+	"Gabriellia": {
+		"age": "74"
+	}
+}

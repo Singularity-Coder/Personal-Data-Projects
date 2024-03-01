@@ -11,7 +11,7 @@ print("\nJSON TO PYTHON --------------------------------------------------------
 my_dict = json.loads(my_json)
 print(my_dict["random float"])
 
-print("\nPYTHON OBJ TO JSON -------------------------------------------------------------------------------------\n")
+print("\nPYTHON OBJ TO JSON STRING -------------------------------------------------------------------------------------\n")
 
 new_json = json.dumps(my_dict)
 print(new_json)

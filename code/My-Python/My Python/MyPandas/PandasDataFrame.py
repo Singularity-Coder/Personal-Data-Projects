@@ -2,6 +2,7 @@ import pandas as pd
 
 # 2D DS like 2D array or table
 
+# correct syntax to load a Python Dictionary called "data" into a Pandas DataFrame
 data = {
     "col1": ["day1", "day2", "day3", "day4", "day5", "day6"],
     "col2": [111, 222, 333, 444, 555, 666],

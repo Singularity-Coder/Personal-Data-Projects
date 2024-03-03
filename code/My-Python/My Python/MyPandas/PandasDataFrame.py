@@ -44,7 +44,7 @@ print("\nLOAD FILES INTO DATAFRAME ---------------------------------------------
 df = pd.read_csv("../assets/color_srgb.csv")
 print(df)
 print()
-df = pd.read_json("../assets/random2.json")
+df = pd.read_json("../assets/random_table.json")
 print(df)
 print()
 df = pd.read_excel("../assets/dummy_excel.xls")

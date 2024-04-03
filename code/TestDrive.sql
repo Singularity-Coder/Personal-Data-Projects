@@ -1,3 +1,6 @@
+# DDL DML queries
+# Download MySQL Workbench
+
 Create database db_new;
 USE db_new;
 

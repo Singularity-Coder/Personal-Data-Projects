@@ -5,16 +5,16 @@
 \red44\green55\blue61;\red21\green128\blue62;\red42\green55\blue62;\red40\green79\blue205;\red42\green55\blue62;
 \red238\green57\blue24;\red41\green80\blue206;\red44\green55\blue61;\red21\green128\blue62;\red42\green55\blue62;
 \red237\green56\blue23;\red40\green79\blue205;\red44\green55\blue61;\red42\green55\blue62;\red21\green128\blue62;
-\red238\green57\blue24;\red44\green55\blue61;\red238\green57\blue24;}
+\red238\green57\blue24;\red44\green55\blue61;}
 {\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c20298\c40742\c84246;
 \cssrgb\c22794\c27898\c30615;\cssrgb\c5039\c56433\c30904;\cssrgb\c21621\c27903\c31013;\cssrgb\c20298\c40741\c84246;\cssrgb\c21621\c27902\c31012;
 \cssrgb\c95572\c31583\c11464;\cssrgb\c20597\c41091\c84570;\cssrgb\c22843\c27954\c30642;\cssrgb\c4981\c56395\c30828;\cssrgb\c21672\c27962\c31045;
 \cssrgb\c95457\c31401\c11162;\cssrgb\c20298\c40742\c84246;\cssrgb\c22794\c27898\c30615;\cssrgb\c21621\c27903\c31013;\cssrgb\c5039\c56433\c30904;
-\cssrgb\c95572\c31583\c11464;\cssrgb\c22745\c27843\c30588;\cssrgb\c95572\c31584\c11464;}
+\cssrgb\c95572\c31583\c11464;\cssrgb\c22745\c27843\c30588;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
 {\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
-\paperw11900\paperh16840\margl1440\margr1440\vieww28300\viewh16080\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww28300\viewh15520\viewkind0
 \deftab720
 \pard\pardeftab720\partightenfactor0
 
@@ -542,41 +542,57 @@ Recommendation: \
 \f1\b0 \cf2 \
 \pard\pardeftab720\partightenfactor0
 
-\f0\b \cf2 Q4.3\'a0Calculate the Total & Average value of order freight for each state.
+\f0\b \cf2 Q4.3\'a0Calculate the Total & Average value of order freight for each state. (NEED CLARIFICATION)
 \f1\b0 \
 \
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf8 SELECT\cf5 \
-  \cf8 IFNULL\cf9 (\cf5 G.geolocation_state, \cf6 "Unknown"\cf9 )\cf5  \cf8 AS\cf5  \cf6 `state`\cf5 ,\
-  \cf8 ROUND\cf9 (\cf8 SUM\cf9 (\cf5 I.freight_value\cf9 )\cf5 , \cf22 2\cf9 )\cf5  \cf8 AS\cf5  \cf6 `total_freight_value`\cf5 ,\
-  \cf8 ROUND\cf9 (\cf8 AVG\cf9 (\cf5 I.freight_value\cf9 )\cf5 , \cf22 2\cf9 )\cf5  \cf8 AS\cf5  \cf6 `avg_freight_value`\cf5 \
-\cf8 FROM\cf5  \
-  \cf6 `cs1.orders`\cf5  \cf8 AS\cf5  \cf6 `O`\cf5  \cf8 LEFT\cf5  \cf8 JOIN\cf5  \cf6 `cs1.order_items`\cf5  \cf8 AS\cf5  \cf6 `I`\cf5  \
-  \cf8 ON\cf5  O.order_id = I.order_id\
+\cf16 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec16 SELECT\cf17 \strokec17 \
+  \cf16 \strokec16 IFNULL\cf18 \strokec18 (\cf17 \strokec2 C.customer_state\cf17 \strokec17 , \cf19 \strokec19 "Unknown"\cf18 \strokec18 )\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `state`\cf17 \strokec17 ,\
+  \cf16 \strokec16 ROUND\cf18 \strokec18 (\cf16 \strokec16 SUM\cf18 \strokec18 (\cf17 \strokec2 I.freight_value\cf18 \strokec18 )\cf17 \strokec17 , \cf20 \strokec20 2\cf18 \strokec18 )\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `total_freight_value`\cf17 \strokec17 ,\
+  \cf16 \strokec16 ROUND\cf18 \strokec18 (\cf16 \strokec16 AVG\cf18 \strokec18 (\cf17 \strokec2 I.freight_value\cf18 \strokec18 )\cf17 \strokec17 , \cf20 \strokec20 2\cf18 \strokec18 )\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `avg_freight_value`\cf17 \strokec17 \
+\cf16 \strokec16 FROM\cf17 \strokec17  \
+  \cf19 \strokec19 `cs1.orders`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `O`\cf17 \strokec17  \cf16 \strokec16 LEFT\cf17 \strokec17  \cf16 \strokec16 JOIN\cf17 \strokec17  \cf19 \strokec19 `cs1.order_items`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `I`\cf17 \strokec17  \
+  \cf16 \strokec16 ON\cf17 \strokec17  \cf17 \strokec2 O.order_id\cf17 \strokec17  = \cf17 \strokec2 I.order_id\cf17 \strokec17 \
 \
-  \cf8 LEFT\cf5  \cf8 JOIN\cf5  \cf6 `cs1.customers`\cf5  \cf8 AS\cf5  \cf6 `C`\cf5 \
-  \cf8 ON\cf5  O.customer_id = C.customer_id\
-\
-  \cf8 LEFT\cf5  \cf8 JOIN\cf5  \cf6 `cs1.geolocation`\cf5  \cf8 AS\cf5  \cf6 `G`\cf5 \
-  \cf8 ON\cf5  C.customer_zip_code_prefix = G.geolocation_zip_code_prefix\
-\cf8 GROUP\cf5  \cf8 BY\cf5 \
-  G.geolocation_state\
-\cf8 ORDER\cf5  \cf8 BY\cf5 \
-  total_freight_value \cf8 DESC\cf5 ;\
+  \cf16 \strokec16 LEFT\cf17 \strokec17  \cf16 \strokec16 JOIN\cf17 \strokec17  \cf19 \strokec19 `cs1.customers`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `C`\cf17 \strokec17 \
+  \cf16 \strokec16 ON\cf17 \strokec17  \cf17 \strokec2 O.customer_id\cf17 \strokec17  = \cf17 \strokec2 C.customer_id\cf17 \strokec17 \
+\cf16 \strokec16 GROUP\cf17 \strokec17  \cf16 \strokec16 BY\cf17 \strokec17 \
+  \cf17 \strokec2 C.customer_state\cf17 \strokec17 \
+\cf16 \strokec16 ORDER\cf17 \strokec17  \cf16 \strokec16 BY\cf17 \strokec17 \
+  \cf17 \strokec2 total_freight_value\cf17 \strokec17  \cf16 \strokec16 DESC\cf17 \strokec17 ;\cf5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
-\pard\pardeftab720\partightenfactor0
-\cf2 {{\NeXTGraphic 9__#$!@%!#__pastedGraphic.png \width15280 \height11080 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\pardeftab720\partightenfactor0
-\cf2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 {{\NeXTGraphic Screenshot 2024-04-06 at 23.25.10.png \width13520 \height11160 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf0 \
 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 {{\NeXTGraphic avg_freight_value by state.jpeg \width21040 \height16280 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 {{\NeXTGraphic total_freight_value by state.jpeg \width21040 \height16280 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
 Insights: \
-1. SP state has highest freight value while RR seems to have lowest. Avg wise PB has highest while SP has lowest.\
+1. SP state has highest freight value at 718723.07 while RR seems to have lowest at 2235.19. Avg wise RR has highest at 42.98 while SP has lowest at 15.15.\
 \
 Recommendation:\
-1. Find ways to reduce packaging size in area PB to reduce freight costs.\
+1. Find ways to reduce packaging size in area SP to reduce freight costs.\
+2. Find alternate transportation or routes.\
 \
 \pard\pardeftab720\partightenfactor0
 
@@ -594,7 +610,8 @@ Recommendation:\
 \f0\b {\listtext	\uc0\u8226 	}diff_estimated_delivery = order_delivered_customer_date - order_estimated_delivery_date
 \f1\b0 \
 \pard\pardeftab720\partightenfactor0
-\cf2 Ans:\
+\cf2 \
+Ans:\
 \pard\pardeftab720\partightenfactor0
 \cf8 SELECT\cf5 \
   O.order_id,\
@@ -612,12 +629,26 @@ Screenshot:\
 }¬}\pard\pardeftab720\partightenfactor0
 \cf2 \
 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 {{\NeXTGraphic diff_estimated_delivery by time_to_deliver.jpeg \width21040 \height14320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
 Insights: \
-1. There seems to be a gap of min 20 days/hours in the expectations vs reality of delivery. Inefficient route planning or poor algorithms or poor overall planning.\
+1. There seems to be a gap of min 20 days/hours in the expectations vs reality of delivery. \
+2. Inefficient route planning or poor algorithms or poor overall planning.\
 \
 Recommendation: \
-1. Improve path finding algorithms to better plan the route. Measure time at every checkpoint to identify which department is lagging behind.\
-\
+1. Improve path finding algorithms to better plan the route if being used to ensure timely order fulfilment. \
+2. Measure time at every checkpoint to identify delivery delays to optimise supply chain processes.\
+\pard\pardeftab720\partightenfactor0
+\cf2 3. Find ways to reduce packaging size to reduce freight costs.\
+4. Find alternate transportation or routes.\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
 \pard\pardeftab720\partightenfactor0
 
 \f0\b \cf2 _____________________________________________________________________________________________________________________
@@ -629,79 +660,97 @@ Recommendation: \
 \
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf8 WITH\cf5 \
-  \cf6 `T`\cf5  \cf8 AS\cf5  \cf9 (\cf5 \
-    \cf8 SELECT\cf5 \
-      G.geolocation_state,\
-      I.freight_value\
-    \cf8 FROM\cf5  \
-      \cf6 `cs1.orders`\cf5  \cf8 AS\cf5  \cf6 `O`\cf5  \cf8 LEFT\cf5  \cf8 JOIN\cf5  \cf6 `cs1.order_items`\cf5  \cf8 AS\cf5  \cf6 `I`\cf5  \
-      \cf8 ON\cf5  O.order_id = I.order_id\
+\cf16 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec16 WITH\cf17 \strokec17 \
+  \cf19 \strokec19 `T`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf18 \strokec18 (\cf17 \strokec17 \
+    \cf16 \strokec16 SELECT\cf17 \strokec17 \
+      \cf17 \strokec2 C.customer_state\cf17 \strokec17 ,\
+      \cf17 \strokec2 I.freight_value\cf17 \strokec17 \
+    \cf16 \strokec16 FROM\cf17 \strokec17  \
+      \cf19 \strokec19 `cs1.orders`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `O`\cf17 \strokec17  \cf16 \strokec16 LEFT\cf17 \strokec17  \cf16 \strokec16 JOIN\cf17 \strokec17  \cf19 \strokec19 `cs1.order_items`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `I`\cf17 \strokec17  \
+      \cf16 \strokec16 ON\cf17 \strokec17  \cf17 \strokec2 O.order_id\cf17 \strokec17  = \cf17 \strokec2 I.order_id\cf17 \strokec17 \
 \
-      \cf8 LEFT\cf5  \cf8 JOIN\cf5  \cf6 `cs1.customers`\cf5  \cf8 AS\cf5  \cf6 `C`\cf5 \
-      \cf8 ON\cf5  O.customer_id = C.customer_id\
-\
-      \cf8 LEFT\cf5  \cf8 JOIN\cf5  \cf6 `cs1.geolocation`\cf5  \cf8 AS\cf5  \cf6 `G`\cf5 \
-      \cf8 ON\cf5  C.customer_zip_code_prefix = G.geolocation_zip_code_prefix\
-  \cf9 )\cf5 ,\
-  \cf6 `T1`\cf5  \cf8 AS\cf5  \cf9 (\cf5 \
-    \cf8 SELECT\cf5 \
-      \cf8 IFNULL\cf9 (\cf5 geolocation_state, \cf6 "Unknown"\cf9 )\cf5  \cf8 AS\cf5  \cf6 `state`\cf5 ,\
-      \cf8 ROUND\cf9 (\cf8 AVG\cf9 (\cf5 freight_value\cf9 )\cf5 , \cf22 2\cf9 )\cf5  \cf8 AS\cf5  \cf6 `avg_freight_value`\cf5 \
-    \cf8 FROM\cf5  \
-      T\
-    \cf8 GROUP\cf5  \cf8 BY\cf5 \
-      geolocation_state\
-    \cf8 ORDER\cf5  \cf8 BY\cf5 \
-      avg_freight_value \cf8 DESC\cf5 \
-    \cf8 LIMIT\cf5  \cf22 5\cf5 \
-  \cf9 )\cf5 ,\
-  \cf6 `T2`\cf5  \cf8 AS\cf5  \cf9 (\cf5 \
-    \cf8 SELECT\cf5 \
-      \cf8 IFNULL\cf9 (\cf5 geolocation_state, \cf6 "Unknown"\cf9 )\cf5  \cf8 AS\cf5  \cf6 `state`\cf5 ,\
-      \cf8 ROUND\cf9 (\cf8 AVG\cf9 (\cf5 freight_value\cf9 )\cf5 , \cf22 2\cf9 )\cf5  \cf8 AS\cf5  \cf6 `avg_freight_value`\cf5 \
-    \cf8 FROM\cf5  \
-      T\
-    \cf8 GROUP\cf5  \cf8 BY\cf5 \
-      geolocation_state\
-    \cf8 ORDER\cf5  \cf8 BY\cf5 \
-      avg_freight_value \cf8 ASC\cf5 \
-    \cf8 LIMIT\cf5  \cf22 5\cf5 \
-  \cf9 )\cf5 ,\
-  \cf6 `T3`\cf5  \cf8 AS\cf5  \cf9 (\cf5 \
-    \cf8 SELECT\cf5 \
-      \cf8 ROW_NUMBER\cf9 ()\cf5  \cf8 OVER\cf9 ()\cf5  \cf8 AS\cf5  \cf6 `row`\cf5 ,\
-      \cf9 *\cf5 \
-    \cf8 FROM\cf5 \
-      T1\
-  \cf9 )\cf5 ,\
-  \cf6 `T4`\cf5  \cf8 AS\cf5  \cf9 (\cf5 \
-    \cf8 SELECT\cf5 \
-      \cf8 ROW_NUMBER\cf9 ()\cf5  \cf8 OVER\cf9 ()\cf5  \cf8 AS\cf5  \cf6 `row`\cf5 ,\
-      \cf9 *\cf5 \
-    \cf8 FROM\cf5 \
-      T2\
-  \cf9 )\cf5 \
-\cf8 SELECT\cf5 \
-  T3.state \cf8 AS\cf5  \cf6 `state_highest`\cf5 ,\
-  T3.avg_freight_value \cf8 AS\cf5  \cf6 `freight_value_highest`\cf5 ,\
-  T4.state \cf8 AS\cf5  \cf6 `state_lowest`\cf5 ,\
-  T4.avg_freight_value \cf8 AS\cf5  \cf6 `freight_value_lowest`\cf5 \
-\cf8 FROM\cf5 \
-  T3 \cf8 INNER\cf5  \cf8 JOIN\cf5  T4 \cf8 ON\cf5  T3.row = T4.row\
+      \cf16 \strokec16 LEFT\cf17 \strokec17  \cf16 \strokec16 JOIN\cf17 \strokec17  \cf19 \strokec19 `cs1.customers`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `C`\cf17 \strokec17 \
+      \cf16 \strokec16 ON\cf17 \strokec17  \cf17 \strokec2 O.customer_id\cf17 \strokec17  = \cf17 \strokec2 C.customer_id\cf17 \strokec17 \
+  \cf18 \strokec18 )\cf17 \strokec17 ,\
+  \cf19 \strokec19 `T1`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf18 \strokec18 (\cf17 \strokec17 \
+    \cf16 \strokec16 SELECT\cf17 \strokec17 \
+      \cf16 \strokec16 IFNULL\cf18 \strokec18 (\cf17 \strokec2 customer_state\cf17 \strokec17 , \cf19 \strokec19 "Unknown"\cf18 \strokec18 )\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `state`\cf17 \strokec17 ,\
+      \cf16 \strokec16 ROUND\cf18 \strokec18 (\cf16 \strokec16 AVG\cf18 \strokec18 (\cf17 \strokec2 freight_value\cf18 \strokec18 )\cf17 \strokec17 , \cf20 \strokec20 2\cf18 \strokec18 )\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `avg_freight_value`\cf17 \strokec17 \
+    \cf16 \strokec16 FROM\cf17 \strokec17  \
+      \cf17 \strokec2 T\cf17 \strokec17 \
+    \cf16 \strokec16 GROUP\cf17 \strokec17  \cf16 \strokec16 BY\cf17 \strokec17 \
+      \cf17 \strokec2 customer_state\cf17 \strokec17 \
+    \cf16 \strokec16 ORDER\cf17 \strokec17  \cf16 \strokec16 BY\cf17 \strokec17 \
+      \cf17 \strokec2 avg_freight_value\cf17 \strokec17  \cf16 \strokec16 DESC\cf17 \strokec17 \
+    \cf16 \strokec16 LIMIT\cf17 \strokec17  \cf20 \strokec20 5\cf17 \strokec17 \
+  \cf18 \strokec18 )\cf17 \strokec17 ,\
+  \cf19 \strokec19 `T2`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf18 \strokec18 (\cf17 \strokec17 \
+    \cf16 \strokec16 SELECT\cf17 \strokec17 \
+      \cf16 \strokec16 IFNULL\cf18 \strokec18 (\cf17 \strokec2 customer_state\cf17 \strokec17 , \cf19 \strokec19 "Unknown"\cf18 \strokec18 )\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `state`\cf17 \strokec17 ,\
+      \cf16 \strokec16 ROUND\cf18 \strokec18 (\cf16 \strokec16 AVG\cf18 \strokec18 (\cf17 \strokec2 freight_value\cf18 \strokec18 )\cf17 \strokec17 , \cf20 \strokec20 2\cf18 \strokec18 )\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `avg_freight_value`\cf17 \strokec17 \
+    \cf16 \strokec16 FROM\cf17 \strokec17  \
+      \cf17 \strokec2 T\cf17 \strokec17 \
+    \cf16 \strokec16 GROUP\cf17 \strokec17  \cf16 \strokec16 BY\cf17 \strokec17 \
+      \cf17 \strokec2 customer_state\cf17 \strokec17 \
+    \cf16 \strokec16 ORDER\cf17 \strokec17  \cf16 \strokec16 BY\cf17 \strokec17 \
+      \cf17 \strokec2 avg_freight_value\cf17 \strokec17  \cf16 \strokec16 ASC\cf17 \strokec17 \
+    \cf16 \strokec16 LIMIT\cf17 \strokec17  \cf20 \strokec20 5\cf17 \strokec17 \
+  \cf18 \strokec18 )\cf17 \strokec17 ,\
+  \cf19 \strokec19 `T3`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf18 \strokec18 (\cf17 \strokec17 \
+    \cf16 \strokec16 SELECT\cf17 \strokec17 \
+      \cf16 \strokec16 ROW_NUMBER\cf18 \strokec18 ()\cf17 \strokec17  \cf16 \strokec16 OVER\cf18 \strokec18 ()\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `row`\cf17 \strokec17 ,\
+      \cf18 \strokec18 *\cf17 \strokec17 \
+    \cf16 \strokec16 FROM\cf17 \strokec17 \
+      \cf17 \strokec2 T1\cf17 \strokec17 \
+  \cf18 \strokec18 )\cf17 \strokec17 ,\
+  \cf19 \strokec19 `T4`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf18 \strokec18 (\cf17 \strokec17 \
+    \cf16 \strokec16 SELECT\cf17 \strokec17 \
+      \cf16 \strokec16 ROW_NUMBER\cf18 \strokec18 ()\cf17 \strokec17  \cf16 \strokec16 OVER\cf18 \strokec18 ()\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `row`\cf17 \strokec17 ,\
+      \cf18 \strokec18 *\cf17 \strokec17 \
+    \cf16 \strokec16 FROM\cf17 \strokec17 \
+      \cf17 \strokec2 T2\cf17 \strokec17 \
+  \cf18 \strokec18 )\cf17 \strokec17 \
+\cf16 \strokec16 SELECT\cf17 \strokec17 \
+  \cf17 \strokec2 T3.state\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `state_highest`\cf17 \strokec17 ,\
+  \cf17 \strokec2 T3.avg_freight_value\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `freight_value_highest`\cf17 \strokec17 ,\
+  \cf17 \strokec2 T4.state\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `state_lowest`\cf17 \strokec17 ,\
+  \cf17 \strokec2 T4.avg_freight_value\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `freight_value_lowest`\cf17 \strokec17 \
+\cf16 \strokec16 FROM\cf17 \strokec17 \
+  \cf17 \strokec2 T3\cf17 \strokec17  \cf16 \strokec16 INNER\cf17 \strokec17  \cf16 \strokec16 JOIN\cf17 \strokec17  \cf17 \strokec2 T4\cf17 \strokec17  \cf16 \strokec16 ON\cf17 \strokec17  \cf17 \strokec2 T3.row\cf17 \strokec17  = \cf17 \strokec2 T4.row\cf5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
-\pard\pardeftab720\partightenfactor0
-\cf2 {{\NeXTGraphic 11__#$!@%!#__pastedGraphic.png \width20200 \height6120 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\pardeftab720\partightenfactor0
-\cf2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 {{\NeXTGraphic Screenshot 2024-04-07 at 00.01.49.png \width19920 \height6240 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf0 \
 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 {{\NeXTGraphic freight_value_lowest by state_lowest.jpeg \width21040 \height12920 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 {{\NeXTGraphic freight_value_highest by state_highest.jpeg \width21040 \height12920 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
 Insights: \
-1. PB has highest freight value while SP has lowest.\
+1. RR has highest freight value at 42.98 while SP has lowest at 15.15.\
 \
 Recommendation: \
 1. Optimise packaging accordingly to increase the quantity shipped.\
+2. Negotiate for lower freight rates.\
+3. Improve resource allocation.\
+4. Follow recommendations mentioned in Q5.1\
 \
 \pard\pardeftab720\partightenfactor0
 
@@ -714,76 +763,94 @@ Recommendation: \
 \
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf8 WITH\cf5 \
-  \cf6 `T`\cf5  \cf8 AS\cf5  \cf9 (\cf5 \
-    \cf8 SELECT\cf5 \
-      G.geolocation_state,\
-      \cf8 ABS\cf9 (\cf8 DATE_DIFF\cf9 (\cf5 O.order_purchase_timestamp, O.order_delivered_customer_date, DAY\cf9 ))\cf5  \cf8 AS\cf5  \cf6 `delivery_time`\cf5 \
-    \cf8 FROM\cf5  \
-      \cf6 `cs1.orders`\cf5  \cf8 AS\cf5  \cf6 `O`\cf5  \cf8 LEFT\cf5  \cf8 JOIN\cf5  \cf6 `cs1.customers`\cf5  \cf8 AS\cf5  \cf6 `C`\cf5 \
-      \cf8 ON\cf5  O.customer_id = C.customer_id\
-\
-      \cf8 LEFT\cf5  \cf8 JOIN\cf5  \cf6 `cs1.geolocation`\cf5  \cf8 AS\cf5  \cf6 `G`\cf5 \
-      \cf8 ON\cf5  C.customer_zip_code_prefix = G.geolocation_zip_code_prefix\
-  \cf9 )\cf5 ,\
-  \cf6 `T1`\cf5  \cf8 AS\cf5  \cf9 (\cf5 \
-    \cf8 SELECT\cf5 \
-      \cf8 IFNULL\cf9 (\cf5 geolocation_state, \cf6 "Unknown"\cf9 )\cf5  \cf8 AS\cf5  \cf6 `state`\cf5 ,\
-      \cf8 ROUND\cf9 (\cf8 AVG\cf9 (\cf5 delivery_time\cf9 )\cf5 , \cf22 2\cf9 )\cf5  \cf8 AS\cf5  \cf6 `avg_delivery_time`\cf5 \
-    \cf8 FROM\cf5  \
-      T\
-    \cf8 GROUP\cf5  \cf8 BY\cf5 \
-      geolocation_state\
-    \cf8 ORDER\cf5  \cf8 BY\cf5 \
-      avg_delivery_time \cf8 DESC\cf5 \
-    \cf8 LIMIT\cf5  \cf22 5\cf5 \
-  \cf9 )\cf5 ,\
-  \cf6 `T2`\cf5  \cf8 AS\cf5  \cf9 (\cf5 \
-    \cf8 SELECT\cf5 \
-      \cf8 IFNULL\cf9 (\cf5 geolocation_state, \cf6 "Unknown"\cf9 )\cf5  \cf8 AS\cf5  \cf6 `state`\cf5 ,\
-      \cf8 ROUND\cf9 (\cf8 AVG\cf9 (\cf5 delivery_time\cf9 )\cf5 , \cf22 2\cf9 )\cf5  \cf8 AS\cf5  \cf6 `avg_delivery_time`\cf5 \
-    \cf8 FROM\cf5  \
-      T\
-    \cf8 GROUP\cf5  \cf8 BY\cf5 \
-      geolocation_state\
-    \cf8 ORDER\cf5  \cf8 BY\cf5 \
-      avg_delivery_time \cf8 ASC\cf5 \
-    \cf8 LIMIT\cf5  \cf22 5\cf5 \
-  \cf9 )\cf5 ,\
-  \cf6 `T3`\cf5  \cf8 AS\cf5  \cf9 (\cf5 \
-    \cf8 SELECT\cf5 \
-      \cf8 ROW_NUMBER\cf9 ()\cf5  \cf8 OVER\cf9 ()\cf5  \cf8 AS\cf5  \cf6 `row`\cf5 ,\
-      \cf9 *\cf5 \
-    \cf8 FROM\cf5 \
-      T1\
-  \cf9 )\cf5 ,\
-  \cf6 `T4`\cf5  \cf8 AS\cf5  \cf9 (\cf5 \
-    \cf8 SELECT\cf5 \
-      \cf8 ROW_NUMBER\cf9 ()\cf5  \cf8 OVER\cf9 ()\cf5  \cf8 AS\cf5  \cf6 `row`\cf5 ,\
-      \cf9 *\cf5 \
-    \cf8 FROM\cf5 \
-      T2\
-  \cf9 )\cf5 \
-\cf8 SELECT\cf5 \
-  T3.state \cf8 AS\cf5  \cf6 `state_highest`\cf5 ,\
-  T3.avg_delivery_time \cf8 AS\cf5  \cf6 `delivery_time_highest`\cf5 ,\
-  T4.state \cf8 AS\cf5  \cf6 `state_lowest`\cf5 ,\
-  T4.avg_delivery_time \cf8 AS\cf5  \cf6 `delivery_time_lowest`\cf5 \
-\cf8 FROM\cf5 \
-  T3 \cf8 INNER\cf5  \cf8 JOIN\cf5  T4 \cf8 ON\cf5  T3.row = T4.row\
+\cf16 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec16 WITH\cf17 \strokec17 \
+  \cf19 \strokec19 `T`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf18 \strokec18 (\cf17 \strokec17 \
+    \cf16 \strokec16 SELECT\cf17 \strokec17 \
+      \cf17 \strokec2 C.customer_state\cf17 \strokec17 ,\
+      \cf16 \strokec16 ABS\cf18 \strokec18 (\cf16 \strokec16 DATE_DIFF\cf18 \strokec18 (\cf17 \strokec2 O.order_purchase_timestamp\cf17 \strokec17 , \cf17 \strokec2 O.order_delivered_customer_date\cf17 \strokec17 , \cf17 \strokec2 DAY\cf18 \strokec18 ))\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `delivery_time`\cf17 \strokec17 \
+    \cf16 \strokec16 FROM\cf17 \strokec17  \
+      \cf19 \strokec19 `cs1.orders`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `O`\cf17 \strokec17  \cf16 \strokec16 LEFT\cf17 \strokec17  \cf16 \strokec16 JOIN\cf17 \strokec17  \cf19 \strokec19 `cs1.customers`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `C`\cf17 \strokec17 \
+      \cf16 \strokec16 ON\cf17 \strokec17  \cf17 \strokec2 O.customer_id\cf17 \strokec17  = \cf17 \strokec2 C.customer_id\cf17 \strokec17 \
+  \cf18 \strokec18 )\cf17 \strokec17 ,\
+  \cf19 \strokec19 `T1`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf18 \strokec18 (\cf17 \strokec17 \
+    \cf16 \strokec16 SELECT\cf17 \strokec17 \
+      \cf16 \strokec16 IFNULL\cf18 \strokec18 (\cf17 \strokec2 customer_state\cf17 \strokec17 , \cf19 \strokec19 "Unknown"\cf18 \strokec18 )\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `state`\cf17 \strokec17 ,\
+      \cf16 \strokec16 ROUND\cf18 \strokec18 (\cf16 \strokec16 AVG\cf18 \strokec18 (\cf17 \strokec2 delivery_time\cf18 \strokec18 )\cf17 \strokec17 , \cf20 \strokec20 2\cf18 \strokec18 )\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `avg_delivery_time`\cf17 \strokec17 \
+    \cf16 \strokec16 FROM\cf17 \strokec17  \
+      \cf17 \strokec2 T\cf17 \strokec17 \
+    \cf16 \strokec16 GROUP\cf17 \strokec17  \cf16 \strokec16 BY\cf17 \strokec17 \
+      \cf17 \strokec2 customer_state\cf17 \strokec17 \
+    \cf16 \strokec16 ORDER\cf17 \strokec17  \cf16 \strokec16 BY\cf17 \strokec17 \
+      \cf17 \strokec2 avg_delivery_time\cf17 \strokec17  \cf16 \strokec16 DESC\cf17 \strokec17 \
+    \cf16 \strokec16 LIMIT\cf17 \strokec17  \cf20 \strokec20 5\cf17 \strokec17 \
+  \cf18 \strokec18 )\cf17 \strokec17 ,\
+  \cf19 \strokec19 `T2`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf18 \strokec18 (\cf17 \strokec17 \
+    \cf16 \strokec16 SELECT\cf17 \strokec17 \
+      \cf16 \strokec16 IFNULL\cf18 \strokec18 (\cf17 \strokec2 customer_state\cf17 \strokec17 , \cf19 \strokec19 "Unknown"\cf18 \strokec18 )\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `state`\cf17 \strokec17 ,\
+      \cf16 \strokec16 ROUND\cf18 \strokec18 (\cf16 \strokec16 AVG\cf18 \strokec18 (\cf17 \strokec2 delivery_time\cf18 \strokec18 )\cf17 \strokec17 , \cf20 \strokec20 2\cf18 \strokec18 )\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `avg_delivery_time`\cf17 \strokec17 \
+    \cf16 \strokec16 FROM\cf17 \strokec17  \
+      \cf17 \strokec2 T\cf17 \strokec17 \
+    \cf16 \strokec16 GROUP\cf17 \strokec17  \cf16 \strokec16 BY\cf17 \strokec17 \
+      \cf17 \strokec2 customer_state\cf17 \strokec17 \
+    \cf16 \strokec16 ORDER\cf17 \strokec17  \cf16 \strokec16 BY\cf17 \strokec17 \
+      \cf17 \strokec2 avg_delivery_time\cf17 \strokec17  \cf16 \strokec16 ASC\cf17 \strokec17 \
+    \cf16 \strokec16 LIMIT\cf17 \strokec17  \cf20 \strokec20 5\cf17 \strokec17 \
+  \cf18 \strokec18 )\cf17 \strokec17 ,\
+  \cf19 \strokec19 `T3`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf18 \strokec18 (\cf17 \strokec17 \
+    \cf16 \strokec16 SELECT\cf17 \strokec17 \
+      \cf16 \strokec16 ROW_NUMBER\cf18 \strokec18 ()\cf17 \strokec17  \cf16 \strokec16 OVER\cf18 \strokec18 ()\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `row`\cf17 \strokec17 ,\
+      \cf18 \strokec18 *\cf17 \strokec17 \
+    \cf16 \strokec16 FROM\cf17 \strokec17 \
+      \cf17 \strokec2 T1\cf17 \strokec17 \
+  \cf18 \strokec18 )\cf17 \strokec17 ,\
+  \cf19 \strokec19 `T4`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf18 \strokec18 (\cf17 \strokec17 \
+    \cf16 \strokec16 SELECT\cf17 \strokec17 \
+      \cf16 \strokec16 ROW_NUMBER\cf18 \strokec18 ()\cf17 \strokec17  \cf16 \strokec16 OVER\cf18 \strokec18 ()\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `row`\cf17 \strokec17 ,\
+      \cf18 \strokec18 *\cf17 \strokec17 \
+    \cf16 \strokec16 FROM\cf17 \strokec17 \
+      \cf17 \strokec2 T2\cf17 \strokec17 \
+  \cf18 \strokec18 )\cf17 \strokec17 \
+\cf16 \strokec16 SELECT\cf17 \strokec17 \
+  \cf17 \strokec2 T3.state\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `state_highest`\cf17 \strokec17 ,\
+  \cf17 \strokec2 T3.avg_delivery_time\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `delivery_time_highest`\cf17 \strokec17 ,\
+  \cf17 \strokec2 T4.state\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `state_lowest`\cf17 \strokec17 ,\
+  \cf17 \strokec2 T4.avg_delivery_time\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `delivery_time_lowest`\cf17 \strokec17 \
+\cf16 \strokec16 FROM\cf17 \strokec17 \
+  \cf17 \strokec2 T3\cf17 \strokec17  \cf16 \strokec16 INNER\cf17 \strokec17  \cf16 \strokec16 JOIN\cf17 \strokec17  \cf17 \strokec2 T4\cf17 \strokec17  \cf16 \strokec16 ON\cf17 \strokec17  \cf17 \strokec2 T3.row\cf17 \strokec17  = \cf17 \strokec2 T4.row\cf5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
-\pard\pardeftab720\partightenfactor0
-\cf2 {{\NeXTGraphic 12__#$!@%!#__pastedGraphic.png \width20480 \height6160 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\pardeftab720\partightenfactor0
-\cf2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 {{\NeXTGraphic Screenshot 2024-04-07 at 00.13.03.png \width20200 \height6200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf0 \
 \
-Insights: \
-1. AP state has highest delivery time while SP has lowest. There could be many reasons for this. Dense population, poor transportation, product demand, state laws, etc.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 {{\NeXTGraphic delivery_time_highest by state_highest.jpeg \width21040 \height12920 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf2 \cb3 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 {{\NeXTGraphic delivery_time_lowest by state_lowest.jpeg \width21040 \height12920 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 Insights: \
+1. RR state has highest delivery time while SP has lowest. There could be many reasons for this. Dense population, poor transportation, product demand, state laws, etc.\
 \
 Recommendation: \
 1. Scout the area to get more info and optimise departments that are taking more time.\
+2. Delivery time and freight rates can sometimes have a correlation. Follow recommendations in Q5.2\
 \
 \pard\pardeftab720\partightenfactor0
 
@@ -796,52 +863,77 @@ Recommendation: \
 \
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf8 WITH\cf5 \
-  \cf6 `T`\cf5  \cf8 AS\cf5  \cf9 (\cf5 \
-    \cf8 SELECT\cf5 \
-      G.geolocation_state,\
-      \cf8 ABS\cf9 (\cf8 DATE_DIFF\cf9 (\cf5 O.order_purchase_timestamp, O.order_delivered_customer_date, DAY\cf9 ))\cf5  \cf8 AS\cf5  \cf6 `time_to_deliver`\cf5 ,\
-      \cf8 ABS\cf9 (\cf8 DATE_DIFF\cf9 (\cf5 O.order_purchase_timestamp, O.order_estimated_delivery_date, DAY\cf9 ))\cf5  \cf8 AS\cf5  \cf6 `estimated_time_to_deliver`\cf5 \
-    \cf8 FROM\cf5  \
-      \cf6 `cs1.orders`\cf5  \cf8 AS\cf5  \cf6 `O`\cf5  \cf8 LEFT\cf5  \cf8 JOIN\cf5  \cf6 `cs1.customers`\cf5  \cf8 AS\cf5  \cf6 `C`\cf5 \
-      \cf8 ON\cf5  O.customer_id = C.customer_id\
-      \cf8 LEFT\cf5  \cf8 JOIN\cf5  \cf6 `cs1.geolocation`\cf5  \cf8 AS\cf5  \cf6 `G`\cf5 \
-      \cf8 ON\cf5  C.customer_zip_code_prefix = G.geolocation_zip_code_prefix\
-  \cf9 )\cf5 \
-\cf8 SELECT\cf5  \cf8 DISTINCT\cf5 \
-  geolocation_state \cf8 AS\cf5  \cf6 `state`\cf5 ,\
-  \cf8 ROUND\cf9 (\cf8 AVG\cf9 (\cf5 time_to_deliver\cf9 )\cf5 , \cf22 2\cf9 )\cf5  \cf8 AS\cf5  \cf6 `avg_time_to_deliver`\cf5 ,\
-  \cf8 ROUND\cf9 (\cf8 AVG\cf9 (\cf5 estimated_time_to_deliver\cf9 )\cf5 , \cf22 2\cf9 )\cf5  \cf8 AS\cf5  \cf6 `avg_estimated_time_to_deliver`\cf5 ,\
-  \cf8 ROUND\cf9 (\cf8 ABS\cf9 (\cf8 AVG\cf9 (\cf5 time_to_deliver\cf9 )\cf5  \cf9 -\cf5  \cf8 AVG\cf9 (\cf5 estimated_time_to_deliver\cf9 ))\cf5 , \cf22 2\cf9 )\cf5  \cf8 AS\cf5  \cf6 `fast_by`\cf5 \
-\cf8 FROM\cf5 \
-  T\
-\cf8 WHERE\cf5 \
-  geolocation_state \cf8 IN\cf5  \cf9 (\cf5 \
-        \cf8 SELECT\cf5  \cf8 DISTINCT\cf5 \
-          geolocation_state \cf8 AS\cf5  \cf6 `state`\cf5 ,\
-        \cf8 FROM\cf5 \
-          T\
-        \cf8 WHERE\cf5 \
-          time_to_deliver \cf9 <\cf5  estimated_time_to_deliver \cf8 AND\cf5 \
-          geolocation_state \cf8 IS\cf5  \cf8 NOT\cf5  \cf8 NULL\cf5 \
-        \cf8 ORDER\cf5  \cf8 BY\cf5 \
-          state \cf8 ASC\cf5 \
-        \cf8 LIMIT\cf5  \cf22 5\cf5 \
-  \cf9 )\cf5 \
-\cf8 GROUP\cf5  \cf8 BY\cf5 \
-  geolocation_state\
-\cf8 ORDER\cf5  \cf8 BY\cf5 \
-  state\
+\cf16 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec16 WITH\cf17 \strokec17 \
+  \cf19 \strokec19 `T`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf18 \strokec18 (\cf17 \strokec17 \
+    \cf16 \strokec16 SELECT\cf17 \strokec17 \
+      \cf17 \strokec2 C.customer_state\cf17 \strokec17 ,\
+      \cf16 \strokec16 ABS\cf18 \strokec18 (\cf16 \strokec16 DATE_DIFF\cf18 \strokec18 (\cf17 \strokec2 O.order_purchase_timestamp\cf17 \strokec17 , \cf17 \strokec2 O.order_delivered_customer_date\cf17 \strokec17 , \cf17 \strokec2 DAY\cf18 \strokec18 ))\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `time_to_deliver`\cf17 \strokec17 ,\
+      \cf16 \strokec16 ABS\cf18 \strokec18 (\cf16 \strokec16 DATE_DIFF\cf18 \strokec18 (\cf17 \strokec2 O.order_purchase_timestamp\cf17 \strokec17 , \cf17 \strokec2 O.order_estimated_delivery_date\cf17 \strokec17 , \cf17 \strokec2 DAY\cf18 \strokec18 ))\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `estimated_time_to_deliver`\cf17 \strokec17 \
+    \cf16 \strokec16 FROM\cf17 \strokec17  \
+      \cf19 \strokec19 `cs1.orders`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `O`\cf17 \strokec17  \cf16 \strokec16 LEFT\cf17 \strokec17  \cf16 \strokec16 JOIN\cf17 \strokec17  \cf19 \strokec19 `cs1.customers`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `C`\cf17 \strokec17 \
+      \cf16 \strokec16 ON\cf17 \strokec17  \cf17 \strokec2 O.customer_id\cf17 \strokec17  = \cf17 \strokec2 C.customer_id\cf17 \strokec17 \
+  \cf18 \strokec18 )\cf17 \strokec17 \
+\cf16 \strokec16 SELECT\cf17 \strokec17  \cf16 \strokec16 DISTINCT\cf17 \strokec17 \
+  \cf17 \strokec2 customer_state\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `state`\cf17 \strokec17 ,\
+  \cf16 \strokec16 ROUND\cf18 \strokec18 (\cf16 \strokec16 AVG\cf18 \strokec18 (\cf17 \strokec2 time_to_deliver\cf18 \strokec18 )\cf17 \strokec17 , \cf20 \strokec20 2\cf18 \strokec18 )\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `avg_time_to_deliver`\cf17 \strokec17 ,\
+  \cf16 \strokec16 ROUND\cf18 \strokec18 (\cf16 \strokec16 AVG\cf18 \strokec18 (\cf17 \strokec2 estimated_time_to_deliver\cf18 \strokec18 )\cf17 \strokec17 , \cf20 \strokec20 2\cf18 \strokec18 )\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `avg_estimated_time_to_deliver`\cf17 \strokec17 ,\
+  \cf16 \strokec16 ROUND\cf18 \strokec18 (\cf16 \strokec16 ABS\cf18 \strokec18 (\cf16 \strokec16 AVG\cf18 \strokec18 (\cf17 \strokec2 time_to_deliver\cf18 \strokec18 )\cf17 \strokec17  \cf18 \strokec18 -\cf17 \strokec17  \cf16 \strokec16 AVG\cf18 \strokec18 (\cf17 \strokec2 estimated_time_to_deliver\cf18 \strokec18 ))\cf17 \strokec17 , \cf20 \strokec20 2\cf18 \strokec18 )\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `fast_by`\cf17 \strokec17 \
+\cf16 \strokec16 FROM\cf17 \strokec17 \
+  \cf17 \strokec2 T\cf17 \strokec17 \
+\cf16 \strokec16 WHERE\cf17 \strokec17 \
+  \cf17 \strokec2 customer_state\cf17 \strokec17  \cf16 \strokec16 IN\cf17 \strokec17  \cf18 \strokec18 (\cf17 \strokec17 \
+        \cf16 \strokec16 SELECT\cf17 \strokec17  \cf16 \strokec16 DISTINCT\cf17 \strokec17 \
+          \cf17 \strokec2 customer_state\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `state`\cf17 \strokec17 ,\
+        \cf16 \strokec16 FROM\cf17 \strokec17 \
+          \cf17 \strokec2 T\cf17 \strokec17 \
+        \cf16 \strokec16 WHERE\cf17 \strokec17 \
+          \cf17 \strokec2 time_to_deliver\cf17 \strokec17  \cf18 \strokec18 <\cf17 \strokec17  \cf17 \strokec2 estimated_time_to_deliver\cf17 \strokec17  \cf16 \strokec16 AND\cf17 \strokec17 \
+          \cf17 \strokec2 customer_state\cf17 \strokec17  \cf16 \strokec16 IS\cf17 \strokec17  \cf16 \strokec16 NOT\cf17 \strokec17  \cf16 \strokec16 NULL\cf17 \strokec17 \
+        \cf16 \strokec16 ORDER\cf17 \strokec17  \cf16 \strokec16 BY\cf17 \strokec17 \
+          \cf17 \strokec2 state\cf17 \strokec17  \cf16 \strokec16 ASC\cf17 \strokec17 \
+        \cf16 \strokec16 LIMIT\cf17 \strokec17  \cf20 \strokec20 5\cf17 \strokec17 \
+  \cf18 \strokec18 )\cf17 \strokec17 \
+\cf16 \strokec16 GROUP\cf17 \strokec17  \cf16 \strokec16 BY\cf17 \strokec17 \
+  \cf17 \strokec2 customer_state\cf17 \strokec17 \
+\cf16 \strokec16 ORDER\cf17 \strokec17  \cf16 \strokec16 BY\cf17 \strokec17 \
+  \cf17 \strokec2 fast_by\cf17 \strokec17  \cf16 \strokec16 DESC\cf17 \strokec17 ;\cf5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
-\pard\pardeftab720\partightenfactor0
-\cf2 {{\NeXTGraphic 13__#$!@%!#__pastedGraphic.png \width19320 \height6120 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\pardeftab720\partightenfactor0
-\cf2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 {{\NeXTGraphic Screenshot 2024-04-07 at 00.35.07.png \width19000 \height6200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf0 \
 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 {{\NeXTGraphic avg_estimated_time_to_deliver by state.jpeg \width21040 \height11880 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 {{\NeXTGraphic avg_time_to_deliver by state.jpeg \width21040 \height11880 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 {{\NeXTGraphic fast_by by state.jpeg \width21040 \height11880 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
 Insights: \
-1. State AM is faster by 20.25 days from its estimated delivery date 44.9 days. 1/2 the time.\
+1. State AC is faster by 20.13 days from its estimated delivery date 40.77 days. ~1/2 the time.\
+2. Faster deliveries improve customer satisfaction.\
+3. Faster deliveries also shows a streamlined delivery process. The process can be used as a template to emulate the speed in other areas.\
 \
 Recommendation: \
 1. Increase stock in AM state to make more deliveries.\
@@ -857,31 +949,55 @@ Recommendation: \
 \
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf8 SELECT\cf5 \
-  \cf8 COUNT\cf9 (\cf5 O.order_id\cf9 )\cf5  \cf8 AS\cf5  \cf6 `orders_placed`\cf5 ,\
-  \cf8 EXTRACT\cf9 (\cf5 MONTH \cf8 FROM\cf5  O.order_purchase_timestamp\cf9 )\cf5  \cf8 AS\cf5  \cf6 `month`\cf5 ,\
-  P.payment_type\
-\cf8 FROM\cf5  \
-  \cf6 `cs1.orders`\cf5  \cf8 AS\cf5  \cf6 `O`\cf5  \cf8 LEFT\cf5  \cf8 JOIN\cf5  \cf6 `cs1.payments`\cf5  \cf8 AS\cf5  \cf6 `P`\cf5 \
-  \cf8 ON\cf5  O.order_id = P.order_id\
-\cf8 GROUP\cf5  \cf8 BY\cf5 \
-  month,\
-  P.payment_type\
-\cf8 ORDER\cf5  \cf8 BY\cf5 \
-  month \cf8 ASC\cf5 ;\
+\cf16 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec16 SELECT\cf17 \strokec17 \
+  \cf16 \strokec16 EXTRACT\cf18 \strokec18 (\cf17 \strokec2 YEAR\cf17 \strokec17  \cf16 \strokec16 FROM\cf17 \strokec17  \cf17 \strokec2 O.order_purchase_timestamp\cf18 \strokec18 )\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `year`\cf17 \strokec17 ,\
+  \cf16 \strokec16 EXTRACT\cf18 \strokec18 (\cf17 \strokec2 MONTH\cf17 \strokec17  \cf16 \strokec16 FROM\cf17 \strokec17  \cf17 \strokec2 O.order_purchase_timestamp\cf18 \strokec18 )\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `month`\cf17 \strokec17 ,\
+  \cf17 \strokec2 P.payment_type\cf17 \strokec17 ,\
+  \cf16 \strokec16 COUNT\cf18 \strokec18 (\cf17 \strokec2 O.order_id\cf18 \strokec18 )\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `orders_placed`\cf17 \strokec17 \
+\cf16 \strokec16 FROM\cf17 \strokec17  \
+  \cf19 \strokec19 `cs1.orders`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `O`\cf17 \strokec17  \cf16 \strokec16 LEFT\cf17 \strokec17  \cf16 \strokec16 JOIN\cf17 \strokec17  \cf19 \strokec19 `cs1.payments`\cf17 \strokec17  \cf16 \strokec16 AS\cf17 \strokec17  \cf19 \strokec19 `P`\cf17 \strokec17 \
+  \cf16 \strokec16 ON\cf17 \strokec17  \cf17 \strokec2 O.order_id\cf17 \strokec17  = \cf17 \strokec2 P.order_id\cf17 \strokec17 \
+\cf16 \strokec16 GROUP\cf17 \strokec17  \cf16 \strokec16 BY\cf17 \strokec17 \
+  \cf17 \strokec2 year\cf17 \strokec17 ,\
+  \cf17 \strokec2 month\cf17 \strokec17 ,\
+  \cf17 \strokec2 P.payment_type\cf17 \strokec17 \
+\cf16 \strokec16 HAVING\cf17 \strokec17 \
+  \cf17 \strokec2 P.payment_type\cf17 \strokec17  \cf16 \strokec16 IS\cf17 \strokec17  \cf16 \strokec16 NOT\cf17 \strokec17  \cf16 \strokec16 NULL\cf17 \strokec17 \
+\cf16 \strokec16 ORDER\cf17 \strokec17  \cf16 \strokec16 BY\cf17 \strokec17 \
+  \cf17 \strokec2 year\cf17 \strokec17  \cf16 \strokec16 ASC\cf17 \strokec17 ,\
+  \cf17 \strokec2 month\cf17 \strokec17  \cf16 \strokec16 ASC\cf17 \strokec17 ;\cf5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
-\pard\pardeftab720\partightenfactor0
-\cf2 {{\NeXTGraphic 14__#$!@%!#__pastedGraphic.png \width12640 \height11120 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\pardeftab720\partightenfactor0
-\cf2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 {{\NeXTGraphic Screenshot 2024-04-07 at 01.05.16.png \width14400 \height11240 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf0 \
 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 {{\NeXTGraphic orders_placed by payment_type.jpeg \width20400 \height14840 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 {{\NeXTGraphic orders_placed by month.jpeg \width20400 \height15880 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
 Insights: \
 1. Credit card is clearly the most popular choice followed by UPI. Debit card being the least preferred.\
+2. We can observe seasonality in the usage of payment types.\
 \
 Recommendation: \
-1. We should team up with banks to give low interest credit to those who signup with our scheme.\
+1. We should team up with banks to give low interest credit to those who signup with our scheme. Provide cash backs for using their credit card.\
 \
 \pard\pardeftab720\partightenfactor0
 
@@ -913,7 +1029,7 @@ Screenshot:\
 \cf2 \
 \
 Insights: \
-1. It looks like most orders are placed in a single shot. This is good.\
+1. It looks like most orders are placed in a single up-front payment. This is good.\
 \
 Recommendation: \
 1. We should stick to the existing plan here.\

@@ -3,10 +3,10 @@
 \f3\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red40\green79\blue205;
 \red44\green55\blue61;\red21\green128\blue62;\red44\green55\blue61;\red42\green55\blue62;\red21\green128\blue62;
-\red40\green79\blue205;\red42\green55\blue62;\red238\green57\blue24;}
+\red40\green79\blue205;\red42\green55\blue62;\red238\green57\blue24;\red238\green57\blue24;}
 {\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c20298\c40742\c84246;
 \cssrgb\c22794\c27898\c30615;\cssrgb\c5039\c56433\c30904;\cssrgb\c22794\c27898\c30615;\cssrgb\c21621\c27903\c31013;\cssrgb\c5039\c56433\c30904;
-\cssrgb\c20298\c40741\c84246;\cssrgb\c21621\c27902\c31012;\cssrgb\c95572\c31584\c11464;}
+\cssrgb\c20298\c40741\c84246;\cssrgb\c21621\c27902\c31012;\cssrgb\c95572\c31583\c11464;\cssrgb\c95572\c31584\c11464;}
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
 {\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
@@ -215,7 +215,14 @@ Screenshot:\
 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f3\fs24 \cf0 {{\NeXTGraphic total_orders_per_month by month.jpeg \width20400 \height17360 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+\f3\fs24 \cf0 {{\NeXTGraphic total_orders_per_month by month.jpeg \width20400 \height13680 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 {{\NeXTGraphic 1__#$!@%!#__total_orders_per_month by month.jpeg \width20400 \height17360 \appleattachmentpadding0 \appleembedtype0 \appleaqc
 }¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
 \f1\fs30 \cf2 \cb3 \
@@ -251,56 +258,64 @@ Recommendation: \
 \f0\b {\listtext	\uc0\u8226 	}19-23 hrs : Night
 \f1\b0 \
 \pard\pardeftab720\partightenfactor0
-\cf2 Ans:\
+\cf2 \
+Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf10 WITH\cf7 \
-  \cf9 `T`\cf7  \cf10 AS\cf7  \cf11 (\cf7 \
-    \cf10 SELECT\cf7  \
-      G.geolocation_city,\
-      C.customer_id,\
-      O.order_id,\
-      \cf10 TIME\cf11 (\cf7 O.order_purchase_timestamp\cf11 )\cf7  \cf10 AS\cf7  \cf9 `order_purchase_timestamp`\cf7 ,\
-      \cf11 (\cf7 \
-        \cf10 CASE\cf7 \
-        \cf10 WHEN\cf7  \cf10 EXTRACT\cf11 (\cf7 HOUR \cf10 FROM\cf7  \cf10 TIME\cf11 (\cf7 O.order_purchase_timestamp\cf11 ))\cf7  \cf11 >=\cf7  \cf12 0\cf7  \
-        \cf10 AND\cf7  \cf10 EXTRACT\cf11 (\cf7 HOUR \cf10 FROM\cf7  \cf10 TIME\cf11 (\cf7 O.order_purchase_timestamp\cf11 ))\cf7  \cf11 <=\cf7  \cf12 6\cf7  \cf10 THEN\cf7  \cf9 "Dawn"\cf7 \
+\cf4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 WITH\cf5 \strokec5 \
+  \cf6 \strokec6 `T`\cf5 \strokec5  \cf4 \strokec4 AS\cf5 \strokec5  \cf8 \strokec8 (\cf5 \strokec5 \
+    \cf4 \strokec4 SELECT\cf5 \strokec5  \
+      \cf5 \strokec2 G.geolocation_city\cf5 \strokec5 ,\
+      \cf5 \strokec2 C.customer_id\cf5 \strokec5 ,\
+      \cf5 \strokec2 O.order_id\cf5 \strokec5 ,\
+      \cf4 \strokec4 TIME\cf8 \strokec8 (\cf5 \strokec2 O.order_purchase_timestamp\cf8 \strokec8 )\cf5 \strokec5  \cf4 \strokec4 AS\cf5 \strokec5  \cf6 \strokec6 `order_purchase_timestamp`\cf5 \strokec5 ,\
+      \cf8 \strokec8 (\cf5 \strokec5 \
+        \cf4 \strokec4 CASE\cf5 \strokec5 \
+        \cf4 \strokec4 WHEN\cf5 \strokec5  \cf4 \strokec4 EXTRACT\cf8 \strokec8 (\cf5 \strokec2 HOUR\cf5 \strokec5  \cf4 \strokec4 FROM\cf5 \strokec5  \cf4 \strokec4 TIME\cf8 \strokec8 (\cf5 \strokec2 O.order_purchase_timestamp\cf8 \strokec8 ))\cf5 \strokec5  \cf4 \strokec4 BETWEEN\cf5 \strokec5  \cf12 \strokec12 0\cf5 \strokec5  \cf4 \strokec4 AND\cf5 \strokec5  \cf12 \strokec12 6\cf5 \strokec5  \cf4 \strokec4 THEN\cf5 \strokec5  \cf6 \strokec6 "Dawn"\cf5 \strokec5 \
 \
-        \cf10 WHEN\cf7  \cf10 EXTRACT\cf11 (\cf7 HOUR \cf10 FROM\cf7  \cf10 TIME\cf11 (\cf7 O.order_purchase_timestamp\cf11 ))\cf7  \cf11 >=\cf7  \cf12 7\cf7  \
-        \cf10 AND\cf7  \cf10 EXTRACT\cf11 (\cf7 HOUR \cf10 FROM\cf7  \cf10 TIME\cf11 (\cf7 O.order_purchase_timestamp\cf11 ))\cf7  \cf11 <=\cf7  \cf12 12\cf7  \cf10 THEN\cf7  \cf9 "Mornings"\cf7 \
+        \cf4 \strokec4 WHEN\cf5 \strokec5  \cf4 \strokec4 EXTRACT\cf8 \strokec8 (\cf5 \strokec2 HOUR\cf5 \strokec5  \cf4 \strokec4 FROM\cf5 \strokec5  \cf4 \strokec4 TIME\cf8 \strokec8 (\cf5 \strokec2 O.order_purchase_timestamp\cf8 \strokec8 ))\cf5 \strokec5  \cf4 \strokec4 BETWEEN\cf5 \strokec5  \cf12 \strokec12 7\cf5 \strokec5  \cf4 \strokec4 AND\cf5 \strokec5  \cf12 \strokec12 12\cf5 \strokec5  \cf4 \strokec4 THEN\cf5 \strokec5  \cf6 \strokec6 "Mornings"\cf5 \strokec5 \
 \
-        \cf10 WHEN\cf7  \cf10 EXTRACT\cf11 (\cf7 HOUR \cf10 FROM\cf7  \cf10 TIME\cf11 (\cf7 O.order_purchase_timestamp\cf11 ))\cf7  \cf11 >=\cf7  \cf12 13\cf7  \
-        \cf10 AND\cf7  \cf10 EXTRACT\cf11 (\cf7 HOUR \cf10 FROM\cf7  \cf10 TIME\cf11 (\cf7 O.order_purchase_timestamp\cf11 ))\cf7  \cf11 <=\cf7  \cf12 18\cf7  \cf10 THEN\cf7  \cf9 "Afternoon"\cf7 \
+        \cf4 \strokec4 WHEN\cf5 \strokec5  \cf4 \strokec4 EXTRACT\cf8 \strokec8 (\cf5 \strokec2 HOUR\cf5 \strokec5  \cf4 \strokec4 FROM\cf5 \strokec5  \cf4 \strokec4 TIME\cf8 \strokec8 (\cf5 \strokec2 O.order_purchase_timestamp\cf8 \strokec8 ))\cf5 \strokec5  \cf4 \strokec4 BETWEEN\cf5 \strokec5  \cf12 \strokec12 13\cf5 \strokec5  \cf4 \strokec4 AND\cf5 \strokec5  \cf12 \strokec12 18\cf5 \strokec5  \cf4 \strokec4 THEN\cf5 \strokec5  \cf6 \strokec6 "Afternoon"\cf5 \strokec5 \
 \
-        \cf10 WHEN\cf7  \cf10 EXTRACT\cf11 (\cf7 HOUR \cf10 FROM\cf7  \cf10 TIME\cf11 (\cf7 O.order_purchase_timestamp\cf11 ))\cf7  \cf11 >=\cf7  \cf12 19\cf7  \
-        \cf10 AND\cf7  \cf10 EXTRACT\cf11 (\cf7 HOUR \cf10 FROM\cf7  \cf10 TIME\cf11 (\cf7 O.order_purchase_timestamp\cf11 ))\cf7  \cf11 <=\cf7  \cf12 23\cf7  \cf10 THEN\cf7  \cf9 "Night"\cf7 \
-        \cf10 END\cf7 \
-      \cf11 )\cf7  \cf10 AS\cf7  \cf9 `time_of_day`\cf7 \
-    \cf10 FROM\cf7  \
-      \cf9 `cs1.geolocation`\cf7  \cf10 AS\cf7  \cf9 `G`\cf7  \cf10 RIGHT\cf7  \cf10 JOIN\cf7  \cf9 `cs1.customers`\cf7  \cf10 AS\cf7  \cf9 `C`\cf7  \
-      \cf10 ON\cf7  G.geolocation_zip_code_prefix = C.customer_zip_code_prefix\
+        \cf4 \strokec4 WHEN\cf5 \strokec5  \cf4 \strokec4 EXTRACT\cf8 \strokec8 (\cf5 \strokec2 HOUR\cf5 \strokec5  \cf4 \strokec4 FROM\cf5 \strokec5  \cf4 \strokec4 TIME\cf8 \strokec8 (\cf5 \strokec2 O.order_purchase_timestamp\cf8 \strokec8 ))\cf5 \strokec5  \cf4 \strokec4 BETWEEN\cf5 \strokec5  \cf12 \strokec12 19\cf5 \strokec5  \cf4 \strokec4 AND\cf5 \strokec5  \cf12 \strokec12 23\cf5 \strokec5  \cf4 \strokec4 THEN\cf5 \strokec5  \cf6 \strokec6 "Night"\cf5 \strokec5 \
+        \cf4 \strokec4 END\cf5 \strokec5 \
+      \cf8 \strokec8 )\cf5 \strokec5  \cf4 \strokec4 AS\cf5 \strokec5  \cf6 \strokec6 `time_of_day`\cf5 \strokec5 \
+    \cf4 \strokec4 FROM\cf5 \strokec5  \
+      \cf6 \strokec6 `cs1.geolocation`\cf5 \strokec5  \cf4 \strokec4 AS\cf5 \strokec5  \cf6 \strokec6 `G`\cf5 \strokec5  \cf4 \strokec4 RIGHT\cf5 \strokec5  \cf4 \strokec4 JOIN\cf5 \strokec5  \cf6 \strokec6 `cs1.customers`\cf5 \strokec5  \cf4 \strokec4 AS\cf5 \strokec5  \cf6 \strokec6 `C`\cf5 \strokec5  \
+      \cf4 \strokec4 ON\cf5 \strokec5  \cf5 \strokec2 G.geolocation_zip_code_prefix\cf5 \strokec5  = \cf5 \strokec2 C.customer_zip_code_prefix\cf5 \strokec5 \
 \
-      \cf10 RIGHT\cf7  \cf10 JOIN\cf7  \cf9 `cs1.orders`\cf7  \cf10 AS\cf7  \cf9 `O`\cf7 \
-      \cf10 ON\cf7  C.customer_id = O.customer_id\
-    \cf10 WHERE\cf7 \
-      \cf10 LOWER\cf11 (\cf7 geolocation_city\cf11 )\cf7  \cf10 LIKE\cf7  \cf9 "bra%"\cf7 \
-\cf11 )\cf7 \
-\cf10 SELECT\cf7 \
-  time_of_day,\
-  \cf10 COUNT\cf11 (\cf7 time_of_day\cf11 )\cf7  \cf10 AS\cf7  \cf9 `purchase_count_per_time_of_day`\cf7 ,\
-\cf10 FROM\cf7 \
-  T\
-\cf10 GROUP\cf7  \cf10 BY\cf7 \
-  time_of_day\
-\cf10 ORDER\cf7  \cf10 BY\cf7 \
-  purchase_count_per_time_of_day \cf10 DESC\cf7 ;\
+      \cf4 \strokec4 RIGHT\cf5 \strokec5  \cf4 \strokec4 JOIN\cf5 \strokec5  \cf6 \strokec6 `cs1.orders`\cf5 \strokec5  \cf4 \strokec4 AS\cf5 \strokec5  \cf6 \strokec6 `O`\cf5 \strokec5 \
+      \cf4 \strokec4 ON\cf5 \strokec5  \cf5 \strokec2 C.customer_id\cf5 \strokec5  = \cf5 \strokec2 O.customer_id\cf5 \strokec5 \
+    \cf4 \strokec4 WHERE\cf5 \strokec5 \
+      \cf4 \strokec4 LOWER\cf8 \strokec8 (\cf5 \strokec2 geolocation_city\cf8 \strokec8 )\cf5 \strokec5  \cf4 \strokec4 LIKE\cf5 \strokec5  \cf6 \strokec6 "bra%"\cf5 \strokec5 \
+\cf8 \strokec8 )\cf5 \strokec5 \
+\cf4 \strokec4 SELECT\cf5 \strokec5 \
+  \cf5 \strokec2 time_of_day\cf5 \strokec5 ,\
+  \cf4 \strokec4 COUNT\cf8 \strokec8 (\cf5 \strokec2 time_of_day\cf8 \strokec8 )\cf5 \strokec5  \cf4 \strokec4 AS\cf5 \strokec5  \cf6 \strokec6 `purchase_count_per_time_of_day`\cf5 \strokec5 ,\
+\cf4 \strokec4 FROM\cf5 \strokec5 \
+  \cf5 \strokec2 T\cf5 \strokec5 \
+\cf4 \strokec4 GROUP\cf5 \strokec5  \cf4 \strokec4 BY\cf5 \strokec5 \
+  \cf5 \strokec2 time_of_day\cf5 \strokec5 \
+\cf4 \strokec4 ORDER\cf5 \strokec5  \cf4 \strokec4 BY\cf5 \strokec5 \
+  \cf5 \strokec2 purchase_count_per_time_of_day\cf5 \strokec5  \cf4 \strokec4 DESC\cf5 \strokec5 ;\cf7 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
-\pard\pardeftab720\partightenfactor0
-\cf2 {{\NeXTGraphic 4__#$!@%!#__pastedGraphic.png \width19120 \height5160 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\pardeftab720\partightenfactor0
-\cf2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 \cb1 {{\NeXTGraphic Screenshot 2024-04-06 at 10.03.42.png \width13440 \height5200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf0 \
 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 {{\NeXTGraphic purchase_count_per_time_of_day by time_of_day.jpeg \width21040 \height8800 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\fs30 \cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \
 Insights: \
 1. Brazilian customers mostly place their orders in the afternoon.\
 \
@@ -425,11 +440,11 @@ Ans:\
       \cf9 `cs1.orders`\cf7  \cf10 AS\cf7  \cf9 `O`\cf7  \cf10 RIGHT\cf7  \cf10 JOIN\cf7  \cf9 `cs1.payments`\cf7  \cf10 AS\cf7  \cf9 `P`\cf7  \
       \cf10 ON\cf7  O.order_id = P.order_id\
     \cf10 WHERE\cf7 \
-      \cf11 (\cf10 EXTRACT\cf11 (\cf7 YEAR \cf10 FROM\cf7  order_purchase_timestamp\cf11 )\cf7  = \cf12 2017\cf7  \cf10 OR\cf7 \
-      \cf10 EXTRACT\cf11 (\cf7 YEAR \cf10 FROM\cf7  order_purchase_timestamp\cf11 )\cf7  = \cf12 2018\cf11 )\cf7  \cf10 AND\cf7 \
+      \cf11 (\cf10 EXTRACT\cf11 (\cf7 YEAR \cf10 FROM\cf7  order_purchase_timestamp\cf11 )\cf7  = \cf13 2017\cf7  \cf10 OR\cf7 \
+      \cf10 EXTRACT\cf11 (\cf7 YEAR \cf10 FROM\cf7  order_purchase_timestamp\cf11 )\cf7  = \cf13 2018\cf11 )\cf7  \cf10 AND\cf7 \
 \
-      \cf10 EXTRACT\cf11 (\cf7 MONTH \cf10 FROM\cf7  order_purchase_timestamp\cf11 )\cf7  \cf11 >=\cf7  \cf12 1\cf7  \cf10 AND\cf7 \
-      \cf10 EXTRACT\cf11 (\cf7 MONTH \cf10 FROM\cf7  order_purchase_timestamp\cf11 )\cf7  \cf11 <=\cf7  \cf12 8\cf7 \
+      \cf10 EXTRACT\cf11 (\cf7 MONTH \cf10 FROM\cf7  order_purchase_timestamp\cf11 )\cf7  \cf11 >=\cf7  \cf13 1\cf7  \cf10 AND\cf7 \
+      \cf10 EXTRACT\cf11 (\cf7 MONTH \cf10 FROM\cf7  order_purchase_timestamp\cf11 )\cf7  \cf11 <=\cf7  \cf13 8\cf7 \
   \cf11 )\cf7 ,\
   \cf9 `T1`\cf7  \cf10 AS\cf7  \cf11 (\cf7 \
     \cf10 SELECT\cf7 \
@@ -452,12 +467,12 @@ Ans:\
       X.pay_jan_to_aug \cf11 !=\cf7  Y.pay_jan_to_aug\
     \cf10 ORDER\cf7  \cf10 BY\cf7 \
       X.pay_jan_to_aug \cf10 ASC\cf7 \
-    \cf10 LIMIT\cf7  \cf12 1\cf7 \
+    \cf10 LIMIT\cf7  \cf13 1\cf7 \
   \cf11 )\cf7 \
 \
 \cf10 SELECT\cf7 \
   \cf10 ROUND\cf11 (\cf7 \
-      \cf11 (\cf10 ABS\cf11 (\cf7 value_2017 \cf11 -\cf7  value_2018\cf11 )\cf7  \cf11 /\cf7  value_2017\cf11 )\cf7  \cf11 *\cf7  \cf12 100.0\cf7 , \cf12 2\cf7 \
+      \cf11 (\cf10 ABS\cf11 (\cf7 value_2017 \cf11 -\cf7  value_2018\cf11 )\cf7  \cf11 /\cf7  value_2017\cf11 )\cf7  \cf11 *\cf7  \cf13 100.0\cf7 , \cf13 2\cf7 \
     \cf11 )\cf7  \cf10 AS\cf7  \cf9 `perc_incr_2017_to_2018`\cf7 \
 \cf10 FROM\cf7 \
   T2\
@@ -489,8 +504,8 @@ Ans:\
 \pard\pardeftab720\partightenfactor0
 \cf10 SELECT\cf7 \
   \cf10 IFNULL\cf11 (\cf7 G.geolocation_state, \cf9 "Unknown"\cf11 )\cf7  \cf10 AS\cf7  \cf9 `state`\cf7 ,\
-  \cf10 ROUND\cf11 (\cf10 SUM\cf11 (\cf7 P.payment_value\cf11 )\cf7 , \cf12 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `total_price`\cf7 ,\
-  \cf10 ROUND\cf11 (\cf10 AVG\cf11 (\cf7 P.payment_value\cf11 )\cf7 , \cf12 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `avg_price`\cf7 \
+  \cf10 ROUND\cf11 (\cf10 SUM\cf11 (\cf7 P.payment_value\cf11 )\cf7 , \cf13 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `total_price`\cf7 ,\
+  \cf10 ROUND\cf11 (\cf10 AVG\cf11 (\cf7 P.payment_value\cf11 )\cf7 , \cf13 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `avg_price`\cf7 \
 \cf10 FROM\cf7  \
   \cf9 `cs1.orders`\cf7  \cf10 AS\cf7  \cf9 `O`\cf7  \cf10 RIGHT\cf7  \cf10 JOIN\cf7  \cf9 `cs1.payments`\cf7  \cf10 AS\cf7  \cf9 `P`\cf7  \
   \cf10 ON\cf7  O.order_id = P.order_id\
@@ -532,8 +547,8 @@ Ans:\
 \pard\pardeftab720\partightenfactor0
 \cf10 SELECT\cf7 \
   \cf10 IFNULL\cf11 (\cf7 G.geolocation_state, \cf9 "Unknown"\cf11 )\cf7  \cf10 AS\cf7  \cf9 `state`\cf7 ,\
-  \cf10 ROUND\cf11 (\cf10 SUM\cf11 (\cf7 I.freight_value\cf11 )\cf7 , \cf12 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `total_freight_value`\cf7 ,\
-  \cf10 ROUND\cf11 (\cf10 AVG\cf11 (\cf7 I.freight_value\cf11 )\cf7 , \cf12 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `avg_freight_value`\cf7 \
+  \cf10 ROUND\cf11 (\cf10 SUM\cf11 (\cf7 I.freight_value\cf11 )\cf7 , \cf13 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `total_freight_value`\cf7 ,\
+  \cf10 ROUND\cf11 (\cf10 AVG\cf11 (\cf7 I.freight_value\cf11 )\cf7 , \cf13 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `avg_freight_value`\cf7 \
 \cf10 FROM\cf7  \
   \cf9 `cs1.orders`\cf7  \cf10 AS\cf7  \cf9 `O`\cf7  \cf10 LEFT\cf7  \cf10 JOIN\cf7  \cf9 `cs1.order_items`\cf7  \cf10 AS\cf7  \cf9 `I`\cf7  \
   \cf10 ON\cf7  O.order_id = I.order_id\
@@ -634,26 +649,26 @@ Ans:\
   \cf9 `T1`\cf7  \cf10 AS\cf7  \cf11 (\cf7 \
     \cf10 SELECT\cf7 \
       \cf10 IFNULL\cf11 (\cf7 geolocation_state, \cf9 "Unknown"\cf11 )\cf7  \cf10 AS\cf7  \cf9 `state`\cf7 ,\
-      \cf10 ROUND\cf11 (\cf10 AVG\cf11 (\cf7 freight_value\cf11 )\cf7 , \cf12 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `avg_freight_value`\cf7 \
+      \cf10 ROUND\cf11 (\cf10 AVG\cf11 (\cf7 freight_value\cf11 )\cf7 , \cf13 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `avg_freight_value`\cf7 \
     \cf10 FROM\cf7  \
       T\
     \cf10 GROUP\cf7  \cf10 BY\cf7 \
       geolocation_state\
     \cf10 ORDER\cf7  \cf10 BY\cf7 \
       avg_freight_value \cf10 DESC\cf7 \
-    \cf10 LIMIT\cf7  \cf12 5\cf7 \
+    \cf10 LIMIT\cf7  \cf13 5\cf7 \
   \cf11 )\cf7 ,\
   \cf9 `T2`\cf7  \cf10 AS\cf7  \cf11 (\cf7 \
     \cf10 SELECT\cf7 \
       \cf10 IFNULL\cf11 (\cf7 geolocation_state, \cf9 "Unknown"\cf11 )\cf7  \cf10 AS\cf7  \cf9 `state`\cf7 ,\
-      \cf10 ROUND\cf11 (\cf10 AVG\cf11 (\cf7 freight_value\cf11 )\cf7 , \cf12 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `avg_freight_value`\cf7 \
+      \cf10 ROUND\cf11 (\cf10 AVG\cf11 (\cf7 freight_value\cf11 )\cf7 , \cf13 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `avg_freight_value`\cf7 \
     \cf10 FROM\cf7  \
       T\
     \cf10 GROUP\cf7  \cf10 BY\cf7 \
       geolocation_state\
     \cf10 ORDER\cf7  \cf10 BY\cf7 \
       avg_freight_value \cf10 ASC\cf7 \
-    \cf10 LIMIT\cf7  \cf12 5\cf7 \
+    \cf10 LIMIT\cf7  \cf13 5\cf7 \
   \cf11 )\cf7 ,\
   \cf9 `T3`\cf7  \cf10 AS\cf7  \cf11 (\cf7 \
     \cf10 SELECT\cf7 \
@@ -718,26 +733,26 @@ Ans:\
   \cf9 `T1`\cf7  \cf10 AS\cf7  \cf11 (\cf7 \
     \cf10 SELECT\cf7 \
       \cf10 IFNULL\cf11 (\cf7 geolocation_state, \cf9 "Unknown"\cf11 )\cf7  \cf10 AS\cf7  \cf9 `state`\cf7 ,\
-      \cf10 ROUND\cf11 (\cf10 AVG\cf11 (\cf7 delivery_time\cf11 )\cf7 , \cf12 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `avg_delivery_time`\cf7 \
+      \cf10 ROUND\cf11 (\cf10 AVG\cf11 (\cf7 delivery_time\cf11 )\cf7 , \cf13 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `avg_delivery_time`\cf7 \
     \cf10 FROM\cf7  \
       T\
     \cf10 GROUP\cf7  \cf10 BY\cf7 \
       geolocation_state\
     \cf10 ORDER\cf7  \cf10 BY\cf7 \
       avg_delivery_time \cf10 DESC\cf7 \
-    \cf10 LIMIT\cf7  \cf12 5\cf7 \
+    \cf10 LIMIT\cf7  \cf13 5\cf7 \
   \cf11 )\cf7 ,\
   \cf9 `T2`\cf7  \cf10 AS\cf7  \cf11 (\cf7 \
     \cf10 SELECT\cf7 \
       \cf10 IFNULL\cf11 (\cf7 geolocation_state, \cf9 "Unknown"\cf11 )\cf7  \cf10 AS\cf7  \cf9 `state`\cf7 ,\
-      \cf10 ROUND\cf11 (\cf10 AVG\cf11 (\cf7 delivery_time\cf11 )\cf7 , \cf12 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `avg_delivery_time`\cf7 \
+      \cf10 ROUND\cf11 (\cf10 AVG\cf11 (\cf7 delivery_time\cf11 )\cf7 , \cf13 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `avg_delivery_time`\cf7 \
     \cf10 FROM\cf7  \
       T\
     \cf10 GROUP\cf7  \cf10 BY\cf7 \
       geolocation_state\
     \cf10 ORDER\cf7  \cf10 BY\cf7 \
       avg_delivery_time \cf10 ASC\cf7 \
-    \cf10 LIMIT\cf7  \cf12 5\cf7 \
+    \cf10 LIMIT\cf7  \cf13 5\cf7 \
   \cf11 )\cf7 ,\
   \cf9 `T3`\cf7  \cf10 AS\cf7  \cf11 (\cf7 \
     \cf10 SELECT\cf7 \
@@ -801,9 +816,9 @@ Ans:\
   \cf11 )\cf7 \
 \cf10 SELECT\cf7  \cf10 DISTINCT\cf7 \
   geolocation_state \cf10 AS\cf7  \cf9 `state`\cf7 ,\
-  \cf10 ROUND\cf11 (\cf10 AVG\cf11 (\cf7 time_to_deliver\cf11 )\cf7 , \cf12 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `avg_time_to_deliver`\cf7 ,\
-  \cf10 ROUND\cf11 (\cf10 AVG\cf11 (\cf7 estimated_time_to_deliver\cf11 )\cf7 , \cf12 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `avg_estimated_time_to_deliver`\cf7 ,\
-  \cf10 ROUND\cf11 (\cf10 ABS\cf11 (\cf10 AVG\cf11 (\cf7 time_to_deliver\cf11 )\cf7  \cf11 -\cf7  \cf10 AVG\cf11 (\cf7 estimated_time_to_deliver\cf11 ))\cf7 , \cf12 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `fast_by`\cf7 \
+  \cf10 ROUND\cf11 (\cf10 AVG\cf11 (\cf7 time_to_deliver\cf11 )\cf7 , \cf13 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `avg_time_to_deliver`\cf7 ,\
+  \cf10 ROUND\cf11 (\cf10 AVG\cf11 (\cf7 estimated_time_to_deliver\cf11 )\cf7 , \cf13 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `avg_estimated_time_to_deliver`\cf7 ,\
+  \cf10 ROUND\cf11 (\cf10 ABS\cf11 (\cf10 AVG\cf11 (\cf7 time_to_deliver\cf11 )\cf7  \cf11 -\cf7  \cf10 AVG\cf11 (\cf7 estimated_time_to_deliver\cf11 ))\cf7 , \cf13 2\cf11 )\cf7  \cf10 AS\cf7  \cf9 `fast_by`\cf7 \
 \cf10 FROM\cf7 \
   T\
 \cf10 WHERE\cf7 \
@@ -817,7 +832,7 @@ Ans:\
           geolocation_state \cf10 IS\cf7  \cf10 NOT\cf7  \cf10 NULL\cf7 \
         \cf10 ORDER\cf7  \cf10 BY\cf7 \
           state \cf10 ASC\cf7 \
-        \cf10 LIMIT\cf7  \cf12 5\cf7 \
+        \cf10 LIMIT\cf7  \cf13 5\cf7 \
   \cf11 )\cf7 \
 \cf10 GROUP\cf7  \cf10 BY\cf7 \
   geolocation_state\

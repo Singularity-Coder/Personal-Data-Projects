@@ -12,7 +12,7 @@
 {\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
 {\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
 {\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
-\paperw11900\paperh16840\margl1440\margr1440\vieww28300\viewh15520\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww28300\viewh16080\viewkind0
 \deftab720
 \pard\pardeftab720\partightenfactor0
 
@@ -154,10 +154,11 @@ Screenshot:\
 }¬}\pard\pardeftab720\partightenfactor0
 \cf2 \
 \
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
 
 \f3\fs24 \cf0 \cb1 {{\NeXTGraphic total_orders_per_year by year.jpeg \width21000 \height12800 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+
 \f1\fs30 \cf2 \cb3 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
@@ -460,9 +461,8 @@ Insights:\'a0\
 \
 Recommendation: NA\
 \
-\pard\pardeftab720\partightenfactor0
 
-\f0\b \cf2 _____________________________________________________________________________________________________________________
+\f0\b _____________________________________________________________________________________________________________________
 \f1\b0 \
 \
 
@@ -519,15 +519,12 @@ Insights: \
 Recommendation: \
 1. Investing more in PB might give us higher returns in the future.\'a0We should prepare premium plans for these areas and perform a test run to see if it drives more revenue.\
 \
-\pard\pardeftab720\partightenfactor0
 
-\f0\b \cf2 _____________________________________________________________________________________________________________________\
-\pard\pardeftab720\partightenfactor0
+\f0\b _____________________________________________________________________________________________________________________\
 
-\f1\b0 \cf2 \
-\pard\pardeftab720\partightenfactor0
+\f1\b0 \
 
-\f0\b \cf2 Q4.3\'a0Calculate the Total & Average value of order freight for each state. (NEED CLARIFICATION)
+\f0\b Q4.3\'a0Calculate the Total & Average value of order freight for each state. (NEED CLARIFICATION)
 \f1\b0 \
 \
 Ans:\
@@ -546,7 +543,7 @@ SELECT\cf5 \
 \cf4 GROUP\cf5  \cf4 BY\cf5 \
   C.customer_state\
 \cf4 ORDER\cf5  \cf4 BY\cf5 \
-  total_freight_value \cf4 DESC\cf5 ;\cf5 \kerning1\expnd0\expndtw0 \
+  total_freight_value \cf4 DESC\cf5 ;\kerning1\expnd0\expndtw0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
@@ -579,9 +576,8 @@ Recommendation:\
 1. Find ways to reduce packaging size in area SP to reduce freight costs.\
 2. Find alternate transportation or routes.\
 \
-\pard\pardeftab720\partightenfactor0
 
-\f0\b \cf2 _____________________________________________________________________________________________________________________
+\f0\b _____________________________________________________________________________________________________________________
 \f1\b0 \
 \
 
@@ -632,9 +628,8 @@ Recommendation: \
 3. Find ways to reduce packaging size to reduce freight costs.\
 4. Find alternate transportation or routes.\
 \
-\pard\pardeftab720\partightenfactor0
 
-\f0\b \cf2 _____________________________________________________________________________________________________________________
+\f0\b _____________________________________________________________________________________________________________________
 \f1\b0 \
 \
 
@@ -700,7 +695,7 @@ WITH\cf5 \
   T4.state \cf4 AS\cf5  \cf6 `state_lowest`\cf5 ,\
   T4.avg_freight_value \cf4 AS\cf5  \cf6 `freight_value_lowest`\cf5 \
 \cf4 FROM\cf5 \
-  T3 \cf4 INNER\cf5  \cf4 JOIN\cf5  T4 \cf4 ON\cf5  T3.row = T4.row\cf5 \kerning1\expnd0\expndtw0 \
+  T3 \cf4 INNER\cf5  \cf4 JOIN\cf5  T4 \cf4 ON\cf5  T3.row = T4.row\kerning1\expnd0\expndtw0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
@@ -735,9 +730,8 @@ Recommendation: \
 3. Improve resource allocation.\
 4. Follow recommendations mentioned in Q5.1\
 \
-\pard\pardeftab720\partightenfactor0
 
-\f0\b \cf2 _____________________________________________________________________________________________________________________
+\f0\b _____________________________________________________________________________________________________________________
 \f1\b0 \
 \
 
@@ -800,7 +794,7 @@ WITH\cf5 \
   T4.state \cf4 AS\cf5  \cf6 `state_lowest`\cf5 ,\
   T4.avg_delivery_time \cf4 AS\cf5  \cf6 `delivery_time_lowest`\cf5 \
 \cf4 FROM\cf5 \
-  T3 \cf4 INNER\cf5  \cf4 JOIN\cf5  T4 \cf4 ON\cf5  T3.row = T4.row\cf5 \kerning1\expnd0\expndtw0 \
+  T3 \cf4 INNER\cf5  \cf4 JOIN\cf5  T4 \cf4 ON\cf5  T3.row = T4.row\kerning1\expnd0\expndtw0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
@@ -835,9 +829,8 @@ Recommendation: \
 1. Scout the area to get more info and optimise departments that are taking more time.\
 2. Delivery time and freight rates can sometimes have a correlation. Follow recommendations in Q5.2\
 \
-\pard\pardeftab720\partightenfactor0
 
-\f0\b \cf2 _____________________________________________________________________________________________________________________
+\f0\b _____________________________________________________________________________________________________________________
 \f1\b0 \
 \
 
@@ -880,7 +873,7 @@ WITH\cf5 \
 \cf4 GROUP\cf5  \cf4 BY\cf5 \
   customer_state\
 \cf4 ORDER\cf5  \cf4 BY\cf5 \
-  fast_by \cf4 DESC\cf5 ;\cf5 \kerning1\expnd0\expndtw0 \
+  fast_by \cf4 DESC\cf5 ;\kerning1\expnd0\expndtw0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
@@ -921,9 +914,8 @@ Insights: \
 Recommendation: \
 1. Increase stock in AM state to make more deliveries.\
 \
-\pard\pardeftab720\partightenfactor0
 
-\f0\b \cf2 _____________________________________________________________________________________________________________________
+\f0\b _____________________________________________________________________________________________________________________
 \f1\b0 \
 \
 
@@ -949,7 +941,7 @@ SELECT\cf5 \
   P.payment_type \cf4 IS\cf5  \cf4 NOT\cf5  \cf4 NULL\cf5 \
 \cf4 ORDER\cf5  \cf4 BY\cf5 \
   year \cf4 ASC\cf5 ,\
-  month \cf4 ASC\cf5 ;\cf5 \kerning1\expnd0\expndtw0 \
+  month \cf4 ASC\cf5 ;\kerning1\expnd0\expndtw0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
@@ -982,9 +974,8 @@ Insights: \
 Recommendation: \
 1. We should team up with banks to give low interest credit to those who signup with our scheme. Provide cash backs for using their credit card.\
 \
-\pard\pardeftab720\partightenfactor0
 
-\f0\b \cf2 _____________________________________________________________________________________________________________________
+\f0\b _____________________________________________________________________________________________________________________
 \f1\b0 \
 \
 

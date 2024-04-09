@@ -11,6 +11,8 @@
 # SQL is the standard language for dealing with Relational Databases.
 # SQL is used to insert, search, update, and delete database records.
 
+# A NULL value is different from a zero value or a field that contains spaces. A field with a NULL value is one that has been left blank during record creation!
+# NULL is not a value. So u cannot compare it with anything
 
 CREATE DATABASE db_test;
 USE db_test;
@@ -42,10 +44,10 @@ SELECT * FROM tbl_customer WHERE
 SELECT * FROM tbl_customer ORDER BY customer_zip ASC, customer_first_name ASC;
 
 
+# IS NULL, IS NOT NULL
+SELECT * FROM tbl_customer WHERE customer_last_name IS NOT NULL;
+SELECT * FROM tbl_customer WHERE customer_zip IS NULL;    
 
-    
-    
-    
     
 /**************************************************************************************************/
 # Stored Procedures

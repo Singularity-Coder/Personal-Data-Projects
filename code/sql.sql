@@ -71,14 +71,10 @@ CREATE TABLE tbl_people_2(
     is_active INT CHECK(is_active IN (1, 0))
 );
 
-# Create an index on column
-# Not much use if u create index for primary key
-SELECT * FROM tbl_people_1 WHERE LOWER(first_name) = "jane"; # This searches all rows and fetches rows with jane first_name. inefficient.
-EXPLAIN SELECT * FROM tbl_people_1 WHERE LOWER(first_name) = "jane"; # This explains how it fetched the data 
-
-CREATE INDEX index_first_name ON tbl_people_1 (first_name); # Creating index requires more memory as it creates new index table
-SELECT * FROM tbl_people_1 WHERE LOWER(first_name) = "jane"; # This will search only 1 or as many rows as “Hit” exists
-EXPLAIN SELECT * FROM tbl_people_1 WHERE LOWER(first_name) = "jane";
+# Change col name and type and default value - MySQLWorkbench has GUI for this operation & provides query as well
+-- ALTER TABLE `db_random_people`.`tbl_people_1` 
+-- CHANGE COLUMN `first_name` `first_name` VARCHAR(20) NULL DEFAULT NULL ,
+-- CHANGE COLUMN `last_name` `last_name` VARCHAR(20) NULL DEFAULT NULL ;
 
 # Delete all data from "tbl_people_2" - DDL command
 -- TRUNCATE TABLE tbl_people_2;
@@ -99,7 +95,7 @@ VALUES
 (103, "David", "Doe", 39, "M", "8245639877", "David@gma11 com", "1998-05-10", 1),
 (104, "Jane", "Doe", 28, "F", "8245639876", "Jane@gma11 com", "1998-05-10", 0),
 (105, "Jane", "Doe", 28, "F", "8245639876", "Jane@gma11 com", "1998-05-10", 0),
-(106, "Jane", "Doe", 28, "F", "8245639876", "Jane@gma11 com", "1998-05-10", 0);
+(106, "Jamine", "Doe", 28, "F", "8245639876", "Jane@gma11 com", "1998-05-10", 0);
 
 # View data from table "tbl_people_1"
 SELECT * FROM tbl_people_1;

@@ -11,26 +11,42 @@
 # SQL is the standard language for dealing with Relational Databases.
 # SQL is used to insert, search, update, and delete database records.
 
+
 CREATE DATABASE db_test;
 USE db_test;
 
-/**************************************************************************************************/
-# CTEs and Views
-/**************************************************************************************************/
 
-WITH
-	cte_1 AS (
-		SELECT * FROM tbl_customer WHERE LOWER(customer_first_name) LIKE "j%"
-    )
-SELECT * FROM cte_1;
+# The SELECT statement is used to select data from a database.
+SELECT * FROM tbl_customer;
+SELECT DISTINCT * FROM tbl_customer;
+SELECT DISTINCT customer_zip FROM tbl_customer;
+    
+# The WHERE clause is used to filter records. It is used to extract only those records that fulfill a specified condition.
+# The WHERE clause is not only used in SELECT statements, it is also used in UPDATE, DELETE, etc.!
+    
+SELECT * FROM tbl_customer WHERE customer_zip BETWEEN 110006 AND 122067;
+SELECT * FROM tbl_customer WHERE LOWER(customer_first_name) LIKE "jan_";
+SELECT * FROM tbl_customer WHERE customer_zip IN (110006, 122067);
+SELECT * FROM tbl_customer WHERE customer_id >= 10;
+SELECT * FROM tbl_customer WHERE customer_id = 10;
+SELECT * FROM tbl_customer WHERE customer_id != 10;
+SELECT * FROM tbl_customer WHERE customer_id <> 10;
 
-# Views are like SQL variables. Temporarily store data in Views db.
-CREATE VIEW
-	view_1 AS (
-		SELECT * FROM tbl_customer WHERE LOWER(customer_first_name) LIKE "j%"
-    );
-SELECT * FROM view_1;
+    
+# AND, OR, NOT
+SELECT * FROM tbl_customer WHERE 
+(customer_id <> 10 AND customer_id < 15) OR customer_zip NOT IN (110006, 122067);
 
+
+# ORDER BY - default ascending sort. If 2 rows have same value then sort those by another col
+SELECT * FROM tbl_customer ORDER BY customer_zip ASC, customer_first_name ASC;
+
+
+
+    
+    
+    
+    
 /**************************************************************************************************/
 # Stored Procedures
 /**************************************************************************************************/

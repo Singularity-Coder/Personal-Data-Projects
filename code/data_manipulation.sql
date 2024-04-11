@@ -68,8 +68,42 @@ WHERE
     phone IS NULL OR
     gender IS NULL;
 
-# DELETE record
+# DELETE record - If you omit the WHERE clause, all records in the table will be deleted!
+DELETE FROM tbl_people_1 WHERE phone = "9999999999";
+
+# get 1 record. LIMIT clause is used to specify the number of records to return.
+# The LIMIT clause is useful on large tables with thousands of records. Returning a large number of records can impact performance.
+SELECT * FROM tbl_people_1 LIMIT 1; 
+
+# get 4 to 6 records. The SQL query below says "return only 3 records, start on record 4 (OFFSET 3)":
+SELECT * FROM tbl_people_1 LIMIT 3 OFFSET 3;
 
 
+# MIN() returns smallest value of selected col
+# MAX() returns largest value of selected col
+# Aggregate functions work only in SELECT clause
+SELECT MIN(age) FROM tbl_people_1; # 1d output - 1 row 1 col
+SELECT MAX(age) FROM tbl_people_1; # 1d output
 
+SELECT 
+	MIN(age) AS min_age,
+    MAX(age) AS max_age
+FROM 
+	tbl_people_1; # 2d output - 1 row 2 cols
+
+SELECT 
+	is_active,
+	MIN(age) AS min_age,
+    MAX(age) AS max_age
+FROM 
+	tbl_people_1
+GROUP BY
+	is_active; # 3d output - n rows, n cols
+
+# COUNT() - The COUNT() function returns the number of rows that matches a specified criterion.
+# AVG() - The AVG() function returns the average value of a numeric column. 
+# SUM() - The SUM() function returns the total sum of a numeric column. 
+SELECT COUNT(age) FROM tbl_people_1;
+SELECT AVG(age) FROM tbl_people_1;
+SELECT SUM(age) FROM tbl_people_1;
 

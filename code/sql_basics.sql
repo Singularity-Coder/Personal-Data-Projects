@@ -14,6 +14,7 @@
 # A NULL value is different from a zero value or a field that contains spaces. A field with a NULL value is one that has been left blank during record creation!
 # NULL is not a value. So u cannot compare it with anything
 
+# Import data sets - tbl_customer, tbl_customer_purchases, tbl_product
 CREATE DATABASE db_test;
 USE db_test;
 
@@ -48,6 +49,33 @@ SELECT * FROM tbl_customer ORDER BY customer_zip ASC, customer_first_name ASC;
 SELECT * FROM tbl_customer WHERE customer_last_name IS NOT NULL;
 SELECT * FROM tbl_customer WHERE customer_zip IS NULL;    
 
+
+# IN operator
+# The IN operator allows you to specify multiple values in a WHERE clause.
+# The IN operator is a shorthand for multiple OR conditions.
+SELECT * FROM tbl_customer WHERE customer_zip IN (122067, 110006);
+SELECT * FROM tbl_customer WHERE customer_zip NOT IN (SELECT customer_zip FROM tbl_customer WHERE customer_zip LIKE "___0_");
+
+
+# BETWEEN operator
+# The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates.
+# The BETWEEN operator is inclusive: begin and end values are included.
+SELECT * FROM tbl_customer WHERE customer_id BETWEEN 1 AND 10;
+SELECT * FROM tbl_customer WHERE (customer_first_name BETWEEN "Jane" AND "Russell") AND (customer_last_name BETWEEN "Armenta" AND "Paulson"); # considers first chars. probably ASCII
+SELECT * FROM tbl_customer_purchases WHERE market_date BETWEEN "2019-09-28" AND "2020-09-02";
+
+
+# We give Aliases for table, column. Its temp name for readability. Exists in duration of query only. AS keyword.
+
+
+# COMMENTS
+-- single line
+/*
+Multi 
+Line
+*/
+SELECT customer_id, /*customer_first_name,*/ customer_last_name FROM tbl_customer
+
     
 /**************************************************************************************************/
 # Stored Procedures
@@ -76,11 +104,6 @@ SELECT * FROM tbl_customer WHERE customer_zip IS NULL;
 
 /**************************************************************************************************/
 # Group By and Aggregation
-/**************************************************************************************************/
-
-
-/**************************************************************************************************/
-# Joins
 /**************************************************************************************************/
 
 

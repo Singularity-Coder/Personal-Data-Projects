@@ -74,36 +74,103 @@ SELECT * FROM tbl_customer_purchases WHERE market_date BETWEEN "2019-09-28" AND 
 Multi 
 Line
 */
-SELECT customer_id, /*customer_first_name,*/ customer_last_name FROM tbl_customer
+SELECT customer_id, /*customer_first_name,*/ customer_last_name FROM tbl_customer;
 
+
+# EXISTS operator
+/*
+The EXISTS operator is used to test for the existence of any record in a subquery.
+The EXISTS operator returns TRUE if the subquery returns one or more records.
+*/
+SELECT * FROM tbl_customer AS C WHERE 
+EXISTS (SELECT * FROM tbl_customer_purchases AS P WHERE P.customer_id = C.customer_id AND cost_to_customer_per_qty < 2);
+
+
+
+# ANY, ALL
+/*
+The ANY and ALL operators allow you to perform a comparison between a single column value and a range of other values.
+comparisons such as =, !=, >, <, >=, <=
+*/
+# This should be greater than AT LEAST one value in the list 
+# This should be greater than the MIN value in the list
+# SELECT 17 > ANY (13, 25, 3, 4, 1, -8); #TRUE 
+# ALL should be greater than the MAX value in the list
+# SELECT 17 > ALL (13, 25, 3, 4, 1, -8) ; #FALSE
+/*
+ANY --- returns TRUE if ANY of the subquery values meet the condition
+ANY means that the condition will be true if the operation is true for any of the values in the range.
+*/
+SELECT * FROM tbl_customer WHERE customer_id > ANY (SELECT * FROM tbl_customer WHERE customer_id > 5);
+/*
+ALL --- returns TRUE if ALL of the subquery values meet the condition
+is used with SELECT, WHERE and HAVING statements
+ALL means that the condition will be true only if the operation is true for all values in the range.
+*/
+SELECT * FROM tbl_customer WHERE customer_id > ALL (SELECT * FROM tbl_customer WHERE customer_id > 5);
+
+
+# CASE
+/*
+once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause.
+CASE can be used on ORDER BY as well
+*/
+SELECT 
+	customer_first_name,
+    (
+		CASE
+        WHEN customer_zip > 110006 THEN customer_zip + 1
+        WHEN customer_zip < 110006 THEN customer_zip - 1
+        ELSE customer_zip
+        END
+    ) AS customer_zip
+FROM 
+	tbl_customer;
+
+
+
+# IFNULL() func
+/*
+SELECT ProductName, UnitPrice * (UnitsInStock + UnitsOnOrder) FROM Products;
+if any of the "UnitsOnOrder" values are NULL, the result will be NULL. Hence we handle NULL values with IFNULL
+The MySQL IFNULL() function lets you return an alternative value if an expression is NULL.
+*/
+SELECT 5 * customer_zip AS customer_zip FROM tbl_customer WHERE customer_id = 300; # NULL
+SELECT 5 * IFNULL(customer_zip, 22821) AS customer_zip FROM tbl_customer WHERE customer_id = 300; # 114105
+
+
+# COALESCE() func
+/*
+returns first non null value in list
+*/
+SELECT COALESCE(NULL, NULL); # NULL
+SELECT COALESCE(1, 2, 3, 4, NULL, 15); # 1
+SELECT COALESCE(NULL, NULL, "Banshee", "00"); # Banshee
+
+
+
+# GROUP_CONCAT
+SELECT 
+	customer_zip, 
+	GROUP_CONCAT(customer_first_name SEPARATOR ', ') AS first_names 
+FROM 
+	tbl_customer
+GROUP BY 
+	customer_zip 
+HAVING 
+	COUNT(*) > 3;
     
+    
+    
+    
+# Operators - https://www.w3schools.com/mysql/mysql_operators.asp
+
+
+
+
+
 /**************************************************************************************************/
 # Stored Procedures
-/**************************************************************************************************/
-
-
-/**************************************************************************************************/
-# Custom SQL Functions
-/**************************************************************************************************/
-
-
-/**************************************************************************************************/
-# Extracting Data
-/**************************************************************************************************/
-
-
-/**************************************************************************************************/
-# Filtering Data
-/**************************************************************************************************/
-
-
-/**************************************************************************************************/
-# Subqueries
-/**************************************************************************************************/
-
-
-/**************************************************************************************************/
-# Group By and Aggregation
 /**************************************************************************************************/
 
 
@@ -114,9 +181,4 @@ SELECT customer_id, /*customer_first_name,*/ customer_last_name FROM tbl_custome
 
 /**************************************************************************************************/
 # Date and Time Functions
-/**************************************************************************************************/
-
-
-/**************************************************************************************************/
-# Advanced concepts
 /**************************************************************************************************/

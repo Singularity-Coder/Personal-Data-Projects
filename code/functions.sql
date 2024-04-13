@@ -1,0 +1,50 @@
+/*
+https://www.w3schools.com/mysql/mysql_ref_functions.asp
+*/
+
+# String func
+CONCAT
+INSERT
+LENGTH
+LOCATE
+LOWER
+UPPER
+POSITION
+REPEAT
+REPLACE
+REVERSE
+SUBSTR
+TRIM
+
+# Numeric func
+ABS
+AVG
+CEIL
+COUNT
+DIV
+EXP
+FLOOR
+MAX
+MIN
+POW
+RAND
+ROUND
+SQRT
+SUM
+
+# Date func
+CURRENT_DATE
+CURRENT_TIME
+DATEDIFF
+DATE_ADD
+DATE_FORMAT
+DATE_SUB
+EXTRACT
+
+# Advanced func
+CASE
+CAST
+COALESCE
+IF
+IFNULL
+ISNULL

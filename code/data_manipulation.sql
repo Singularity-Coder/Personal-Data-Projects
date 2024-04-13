@@ -107,3 +107,14 @@ SELECT COUNT(age) FROM tbl_people_1;
 SELECT AVG(age) FROM tbl_people_1;
 SELECT SUM(age) FROM tbl_people_1;
 
+
+# INSERT INTO SELECT
+/*
+the columns that are not filled with data, will contain NULL
+The INSERT INTO SELECT statement copies data from one table and inserts it into another table.
+The INSERT INTO SELECT statement requires that the data types in source and target tables matches.
+Note: The existing records in the target table are unaffected.
+Copy all columns from one table to another table:
+*/
+INSERT INTO tbl_people_1 (first_name, last_name, age) 
+SELECT first_name, last_name, age FROM tbl_people_1 WHERE gender = 'F';

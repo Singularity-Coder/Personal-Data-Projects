@@ -4,6 +4,7 @@ https://www.w3schools.com/mysql/mysql_ref_functions.asp
 
 # String func
 SELECT CONCAT('Hitheh', ' ', 'Vadar');
+SELECT CONCAT("Hello", NULL); # NULL
 SELECT INSERT('Hih', 3, 1, 'thesh'); # 3 is the position to insert "thesh", 1 is the chars to replace after 3rd pos
 SELECT LENGTH('Hithesh');
 SELECT LOWER('HITHESH');
@@ -14,6 +15,8 @@ SELECT REPLACE('Hello world, my name is Hithesh. I live on world World.', 'world
 SELECT REVERSE('Hithesh'); # hsehtiH
 SELECT SUBSTR('Hithesh', 1, 3); # Hit
 SELECT TRIM('  hahaha    ');
+SELECT GROUP_CONCAT(customer_first_name) FROM tbl_customer; # default adds commas without space
+SELECT GROUP_CONCAT(DISTINCT customer_first_name ORDER BY customer_id SEPARATOR ", ") FROM tbl_customer;
 
 # Numeric func
 SELECT ABS(-34);
@@ -43,13 +46,18 @@ SELECT EXTRACT(YEAR FROM "2017-06-15");
 SELECT 
 	CASE 
     WHEN 3 < 4 THEN "3 is small"
-    WHEN 3 > 4 THEN "Impossible"
+    WHEN 4 > 3 THEN "Impossible"
     ELSE "Both are same"
     END;
 SELECT CAST(150 AS CHAR);
 SELECT CAST("14:06:10" AS TIME);
 SELECT CAST("2017-08-29" AS DATE);
 SELECT COALESCE(NULL, NULL, "Hithesh"); # retruns first non null value
-SELECT IF(5 > 4, "great", "small");
+SELECT 
+	IF(
+    5 > 4, 
+    "great", 
+    IF(6 < 7, "unfortunate", "small")
+    );
 SELECT IFNULL(NULL, "Hello");
 SELECT ISNULL(NULL); # retruns 1 which is true. 0 is false.

@@ -16,7 +16,9 @@ SELECT
 FROM
 	tbl_customer_purchases;
     
-    
+
+# ---------------------------------------------------------------------------------------------------------------------
+
 
 # Analytical Ranking Window Functions
 # DENSE_RANK, RANK, ROW_NUMBER, NTILE, CUME_DIST
@@ -55,6 +57,8 @@ SELECT
 FROM
 	tbl_customer_purchases;
 
+
+# ---------------------------------------------------------------------------------------------------------------------
 
 
 # Analytical Value Window Functions - Moving average/Sliding window, Cumulative sum or Reverse Cumulative sum. SQL starts from top to bottom so ORDER BY matters.
@@ -136,8 +140,6 @@ SELECT
 	) AS count_curr_row_to_last_row_qty
 FROM
 	tbl_customer_purchases;
-
-# FIRST_VALUE
 
 
 

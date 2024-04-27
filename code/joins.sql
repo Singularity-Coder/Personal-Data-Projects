@@ -56,12 +56,82 @@ SELECT * FROM tbl_joins_1 AS T1 LEFT JOIN tbl_joins_2 AS T2 ON T1.id = T2.id;
 SELECT * FROM tbl_joins_1 AS T1 RIGHT JOIN tbl_joins_2 AS T2 ON T1.id = T2.id;
 
 # CROSS JOIN
+/*
+cross product of all rows - n rows * n rows
+CROSS JOIN creates a virtual table only in memory and not in the DB
+*/
 SELECT * FROM tbl_joins_1 AS T1 CROSS JOIN tbl_joins_2 AS T2;
 SELECT * FROM tbl_joins_1 AS T1 CROSS JOIN tbl_joins_2 AS T2 WHERE T1.id = T2.id; # CROSS JOIN with filter is INNER JOIN
 
+# Join 2 cols without primary key - i think both cols should have same num of rows for it to show results
+SELECT
+	*
+FROM
+	(SELECT name FROM tbl_joins_1) AS T1,
+    (SELECT age FROM tbl_joins_2) AS T2;
 
 
+# TESTS-------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE tbl_washing_machines(
+	name VARCHAR(20),
+    capacity FLOAT
+);
+INSERT INTO tbl_washing_machines
+VALUES
+("Samsung", 7),
+("LG", 7),
+("IFB", 6),
+("Croma", 8),
+("Samsung", 6);
+
+CREATE TABLE tbl_dryer(
+	name VARCHAR(20),
+    capacity FLOAT
+);
+INSERT INTO tbl_dryer
+VALUES
+("Bosch", 6),
+("Seimens", 7),
+("Samsung", 7.5);
+
+SELECT 
+	*
+FROM 
+	tbl_joins_1 AS T1 INNER JOIN tbl_joins_2 AS T2
+	ON T1.id <= T2.id
+ORDER BY
+	T1.name;
+    
+
+SELECT 
+	*
+FROM 
+	tbl_joins_1 AS T1 RIGHT JOIN tbl_joins_2 AS T2
+	ON T1.id < T2.id
+ORDER BY
+	T1.name;    
 
 
+SELECT 
+	*
+FROM 
+	tbl_joins_1 AS T1 CROSS JOIN tbl_joins_2 AS T2
+ORDER BY
+	T1.name;
 
+
+SELECT 1;
+
+
+SELECT 1 FROM tbl_joins_1;
+
+
+SELECT 1, name FROM tbl_joins_1;
+
+
+SELECT 1 FROM tbl_joins_1 WHERE id > 100;
+
+
+SELECT * FROM tbl_joins_1
 

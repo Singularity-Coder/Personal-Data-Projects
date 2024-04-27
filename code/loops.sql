@@ -1,0 +1,1 @@
+# Compare multiple row values with a single row of a diff table

@@ -13,10 +13,10 @@ SELECT POSITION('Gundam' IN 'Anime Gundam 00'); # returns 7th pos
 SELECT REPEAT('Hit ', 3);
 SELECT REPLACE('Hello world, my name is Hithesh. I live on world World.', 'world', 'earth'); # replaces all occurrances. Is case sensi
 SELECT REVERSE('Hithesh'); # hsehtiH
-SELECT SUBSTR('Hithesh', 1, 3); # Hit
+SELECT SUBSTR('Hithesh', 1, 3); # Hit - 1 is start pos, 3 is num of chars from start pos
 SELECT TRIM('  hahaha    ');
-SELECT GROUP_CONCAT(customer_first_name) FROM tbl_customer; # default adds commas without space
-SELECT GROUP_CONCAT(DISTINCT customer_first_name ORDER BY customer_id SEPARATOR ", ") FROM tbl_customer;
+SELECT GROUP_CONCAT(customer_first_name) FROM tbl_customer; # default adds commas without space, wihout ORDER BY the value is randomly arranged
+SELECT GROUP_CONCAT(DISTINCT customer_first_name ORDER BY customer_id SEPARATOR ", ") FROM tbl_customer; # https://www.jooq.org/doc/latest/manual/sql-building/column-expressions/aggregate-functions/group-concat-function/
 
 # Numeric func
 SELECT ABS(-34);

@@ -28,7 +28,7 @@ SELECT * FROM tbl_customer WHERE customer_first_name LIKE "a__g%l";
 SELECT * FROM tbl_customer WHERE customer_first_name LIKE "a_%_%";
 
 # % and _ are wilcard chars
-# % means 0 or more chars - note that it can be 0 chars
+# % means 0 or more chars. Note that it can be 0 chars
 # _ means exactly 1 char
 # A wildcard character is used to substitute one or more characters in a string.
 # Wildcard characters are used with the LIKE operator. The LIKE operator is used in a WHERE clause to search for a specified pattern in a column.

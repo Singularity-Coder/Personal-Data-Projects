@@ -10,3 +10,9 @@
 --     WHERE product_code = product_code;
 -- END;
 
+USE db_test;
+
+CREATE PROCEDURE sp_name()
+BEGIN
+	SELECT 
+END;

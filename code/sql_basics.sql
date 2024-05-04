@@ -14,17 +14,20 @@
 # A NULL value is different from a zero value or a field that contains spaces. A field with a NULL value is one that has been left blank during record creation!
 # NULL is not a value. So u cannot compare it with anything
 
-/**************************************************************************************************/
-# Order of operations
-/**************************************************************************************************/
 /*
-1. FROM - JOIN - ON
-2. WHERE
-3. GROUP BY
-4. HAVING
-5. SELECT
-6. ORDER BY
-7. LIMIT
+Order of operations
+
+1. FROM - find the table
+2. JOIN - merge tables if necessary
+3. ON - apply condition to merge tables
+4. WHERE - filter above merged table based on condition
+
+5. GROUP BY - create a new virtual table from the above table
+6. HAVING - filter the above virtual table based on condition
+7. SELECT - choose the result set of records from the above virtual table
+
+8. ORDER BY - sort records based on any col(s)
+9. LIMIT - limit number of records to a fixed number
 */
 
 
@@ -34,14 +37,26 @@ CREATE DATABASE db_test;
 USE db_test;
 
 
+# We give Aliases for table, column. Its temp name for readability. Exists in duration of query only. AS keyword.
+
+
+# COMMENTS
+-- single line
+/*
+Multi 
+Line
+*/
+SELECT customer_id, /*customer_first_name,*/ customer_last_name FROM tbl_customer;
+
+
 # The SELECT statement is used to select data from a database.
 SELECT * FROM tbl_customer;
 SELECT DISTINCT * FROM tbl_customer;
 SELECT DISTINCT customer_zip FROM tbl_customer;
     
+
 # The WHERE clause is used to filter records. It is used to extract only those records that fulfill a specified condition.
-# The WHERE clause is not only used in SELECT statements, it is also used in UPDATE, DELETE, etc.!
-    
+# The WHERE clause is not only used in SELECT statements, it is also used in UPDATE, DELETE, etc.!    
 SELECT * FROM tbl_customer WHERE customer_zip BETWEEN 110006 AND 122067;
 SELECT * FROM tbl_customer WHERE LOWER(customer_first_name) LIKE "jan_";
 SELECT * FROM tbl_customer WHERE customer_zip IN (110006, 122067);
@@ -78,18 +93,6 @@ SELECT * FROM tbl_customer WHERE customer_zip NOT IN (SELECT customer_zip FROM t
 SELECT * FROM tbl_customer WHERE customer_id BETWEEN 1 AND 10;
 SELECT * FROM tbl_customer WHERE (customer_first_name BETWEEN "Jane" AND "Russell") AND (customer_last_name BETWEEN "Armenta" AND "Paulson"); # considers first chars. probably ASCII
 SELECT * FROM tbl_customer_purchases WHERE market_date BETWEEN "2019-09-28" AND "2020-09-02";
-
-
-# We give Aliases for table, column. Its temp name for readability. Exists in duration of query only. AS keyword.
-
-
-# COMMENTS
--- single line
-/*
-Multi 
-Line
-*/
-SELECT customer_id, /*customer_first_name,*/ customer_last_name FROM tbl_customer;
 
 
 # EXISTS operator
@@ -141,45 +144,8 @@ SELECT
     ) AS customer_zip
 FROM 
 	tbl_customer;
-
-
-
-# IFNULL() func
-/*
-SELECT ProductName, UnitPrice * (UnitsInStock + UnitsOnOrder) FROM Products;
-if any of the "UnitsOnOrder" values are NULL, the result will be NULL. Hence we handle NULL values with IFNULL
-The MySQL IFNULL() function lets you return an alternative value if an expression is NULL.
-*/
-SELECT 5 * customer_zip AS customer_zip FROM tbl_customer WHERE customer_id = 300; # NULL
-SELECT 5 * IFNULL(customer_zip, 22821) AS customer_zip FROM tbl_customer WHERE customer_id = 300; # 114105
-
-
-# COALESCE() func
-/*
-returns first non null value in list
-*/
-SELECT COALESCE(NULL, NULL); # NULL
-SELECT COALESCE(1, 2, 3, 4, NULL, 15); # 1
-SELECT COALESCE(NULL, NULL, "Banshee", "00"); # Banshee
-
-
-
-# GROUP_CONCAT
-SELECT 
-	customer_zip, 
-	GROUP_CONCAT(customer_first_name SEPARATOR ', ') AS first_names 
-FROM 
-	tbl_customer
-GROUP BY 
-	customer_zip 
-HAVING 
-	COUNT(*) > 3;
-    
     
     
     
 # Operators - https://www.w3schools.com/mysql/mysql_operators.asp
-
-
-
 

@@ -37,31 +37,54 @@ INSERT INTO tbl_joins_1
 VALUES
 (1, "Hithesh", 27),
 (2, "Iithesh", 38),
-(3, "Jithesh", 49);
+(3, "Jithesh", 49),
+(35, "Kitesh", 50), 
+(36, "Litesh", 70);
 
 INSERT INTO tbl_joins_2
 VALUES
 (3, "Kithesh", 57),
 (4, "Lithesh", 68),
-(5, "Mithesh", 79);
+(5, "Mithesh", 79),
+(35, "Kitesh", 50), 
+(36, "Litesh", 70);
 
-# INNER JOIN
+
+
+# INNER JOIN - records from both tables that strictly satisfy the condition
 SELECT * FROM tbl_joins_1 AS T1 INNER JOIN tbl_joins_2; # INNER JOIN without ON condition seems to be CROSS JOIN
 SELECT * FROM tbl_joins_1 AS T1 INNER JOIN tbl_joins_2 AS T2 ON T1.id = T2.id;
 
-# LEFT JOIN
+
+
+# LEFT JOIN - all records from the left table and records from the right table that satisfy the condition
 SELECT * FROM tbl_joins_1 AS T1 LEFT JOIN tbl_joins_2 AS T2 ON T1.id = T2.id;
 
-# RIGHT JOIN
+
+
+# RIGHT JOIN - all records from the right table and records from the left table that satisfy the condition
 SELECT * FROM tbl_joins_1 AS T1 RIGHT JOIN tbl_joins_2 AS T2 ON T1.id = T2.id;
+
+
 
 # CROSS JOIN
 /*
 cross product of all rows - n rows * n rows
 CROSS JOIN creates a virtual table only in memory and not in the DB
+each record on left tbl joins with every other record in the right table
 */
 SELECT * FROM tbl_joins_1 AS T1 CROSS JOIN tbl_joins_2 AS T2;
 SELECT * FROM tbl_joins_1 AS T1 CROSS JOIN tbl_joins_2 AS T2 WHERE T1.id = T2.id; # CROSS JOIN with filter is INNER JOIN
+
+
+
+# FULL JOIN - returns all records from both tables
+SELECT
+	*
+FROM
+	tbl_joins_1 FULL JOIN tbl_joins_2;
+
+
 
 # Join 2 cols without primary key - i think both cols should have same num of rows for it to show results
 SELECT
@@ -70,6 +93,20 @@ FROM
 	(SELECT name FROM tbl_joins_1) AS T1,
     (SELECT age FROM tbl_joins_2) AS T2;
 
+
+
+# INTERSECT - get common records from both tables - below gives ids 35 & 36
+(SELECT * FROM tbl_joins_1)
+INTERSECT
+(SELECT * FROM tbl_joins_2);
+
+
+
+# EXCEPT
+/* called MINUS in MySQL and Oracle. Returns only values obtained by first query but not the second one */
+(SELECT * FROM tbl_joins_1)
+EXCEPT
+(SELECT * FROM tbl_joins_2);
 
 # TESTS-------------------------------------------------------------------------------------------------------------------
 

@@ -3,6 +3,7 @@ In OVER() window function you can use
 1. PARTITION BY
 2. ORDER BY
 3. ROWS BETWEEN ___ AND ___  : The blanks can be: n PRECEDING, n FOLLOWING, UNBOUNDED PRECEDING, UNBOUNDED FOLLOWING, CURRENT ROW
+4. RANGE BETWEEN ___ AND ___  
 */
 
 # Aggregate Window Functions
@@ -94,10 +95,10 @@ SELECT
 FROM
 	tbl_customer_purchases;
     
-# NTH_VALUE
+# NTH_VALUE - always specify RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING when using ORDER BY
 SELECT 
 	quantity,
-	NTH_VALUE(quantity, 3) OVER(ORDER BY quantity) AS third_qty # gives 3rd row value irrespective of current row
+	NTH_VALUE(quantity, 3) OVER(ORDER BY quantity RANGE BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS third_qty # gives 3rd row value irrespective of current row
 FROM
 	tbl_customer_purchases;
 

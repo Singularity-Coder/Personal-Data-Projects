@@ -78,7 +78,7 @@ SELECT * FROM tbl_joins_1 AS T1 CROSS JOIN tbl_joins_2 AS T2 WHERE T1.id = T2.id
 
 
 
-# FULL JOIN - returns all records from both tables
+# FULL JOIN - returns all records from both tables. Its like CROSS JOIN
 SELECT
 	*
 FROM
@@ -94,6 +94,14 @@ FROM
     (SELECT age FROM tbl_joins_2) AS T2;
 
 
+# Natural JOIN -  seems to be like MINUS/EXCEPT in Sets
+SELECT
+	*
+FROM
+	(SELECT * FROM tbl_joins_1) AS T1 
+    NATURAL JOIN
+	(SELECT * FROM tbl_joins_2) AS T2;
+
 
 # INTERSECT - get common records from both tables - below gives ids 35 & 36
 (SELECT * FROM tbl_joins_1)
@@ -101,9 +109,11 @@ INTERSECT
 (SELECT * FROM tbl_joins_2);
 
 
-
 # EXCEPT
-/* called MINUS in MySQL and Oracle. Returns only values obtained by first query but not the second one */
+/* called MINUS in MySQL and Oracle. Returns only values obtained by first query but not the second one 
+It removes all dups from both tables and ignores all values in 2nd table. 
+tbl1 has values a, b, c and tbl2 has values b, c, d then result would be a alone. Since b, c are dups they are removed and all vals in tbl2 are ignored.
+*/
 (SELECT * FROM tbl_joins_1)
 EXCEPT
 (SELECT * FROM tbl_joins_2);

@@ -66,10 +66,6 @@ SELECT * FROM tbl_customer WHERE customer_id != 10;
 SELECT * FROM tbl_customer WHERE customer_id <> 10;
 
     
-# AND, OR, NOT
-SELECT * FROM tbl_customer WHERE 
-(customer_id <> 10 AND customer_id < 15) OR customer_zip NOT IN (110006, 122067);
-
 
 # ORDER BY - default ascending sort. If 2 rows have same value then sort those by another col
 SELECT * FROM tbl_customer ORDER BY customer_zip ASC, customer_first_name ASC;
@@ -78,54 +74,6 @@ SELECT * FROM tbl_customer ORDER BY customer_zip ASC, customer_first_name ASC;
 # IS NULL, IS NOT NULL
 SELECT * FROM tbl_customer WHERE customer_last_name IS NOT NULL;
 SELECT * FROM tbl_customer WHERE customer_zip IS NULL;    
-
-
-# IN operator
-# The IN operator allows you to specify multiple values in a WHERE clause.
-# The IN operator is a shorthand for multiple OR conditions.
-SELECT * FROM tbl_customer WHERE customer_zip IN (122067, 110006);
-SELECT * FROM tbl_customer WHERE customer_zip NOT IN (SELECT customer_zip FROM tbl_customer WHERE customer_zip LIKE "___0_");
-
-
-# BETWEEN operator
-# The BETWEEN operator selects values within a given range. The values can be numbers, text, or dates.
-# The BETWEEN operator is inclusive: begin and end values are included.
-SELECT * FROM tbl_customer WHERE customer_id BETWEEN 1 AND 10;
-SELECT * FROM tbl_customer WHERE (customer_first_name BETWEEN "Jane" AND "Russell") AND (customer_last_name BETWEEN "Armenta" AND "Paulson"); # considers first chars. probably ASCII
-SELECT * FROM tbl_customer_purchases WHERE market_date BETWEEN "2019-09-28" AND "2020-09-02";
-
-
-# EXISTS operator
-/*
-The EXISTS operator is used to test for the existence of any record in a subquery.
-The EXISTS operator returns TRUE if the subquery returns one or more records.
-*/
-SELECT * FROM tbl_customer AS C WHERE 
-EXISTS (SELECT * FROM tbl_customer_purchases AS P WHERE P.customer_id = C.customer_id AND cost_to_customer_per_qty < 2);
-
-
-
-# ANY, ALL
-/*
-The ANY and ALL operators allow you to perform a comparison between a single column value and a range of other values.
-comparisons such as =, !=, >, <, >=, <=
-*/
-# This should be greater than AT LEAST one value in the list 
-# This should be greater than the MIN value in the list
-# SELECT 17 > ANY (13, 25, 3, 4, 1, -8); #TRUE 
-# ALL should be greater than the MAX value in the list
-# SELECT 17 > ALL (13, 25, 3, 4, 1, -8) ; #FALSE
-/*
-ANY --- returns TRUE if ANY of the subquery values meet the condition
-ANY means that the condition will be true if the operation is true for any of the values in the range.
-*/
-SELECT * FROM tbl_customer WHERE customer_id > ANY (SELECT * FROM tbl_customer WHERE customer_id > 5);
-/*
-ALL --- returns TRUE if ALL of the subquery values meet the condition
-is used with SELECT, WHERE and HAVING statements
-ALL means that the condition will be true only if the operation is true for all values in the range.
-*/
-SELECT * FROM tbl_customer WHERE customer_id > ALL (SELECT * FROM tbl_customer WHERE customer_id > 5);
 
 
 # CASE
@@ -145,7 +93,78 @@ SELECT
 FROM 
 	tbl_customer;
     
+#-------------------------------------------------------------------------------------------------------------------------
     
+CREATE TABLE tbl_dum_dum_1 (	
+	id INT PRIMARY KEY,
+    name VARCHAR(20)
+);
+CREATE TABLE tbl_dum_dum_2 (	
+	id INT PRIMARY KEY,
+    name VARCHAR(20)
+);
+INSERT INTO tbl_dum_dum_1 VALUES
+(0, "Git"),
+(1, "Hit"),
+(2, "Iit"),
+(3, "Jit");
+INSERT INTO tbl_dum_dum_2 VALUES
+(3, "Jit"),
+(4, "Kit"),
+(5, "Lit"),
+(6, "Mit");
+
+SELECT * FROM tbl_dum_dum_1;
+SELECT * FROM tbl_dum_dum_2; 
+TRUNCATE TABLE tbl_dum_dum_1;
+TRUNCATE TABLE tbl_dum_dum_2;
+DROP TABLE tbl_dum_dum_1;
+DROP TABLE tbl_dum_dum_2;
+
+# Sets
+SELECT * FROM tbl_dum_dum_1
+UNION ALL
+SELECT * FROM tbl_dum_dum_2;
+
+SELECT * FROM tbl_dum_dum_1
+UNION DISTINCT
+SELECT * FROM tbl_dum_dum_2;
+
+SELECT * FROM tbl_dum_dum_1
+INTERSECT
+SELECT * FROM tbl_dum_dum_2;
+
+SELECT * FROM tbl_dum_dum_1
+EXCEPT
+SELECT * FROM tbl_dum_dum_2;
     
-# Operators - https://www.w3schools.com/mysql/mysql_operators.asp
+#-------------------------------------------------------------------------------------------------------------------------
+
+# Describe table structure
+DESC tbl_dum_dum_1;
+
+#-------------------------------------------------------------------------------------------------------------------------
+
+SELECT
+	*
+FROM
+	(SELECT * FROM tbl_dum_dum_1) AS T1 
+    CROSS JOIN
+	(SELECT * FROM tbl_dum_dum_2) AS T2;
+
+
+SELECT "Aha" LIKE "AHA"; # LIKE ignores case
+
+
+
+
+
+
+
+
+
+
+
+
+
 

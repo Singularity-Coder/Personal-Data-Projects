@@ -34,6 +34,12 @@ SHOW CREATE DATABASE db_random_people;
 
 
 # Create table named "peeps"
+/*
+If u have an auto increment id and u insert 0 as id then it automatically converts it to 1 and throws error saying dup entry. To avoid that
+SET SESSION sql_mode='NO_AUTO_VALUE_ON_ZERO'; 
+OR
+UPDATE source_table SET status = 0;
+*/
 CREATE TABLE peeps(
 	id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(20) NOT NULL,
@@ -322,6 +328,7 @@ FROM
 	INFORMATION_SCHEMA.PARTITIONS
 WHERE 
 	TABLE_NAME = 'tbl_sales';
+
 
 
 

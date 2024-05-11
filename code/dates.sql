@@ -59,6 +59,14 @@ SELECT STR_TO_DATE('May 1, 2013','%M %d,%Y'); # 2013-05-01 --- Literal character
 SELECT CONVERT_TZ('2004-01-01 12:00:00','GMT','MET'); # CONVERT_TZ(date, from_tz, to_tz)
 
 
+# Caclulate dist btw 2 lat longs: d = 2R × sin⁻¹(√[sin²((θ₂ - θ₁)/2) + cosθ₁ × cosθ₂ × sin²((φ₂ - φ₁)/2)]) wehre θ₁ is lat and φ₁ is long
+# https://www.omnicalculator.com/other/latitude-longitude-distance
+-- SELECT
+--   6371 * 2 * ASIN(SQRT(
+-- 	
+--   ))
+
+
 
 
 

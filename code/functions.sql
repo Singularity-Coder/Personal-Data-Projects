@@ -35,48 +35,52 @@ HAVING
     
 
 # Numeric func
-SELECT ABS(-34);
-SELECT AVG(quantity) FROM tbl_customer_purchases;
-SELECT CEIL(2.1);
 SELECT COUNT(customer_id) FROM tbl_customer_purchases;
-SELECT 8.2 DIV 2.0; # returns 4. Does int div
-SELECT FLOOR(2.9);
+SELECT AVG(quantity) FROM tbl_customer_purchases;
+SELECT SUM(quantity) FROM tbl_customer_purchases;
 SELECT MAX(quantity) FROM tbl_customer_purchases;
 SELECT MIN(quantity) FROM tbl_customer_purchases;
+SELECT ABS(-34);
+SELECT CEIL(2.1);
+SELECT 8.2 DIV 2.0; # returns 4. Does int div
+SELECT FLOOR(2.9);
 SELECT POW(3, 2); # 3 ^ 2 = 9
 SELECT FLOOR(RAND()*(10-5+1)+5); # random number >= 5 and <=10. returns random decimal num without seed.
 SELECT ROUND(13.22121, 2);
 SELECT SQRT(4);
-SELECT SUM(quantity) FROM tbl_customer_purchases;
+SELECT 4 % 2;
+SELECT 3 % 2;
+SELECT MOD(3, 2);
+
 
 # Date func
 SELECT CURRENT_DATE();
 SELECT CURRENT_TIME();
 SELECT DATEDIFF("2017-06-25", "2017-06-15"); # 10 days
 SELECT DATE_ADD("2017-06-15", INTERVAL 10 DAY); # MICROSECOND, SECOND, MINUTE, HOUR, DAY, WEEK, MONTH, QUARTER, YEAR
-SELECT DATE_FORMAT("2017-06-15", "%W %M %d %Y");
+SELECT DATE_FORMAT("2017-06-15", "%d %M %Y %W");
 SELECT DATE_SUB("2017-06-15", INTERVAL 10 DAY);
 SELECT EXTRACT(YEAR FROM "2017-06-15");
 SELECT NOW(); # returns current date and time
 
 # Advanced func
+SELECT COALESCE(NULL, NULL, "Hithesh"); # retruns first non null value in a list
+SELECT CAST(150 AS CHAR);
+SELECT CAST("14:06:10" AS TIME);
+SELECT CAST("2017/08/29" AS DATE);
+SELECT ISNULL(NULL); # retruns 1 which is true. 0 is false.
 SELECT 
 	CASE 
     WHEN 3 < 4 THEN "3 is small"
     WHEN 4 > 3 THEN "Impossible"
     ELSE "Both are same"
     END;
-SELECT CAST(150 AS CHAR);
-SELECT CAST("14:06:10" AS TIME);
-SELECT CAST("2017-08-29" AS DATE);
-SELECT COALESCE(NULL, NULL, "Hithesh"); # retruns first non null value in a list
 SELECT 
 	IF(
     5 > 4, 
     "great", 
     IF(6 < 7, "unfortunate", "small")
     );
-SELECT ISNULL(NULL); # retruns 1 which is true. 0 is false.
 
 # IFNULL() func
 /*

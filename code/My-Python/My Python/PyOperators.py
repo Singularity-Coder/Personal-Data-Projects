@@ -36,9 +36,9 @@ print("\nARITHMETIC ------------------------------------------------------------
 
 print(a + b)
 print(a - b)
-print(a / b)
+print(a / b)   # float division
 print(a * b)
-print(a // b)  # floor division - takes the lesser int value
+print(a // b)  # floor or integer division - takes the lesser int value
 print(a ** b)  # exponentation
 print(a % b)
 

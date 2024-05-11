@@ -2,8 +2,8 @@ print("\nDICTIONARY ------------------------------------------------------------
 
 """
 Dictionary items are
-1. unordered - As of Python version 3.7, dictionaries are ordered. In Python 3.6 and earlier, dictionaries are unordered.
-2. changeable
+1. unordered
+2. unchangeable - possible by converting to list - Set items are unchangeable, but you can remove and/or add items whenever you like.
 3. no duplicate values 
 4. not indexed 
 """

@@ -22,6 +22,8 @@ my_int2 = int(10)
 # float
 my_float = 9.5
 my_float2 = float(10.5)
+my_float3 = 20.
+my_float4 = .3
 # complex
 my_complex = 8j
 my_complex2 = complex(9j)

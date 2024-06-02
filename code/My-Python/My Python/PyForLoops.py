@@ -58,3 +58,9 @@ for x in (1, 2, 3):
     for y in (5, 6, 7):
         print(y)
     print(x)
+
+print("\nPRINT N TO 1 -------------------------------------------------------------------------------------\n")
+
+n = int(input())
+for i in range(n, 0, -1):
+    print(i)

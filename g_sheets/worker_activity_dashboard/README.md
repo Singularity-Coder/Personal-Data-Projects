@@ -5,7 +5,8 @@
 [Worker Activity Dashboard Project Link](https://docs.google.com/spreadsheets/d/1-HLGfaq5HPvAhhyQK6f9mY-p_RM3nTYVuejWOZy9dS8/edit?gid=818580813#gid=818580813)
 
 ### References:
-[Interactive Google Sheets Dashboard Tutorial: Worker Management | MaKuData](https://www.youtube.com/watch?v=z7AHPooLSiw&ab_channel=MaKuData)
+1. [Interactive Google Sheets Dashboard Tutorial: Worker Management | MaKuData](https://www.youtube.com/watch?v=z7AHPooLSiw&ab_channel=MaKuData)
+2. [Yoga Perdana](https://dribbble.com/shots/5807947-Eagle-Logo)
 
 
 

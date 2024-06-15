@@ -1,4 +1,4 @@
-![alt text](https://github.com/Singularity-Coder/Code-Snippets-SQL/blob/main/g_sheets/worker_activity_dashboard/sc1.png)
+![alt text](https://github.com/Singularity-Coder/Code-Snippets-SQL/blob/main/g_sheets/Projects/worker_activity_dashboard/sc1.png)
 # Worker Activity G-Sheet Dashboard 
 
 ### Project Link

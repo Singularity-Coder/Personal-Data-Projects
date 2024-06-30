@@ -29,7 +29,7 @@ ___
 
 
 ### Pizza Sales EDA
-![alt text](https://github.com/Singularity-Coder/Instant-Python/tree/main/projects/kaggle_pizza_sales_eda/sc1.png)
+![alt text](https://github.com/Singularity-Coder/Instant-Python/blob/main/projects/kaggle_pizza_sales_eda/sc1.png)
 * Used Python and Pandas.
 * Exploratory Data Analysis of a Pizza Restaurant Sales with ~50K records.
 * [Project Link](https://github.com/Singularity-Coder/Instant-Python/tree/main/projects/kaggle_pizza_sales_eda)

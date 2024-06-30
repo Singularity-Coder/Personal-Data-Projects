@@ -54,11 +54,12 @@ my_memoryview = memoryview(bytes(5))
 # -10//3 is -4. Since -3.33 floor is -4
 # 10 ** 2.5
 # 2.5 ** 3
+# math.floor(x), math.ceil(x)
 # floor is the left value in number line, ceil is the right value in number line. So floor of -2.2 is -3
 # floor of 2.0 is 2
 
 # 10 % 4 = 2
-# -10 % 3 = 2      :::: this is because division takes the least value until -10. Since -9 is > -10, the operation goes till -12 and then subs it.
+# -10 % 3 = 2      :::: this is because division takes the least value until -10. Since -9 is > -10, the operation goes till -12 and then subs it. So 12 - 10 = 2
 # 10 % -3 = -2
 # -10 % -3 = -(10 % 3) = -1
 # 10 ** -1 = 1/10 = 0.1
@@ -70,13 +71,14 @@ my_memoryview = memoryview(bytes(5))
 # "Ra" == "ra"    ::: False
 # 3 > 3    ::: False
 # 3 >= 3    ::: True
-# Jupyter notebooks auto prints a variable value wihtout print statement
+# Jupyter notebooks auto prints a variable value wihtout print statement if its the last line in block
 # bool(0) or bool(0.0) or bool("") is false
 # bool(32.42) or bool(-22) or bool("hello") or bool(" ") is true
 
 # Order of ops for operator eval - BODMAS - brackets, exponent, div, multi, add, sub
 # True == 1 is True
 # False == 0 is True
+# "1" == 1 is False
 
 # 400 % 500 = 400
 # 3 % 4 = 3
@@ -101,12 +103,24 @@ my_memoryview = memoryview(bytes(5))
 # in case of contradiction u get empty list:
 # range(2, 10, -1)  since start is 2 and jump is -1: 2 - 1 = 1 but 1 is not in range 2 to 10
 # range(5, 5) start is inclusive n end is exclusive
-# len(range(10)) 11 items
+# len(range(10)) 10 items
 # list(range(10))
 
 # n * (n + 1)/2   sum of n numbers
 
 # length of an array vs len of the count of the len of array: len(str(len(range(4321432))))
+
+"""
+ATM Dispatch problem: Only Rs. 500 and Rs. 200 notes are available.
+amount = int(input('Enter amount: '))
+if amount <= 500 and (amount%500)%200 == 0:
+  print('Discharging cash')
+elif amount > 500 and ((amount%500)%200)%100 == 0:
+  print('Discharging cash')
+else:
+  print('Denomination not available')
+"""
+
 
 """
 Jump Statements:
@@ -142,7 +156,7 @@ forward or positive indexing: 0 to 4   so last inedex is (n-1)
 backward or negative indexing: -5 to -1 so last inedex is (-n)
 """
 
-# In Jupyter notebook press list. + tab to see autocomplete methods
+# In Jupyter notebook press list. + tab to see autocomplete methods for list
 # Use method? to see doc string. Ex: list.append?
 
 """
@@ -177,7 +191,7 @@ Slicing
 start index : end index : step size
 list(0 index : length of list : step size 1) 
 list(::) 0, len, 1
-list(::-1) -1,-(len+1),-1 
+list(::-1) -1,-(len+1),-1       # reverses the list. Since negative indexing starts from 1, the final index is actual len of list. And since in slices the last index is not considered we do len+1 as last index
 
 l = [0,9,1]
 print(l[:100]) # does not crash
@@ -185,7 +199,7 @@ print(l[:100]) # does not crash
 l = [0,9,1,44,2,2,3,93,2,4,5,5]
 l[-1:-4:-1] # [5, 5, 4]
 l[2:-1] # [1, 44, 2, 2, 3, 93, 2, 4, 5] last index is -1 in negative indexing. So this is not contradiction
-l[2:0] # contradiction
+l[2:0] # contradiction -> returns empty list
 l[3::-1] # [44, 1, 9, 0]
 l[2:8:3] # [1, 2]
 Get reversed list - l[::-1]
@@ -198,8 +212,8 @@ Sum of first 3 elems and last 3 elems - sum(l[0:3]) + sum(l[-3:])
 
 -ve indexing gives reverse list
 
-if step/jump is +1 then start index = 0, end index = len of list
-if step/jump is -1 then start index = -1, end index = -len of list - 1
+if step/jump is +1 then start index = 0 if not provided, end index = len of list  
+if step/jump is -1 then start index = -1 if not provided, end index = -len of list - 1
 
 if contradiction result is empty
 """
@@ -238,6 +252,7 @@ f"Hello {name}"
 "hit vu".split() = ["hit", "vu"] # returns a list of string. default delimiter is space
 
 " --> ".join(["hit", "vu"]) = 'hit --> vu'
+"==>".join(map(str, [1,2,3,4])) # '1==>2==>3==>4'
 
 list("hello") = ['h', 'e', 'l', 'l', 'o']
 
@@ -313,7 +328,7 @@ a, b = b, a
 """
 Sets
 {}
-unordered - if u create in speicfi order the order wont be same on access. Cannot index them. they r jumbled up on storage
+unordered - if u create in speicfi order the order wont be same on access. Hence cannot index them. they r jumbled up on storage
 unique vals only
 
 s = {}
@@ -450,7 +465,8 @@ abc[1] = abc[1] + 1 # {1: 2, ‘1’: 2}
 
 dict = {5: 'a', 10: 'b', 15: 'c'}
 dict[0] # error
-dict.get(0) # None 
+dict.get(100) # None 
+dict.get(100, 0) # 0    set default value 
 
 """
 
@@ -667,8 +683,10 @@ Zip
 
 l1 = [1,2]
 l2 =[True, False]
-l3 = dict(zip(l1, l2))
+l3 = dict(zip(l1, l2)) # if u get "TypeError: 'dict' object is not callable" then run "del dict". U declared a var dict somewhere
 l4 = list(zip(l1, l2))
+
+
 """
 
 """
@@ -729,3 +747,331 @@ kwargs is -> {}
 list.sort() # sort by lexico
 sorted(list) # sort by len. preserves lexico 
 """
+
+"""
+x.py can be a module
+A bunch of py files can be a module as well
+A bunch of modules is called a package or library
+"""
+
+"""
+Get full doc with help() method:
+print(help(module_name))
+"""
+
+"""
+import random
+random.randint(0, 100)
+
+Password generator:
+for i in range(10):
+    print(random.randint(0, 100), end="")
+    
+Randomness is calc w.r.t time
+
+# Fix the time. if u dont provide seed then it takes system clock value which always changes.
+random.seed(100)  
+random.randint(0, 10) # 0  
+random.randint(0, 10) # 1
+random.randint(0, 10) # 1
+random.randint(0, 10) # 5
+random.randint(0, 10) # 2
+
+# for seed 100 the above values are always the same
+random.seed(100)  
+random.randint(0, 10) # 0  
+random.randint(0, 10) # 1
+random.randint(0, 10) # 1
+random.randint(0, 10) # 5
+random.randint(0, 10) # 2
+
+Seed fixes time which means whatever ints u generted with that fixed seed they remain the same. The seed is like key.
+"""
+
+"""
+import math
+math.ceil(9.8) # right value
+math.floor(4.5) # left value
+
+from math import *
+ceil() # directly use method instead of math.ceil
+
+Import alias: Useful when 2 libs have same method names
+import math as m
+m.log10(1000)
+
+Its pseudo random because sequence is fixed
+"""
+
+"""
+try:
+except:
+
+l = [1, "a", 3]
+for x in l:
+    try:
+        print(x/5)
+    except Exception as e:
+        print("NAN")
+    except Exception as e:
+        print("NAN")
+    finally:
+        print("NAN")
+        
+Custom Exception:
+if 4 % 2 == 0:
+    raise Exception("Num is weird")
+    
+class MyException(Exception):
+    def __init__(self, message):
+        super().__init__(message)
+        
+try:
+    if 4 % 2 == 0:
+        raise MyException("Num is weird") # this goes to except
+except MyException as e:
+    print(e)
+    
+try:
+  print(a)
+except ValueError:
+  a=3
+  print(a)
+except:
+  a=5
+  print(a)
+finally:
+  a=4
+  print(a)
+"""
+
+"""
+Find GCD - Greatest common divisor: 
+
+A = int(input())
+B = int(input())
+X = min(A, B) # u start descending from min because GCD cannot be greater than min value since its num which divides both 
+for i in range(X, 0, -1):
+    if A % i == 0 and B % i == 0:
+        print(i)
+        break
+"""
+
+"""
+Find LCM - Least common multiple: Cannot be smaller than the largest number in both numbers. Since the smalles multiple is the greatst number * 1, it should be atleast that much
+
+A = int(input())
+B = int(input())
+X = max(A, B) # U take max because LCM has to start from max value and check if its increments are multiples of both
+while True:
+    if X % A == 0 and X % B == 0:
+        print(X)
+        break
+    X += 1
+"""
+
+"""
+Default args come after positional args.
+
+def Interest(p,c,t=2,r=0.09):
+    return p*t*r
+
+# Valid calls
+Interest(p=1000,c=5)
+Interest(c=4,r=0.12,p=5000)
+"""
+
+"""
+Log: used to find power
+
+x^y = z is same as log z, base x = y
+How many times u have to divide z by x to get y
+2^5 = 32  ==>  5 = log 32, base 2
+How many times u have to divide 32 by 2 to get 5
+What power of 2 will give u 32
+"""
+
+"""
+Range:
+
+[a,b] = b-a+1 ==> num of values in range
+[2,5] = 5-2+1 ==> 4 ==> 2,3,4,5
+"""
+
+"""
+Arithmetic progression (AP): Have smae common diff btw 2 consecutive numbers in series. common diff is "d"
+
+2,5,8,11...
+Q: Find Sum of first N numbers of this AP series?
+
+Sum = N/2 [2a + (N-1)d]
+a = first value
+d = common diff btw 2 nums
+N = total nums
+"""
+
+"""
+Geometric progression (GP): common ratio. ar^1 / ar^0
+
+ar^0, ar^1, ar^2, ar^3...ar^N
+5, 10, 20, 40
+5*2^0, 5*2^1, 5*2^2, 5*2^3,..
+
+Sum = a[(r^N - 1) / (r - 1)]
+a = first value
+r = common ratio ==> ar^1 / ar^0
+N = total nums
+"""
+
+"""
+Time complexity: polynomial expression to calc time taken to excute N lines of code
+We dont calc TC in time because diff comps have diff capabilities. Same code executes in 3 sec in one n 10 sec in another
+
+In Big O Notation we ignore constant values, coefficients and other lower order polynomials
+
+O(N)
+O(log N base 2) -> when problem reduces 1/2 on every iteration
+O(N + M) -> when u have 2 diff iterations with diff lengths
+O(sqrt N)
+O(3 sqrt N)
+O(N^3)
+O(N^2)
+O(N * M)
+O(1) -- if regardless of input the code executes cpnstant number of times - best
+
+O(1) < O(log N) < O(sqrt N) < O(N) < O(N log N) < O(N^2) < O(2^N)
+
+K = log N base 2
+"""
+
+"""
+Space complexity:
+
+Approx space used in code
+O(N)
+"""
+
+"""
+Mutable in python means u can update the value in the same memory location
+"""
+
+
+"""
+List:
+
+extend - new list at the end
+append - append an element or a NEW LIST at the end
+"""
+
+
+"""
+Regex - check if patern exists in the string
+https://regex101.com/
+https://docs.python.org/3/howto/regex.html
+
+Test text: _________________________________________________________________
+abcdefghijklmnopqurtuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+1234567890
+
+abcdef
+
+.[{()\^$|?*+
+
+site.com
+
+321-555-4321
+123.555.1234
+123*555*1234
+
+Mr. Varma
+Mr Anant  
+Ms Nandini
+Mrs. Singh
+Mr. T
+
+____________________________________________________________________________
+
+Case sensitive
+^           pos at start of a string ^123
+$           pos at end of a string 123$
+.           matches every char except new line char
+\.          to match dot exactly escape dot
+site\.com   matches exactly site.com
+\d          matches all digits
+\D          matches all that are not digits except new line
+\w          matches all alphanumeric + underscore
+\W          matches all except alphanumeric & underscore including new line
+\s          matches all space and new line chars
+\S          matches all except space chars and new line
+\b          matches all at the borders - word boundaries. \bHa finds Ha at start of the word
+\B          matches all that are inbtw a word n not at the start of word
+$           matches all that are at the end of a word. me$ is at the end of word "name"
+[a-d]       matches all btw "a" to "d" - so a, b, c, d. ASCII values
+[ad]        matches all "a" or "d"
+[a]         match a specific char "a" in string
+[^a]        match all except char "a" in string. This only applies inside character class
+\d\d\d      matches all 3 digit groups of numbers
+\d\d\d.\d\d\d.\d\d\d\d            matches 321-555-4321 type of phone numbers
+\d\d\d[.-]\d\d\d[.-]\d\d\d\d      matches 321-555-4321 type of phone numbers with exactly .- as delimiters
+\d{3}[.-]\d{3}[.-]\d{4}           instead of above u can do this way. \d{4} match digit exactly 4 times
+a+  "a" occurs >= 1 
+a*  "a" occurs >= 0
+a?  "a" occurs 0 or 1 times
+
+____________________________________________________________________________
+
+
+\bM(rs|r|s)\.?\s[A-Z][a-z]*     matches all strings like below. keep in mind the order (rs|r|s) matters. "rs" comes first:
+\bM(rs|r|s)\.?\s[A-Z]\w*     
+Mr. Varma
+Mr Anant  
+Ms Nandini
+Mrs. Singh
+Mr. T 
+
+Check if full name has last name
+
+____________________________________________________________________________
+
+# Regular expressions - Regex
+import re
+
+def isValidEmail(s):
+    email_pattern = "^\w+([\.-]?\w+)*@\w+([|.-]?\w+)*(\.\w{2,3})+$"
+    res = re.search(email_pattern, s)
+    return s
+
+isValidEmail("abc@sca")
+"""
+
+"""
+\s ====> Space
+\S ====> Non Space
+\d ====> Digit
+\D ====> Non Digit
+\w ====> Word
+\W ====> Non Word
+\b ====> Word Boundary
+\B ====> Non Word Boundary
+"""
+
+"""
+A strong password must meet the following criteria:
+
+At least 8 characters long
+Contains at least one uppercase letter, one lowercase letter, one digit, and one special character from the set: !@#$%^&*()-_=+[]{}|;:'",.<>?/
+
+Correct Answer: ^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()-_=+[\]{}|;:'",.<>?/]).{8,}$
+
+Explanation:
+^: Asserts the start of the string.
+(?=.*[a-z]): Positive lookahead for at least one lowercase letter.
+(?=.*[A-Z]): Positive lookahead for at least one uppercase letter.
+(?=.*\d): Positive lookahead for at least one digit.
+(?=.*[!@#$%^&*()-_=+\[\]{}|;:'",.<>?/]): Positive lookahead for at least one special character from the specified set.
+.{8,}: Matches any character (except for a newline) at least 8 times.
+$: Asserts the end of the string.
+"""
+
+

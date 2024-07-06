@@ -124,3 +124,4 @@ if "dummydir2" in os.listdir("assets/"):
     os.rmdir("assets/dummydir2")
 else:
     print("file not found")
+

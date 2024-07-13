@@ -564,6 +564,9 @@ class A inherits class B, class C
 Private attribute
 
 self.__varName
+
+# its still not private - if u check dir(instance)
+_ClassName__varName = something
 """
 
 """
@@ -785,7 +788,7 @@ random.randint(0, 10) # 1
 random.randint(0, 10) # 5
 random.randint(0, 10) # 2
 
-Seed fixes time which means whatever ints u generted with that fixed seed they remain the same. The seed is like key.
+Seed fixes time which means whatever random.randint u generted with that fixed seed they remain the same. The seed is like key.
 """
 
 """

@@ -33,3 +33,14 @@ ___
 * Used Python and Pandas.
 * Exploratory Data Analysis of a Pizza Restaurant Sales with ~50K records.
 * [Project Link](https://github.com/Singularity-Coder/Instant-Python/tree/main/projects/kaggle_pizza_sales_eda)
+
+
+___
+
+
+### Web Scraping books.toscrape.com
+![alt text](https://github.com/Singularity-Coder/Instant-Python/blob/main/projects/web_scraping_books_toscrape_com/sc1.png)
+* Extracts 1000 dummy books from books.toscrape.com.
+* Extracts text and image data.
+* Saves the data in CSV, json and txt file formats.
+* [Project Link](https://github.com/Singularity-Coder/Instant-Python/tree/main/projects/web_scraping_books_toscrape_com)

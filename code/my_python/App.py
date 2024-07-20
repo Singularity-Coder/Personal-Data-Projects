@@ -530,12 +530,13 @@ Above A() object exists. Hence it evals to true.
 """
 
 """
-Under methods
+Dunder methods
 
 def __init__(self):
 def __str__(self): # print obj with custom text 
 def __add__(self, other): # add 2 obj      obj1 + obj2
 def __lt__(self, other): # less than <     obj1 < obj2
+def __eq__(self, other): # obj1 == obj2 
 
 
 class A:
@@ -690,6 +691,12 @@ l3 = dict(zip(l1, l2)) # if u get "TypeError: 'dict' object is not callable" the
 l4 = list(zip(l1, l2))
 
 
+l1 = [1, 2, 3]
+l2 = ["a", "b", "c"]
+l3 = [True, False, True]
+print(list(zip(l1, l2, l3))) # [(1, 'a', True), (2, 'b', False), (3, 'c', True)]
+print(dict(zip(l1, l2, l3))) # Error
+
 """
 
 """
@@ -727,6 +734,13 @@ positional -> *args —> keyworded —> **kwargs
 def random(x, y, z, *args, **kwargs):
 
 kwargs is a dict
+
+def randfunc(a, b, *args, c, d, **kwargs):
+    print(a, b, args, c, d, kwargs)
+
+randfunc(3, 4, 5, 6, c = 4, d = 99, name = "Hit", age = 200, gender = "male", prof = "Programmer")
+Output: 3 4 (5, 6) 4 99 {'name': 'Hit', 'age': 200, 'gender': 'male', 'prof': 'Programmer'}
+
 """
 
 """
@@ -789,6 +803,8 @@ random.randint(0, 10) # 5
 random.randint(0, 10) # 2
 
 Seed fixes time which means whatever random.randint u generted with that fixed seed they remain the same. The seed is like key.
+
+Its pseudo random because sequence is fixed
 """
 
 """
@@ -802,8 +818,6 @@ ceil() # directly use method instead of math.ceil
 Import alias: Useful when 2 libs have same method names
 import math as m
 m.log10(1000)
-
-Its pseudo random because sequence is fixed
 """
 
 """
@@ -968,11 +982,13 @@ append - append an element or a NEW LIST at the end
 
 
 """
+import re
+
 Regex - check if patern exists in the string
 https://regex101.com/
 https://docs.python.org/3/howto/regex.html
 
-Test text: _________________________________________________________________
+Test text for regex testing: _________________________________________________________________
 abcdefghijklmnopqurtuvwxyz
 ABCDEFGHIJKLMNOPQRSTUVWXYZ
 1234567890
@@ -1002,12 +1018,12 @@ $           pos at end of a string 123$
 \.          to match dot exactly escape dot
 site\.com   matches exactly site.com
 \d          matches all digits
-\D          matches all that are not digits except new line
-\w          matches all alphanumeric + underscore
-\W          matches all except alphanumeric & underscore including new line
+\D          matches all that are not digits and not new line
+\w          matches all alphanumeric + underscore [a-zA-Z0-9_]
+\W          matches all including new line but not alphanumeric not underscore [^a-zA-Z0-9_] 
 \s          matches all space and new line chars
 \S          matches all except space chars and new line
-\b          matches all at the borders - word boundaries. \bHa finds Ha at start of the word
+\b          matches all at the borders - word boundaries. \bHa finds Ha at start of the word at any point in the str
 \B          matches all that are inbtw a word n not at the start of word
 $           matches all that are at the end of a word. me$ is at the end of word "name"
 [a-d]       matches all btw "a" to "d" - so a, b, c, d. ASCII values
@@ -1075,6 +1091,67 @@ Explanation:
 (?=.*[!@#$%^&*()-_=+\[\]{}|;:'",.<>?/]): Positive lookahead for at least one special character from the specified set.
 .{8,}: Matches any character (except for a newline) at least 8 times.
 $: Asserts the end of the string.
+"""
+
+
+
+"""
+git init : convert folder to git repo
+git add . : Adds to staging
+git commit -m "" : creates a new save point which we can revert to
+git branch branchName : create new branch
+git checkout branchName : jump to new branch
+git switch branchName : jump to new branch
+git reset : jump to prev commit
+git stash : temporarily shelf changes in working branch
+git remote set-url origin "url" : connect local repo to remote
+git push -u origin branchName : u is upstream. Push changes to remote repo
+git pull origin : pull changes from remote repo 
+git merge branchName : merge current branch to main branch
+git merge feature main : creates a new main branch with merged code of curr branch
+git checkout feature (OR) git rebase main : make feature branch as main branch with both feature and main branch changes
+git clone "url" : create a copy of remote repo in local
+"""
+
+
+
+
+"""
+WEB SCRAPING
+
+Tags:-------------------
+<h1> heading
+<p> paragraph
+
+Attributes:-------------------
+class: Tags have attributes like class which r used to add styling etc. Multiple tags can have same class attribute.
+id: unique for every Tag
+
+Status codes:-------------------
+200 - OK
+404 - Not found - missing on server
+403 - Forbidden - client denied access
+500 - Internal server error
+302 - Found
+301 - Moved permanently - redirect
+
+Pull data from HTML or XML - use BeautifulSoup lib:-------------------
+import requests
+html = requests.get(url).content # html data
+from bs4 import BeautifulSoup as bs
+soup = bs(markup = html, parser = "html.parser")
+items = soup.find_all(name = Tag, class_ = "")
+for item in items:
+    relative_url = item.findChild("a").get("href")
+from urllib.parse import urljoin
+absolute_url = urljoin(base_url, relative_url) # get html from this
+soup.find(name = "h1").getText()
+
+Common methods:
+find(): This method is used to find the first tag that matches a given criteria. soup.find('div', class_='example')
+find_all(): Retrieves all tags that match the criteria.
+select(): This method allows you to use CSS selectors to find elements in the document. soup.select('.someclass or id') would find all elements with the class someclass.
+select_one(): Similar to select(), but instead of returning all matches, it only returns the first match.
 """
 
 

@@ -2,6 +2,11 @@
 /*
 https://www.w3schools.com/mysql/mysql_datatypes.asp
 */
+
+
+CREATE DATABASE db_random_people;
+
+DROP TABLE tbl_random_data;
 CREATE TABLE tbl_random_data(
 	id INT,
     phone CHAR(10),
@@ -14,6 +19,6 @@ CREATE TABLE tbl_random_data(
 );
 INSERT INTO tbl_random_data
 VALUES
-(1, '9583390201', 'Hithesh', 'I am that because I am this when I am that', 'M', 1, 8882.90, '1891-12-29');
+(3, '9583301955', 'Hithesh', 'I am that because I am this when I am that', 'M', 1, 8882.90, '1891-12-29');
 
 SELECT * FROM tbl_random_data;

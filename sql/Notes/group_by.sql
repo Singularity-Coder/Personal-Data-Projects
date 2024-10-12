@@ -10,9 +10,29 @@ AVG()
 
 */
 
+CREATE DATABASE db_random_people;
+USE db_random_people;
+SELECT * FROM tbl_people_1;
+# Multi col or multi dimension groupby - # The AGG_FUNC(colx) function aggregates the colx values for EACH UNIQUE COMBINATION of dim1, dim2, etc.
+# find out active sessions per name for each phone number
+# Q: This query will return both the total quantity sold and the average price per customer-product combination.
+# Q: If you want to group by CustomerID and ProductID to find out the total quantity sold per customer for each product
+SELECT
+	first_name,
+    phone,
+    COUNT(is_active) AS 'active_count'
+FROM
+	tbl_people_1
+GROUP BY
+	first_name,
+    phone
+HAVING
+	active_count > 1;
+
 # Import data sets - tbl_customer, tbl_customer_purchases, tbl_product
 CREATE DATABASE db_test;
 USE db_test;
+
 
 
 # The HAVING clause was added to SQL because the WHERE keyword cannot be used with aggregate functions but WHERE can be used on base table, not the grouped table

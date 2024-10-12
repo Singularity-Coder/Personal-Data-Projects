@@ -15,7 +15,7 @@
 # NULL is not a value. So u cannot compare it with anything
 
 /*
-Order of operations
+Order of execution
 
 1. FROM - find the table
 2. JOIN - merge tables if necessary
@@ -29,6 +29,39 @@ Order of operations
 8. ORDER BY - sort records based on any col(s)
 9. LIMIT - limit number of records to a fixed number
 */
+
+/*
+Order of execution Advanced
+
+1. FROM -> JOIN -> ON
+2. WHERE
+3. GROUP BY
+4. GROUP BY aggregations
+5. HAVING
+6. OVER() window func
+7. SELECT
+8. DISTINCT
+9. Set Ops - UNION/INTERSECT/EXCEPT
+10. ORDER BY
+11. OFFSET
+12. LIMIT
+
+
+1. FROM - the database gets the data from tables in FROM clause and if necessary performs the JOINs,
+2. WHERE - the data are filtered with conditions specified in the WHERE clause,
+● GROUP BY - the data are grouped by conditions specified in the WHERE clause,
+● Aggregate functions - the aggregate functions are applied to the groups created in the GROUP BY phase,
+● HAVING - the groups are filtered with the given condition,
+● Window functions,
+● SELECT - the database selects the given columns,
+● DISTINCT - repeated values are removed,
+● UNION/INTERSECT/EXCEPT - the database applies set operations,
+● ORDER BY - the results are sorted,
+● OFFSET - the first rows are skipped,
+● LIMIT/FETCH/TOP - only the first rows are selected
+*/
+
+# All Definitons have this structure - what is it, where its used, what does it do.
 
 
 
@@ -142,6 +175,7 @@ SELECT * FROM tbl_dum_dum_2;
 
 # Describe table structure
 DESC tbl_dum_dum_1;
+DESC tbl_customer;
 
 #-------------------------------------------------------------------------------------------------------------------------
 
@@ -156,11 +190,23 @@ FROM
 SELECT "Aha" LIKE "AHA"; # LIKE ignores case
 
 
+SELECT EXISTS(SELECT 1 FROM tbl_customer); # faster
 
 
+#-------------------------------------------------------------------------------------------------------------------------
+
+SELECT COUNT(*) FROM tbl_customer; # counts nulls as well
+SELECT COUNT(DISTINCT customer_zip) FROM tbl_customer; # counts ignoring dups
+SELECT COUNT(customer_zip) FROM tbl_customer; # ignores nulls while counting
+SELECT COUNT(1) FROM tbl_customer; # replaces all records with 1 including nulls n then counts
 
 
-
+/*
+Not clear:
+https://www.tutorialspoint.com/sql/sql-except-clause.htm
+https://www.geeksforgeeks.org/best-practices-for-sql-query-optimizations/ 
+Optimise on JOINS
+*/
 
 
 

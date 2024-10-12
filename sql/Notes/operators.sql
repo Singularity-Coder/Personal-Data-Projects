@@ -1,10 +1,10 @@
 /*
 Operators - https://www.w3schools.com/mysql/mysql_operators.asp
 
-AND - allows to combine conditions where record must match both conditions
-OR - allows to combine conditions where record can match either of the conditions
-NOT - negates a condition and fetches records that dont match the condition
-BETWEEN - fetches records that are between the range of values
+AND - allows to combine conditions where RECORD must match both conditions
+OR - allows to combine conditions where RECORD can match either of the conditions
+NOT - negates a condition and fetches RECORDS that dont match the condition
+BETWEEN - fetches RECORDS that are between the range of values
 ALL - the records in this table must match all records in a different result set / table
 ANY - any records in this table that can match any records in diff table 
 LIKE - matches a pattern
@@ -103,12 +103,32 @@ SELECT * FROM tbl_customer WHERE customer_id > ALL (SELECT customer_id FROM tbl_
 /*
 The EXISTS operator is used to test for the existence of any RECORD in a subquery.
 The EXISTS operator returns TRUE if the subquery returns one or more records.
+
+The SQL EXISTS operator is used to test for the existence of any rows in a subquery. 
+It returns TRUE if the subquery returns at least one row, and FALSE if the subquery returns no rows.
+Subquery Execution: The subquery runs for each row of the outer query.
+You get the result of outer query.
 */
 SELECT * FROM tbl_customer AS C WHERE 
 EXISTS (SELECT 1);
 
+# Ex: List all customers who have placed at least one order.
+SELECT * FROM tbl_customer_purchases;
 SELECT * FROM tbl_customer AS C WHERE 
-EXISTS (SELECT * FROM tbl_customer_purchases AS P WHERE P.customer_id = C.customer_id AND cost_to_customer_per_qty < 2);
+EXISTS (SELECT * FROM tbl_customer_purchases AS P WHERE P.customer_id = C.customer_id);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

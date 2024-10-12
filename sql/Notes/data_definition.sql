@@ -40,13 +40,14 @@ SET SESSION sql_mode='NO_AUTO_VALUE_ON_ZERO';
 OR
 UPDATE source_table SET status = 0;
 */
+# Format: Key, Type, Constraint
 CREATE TABLE peeps(
 	id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(20) NOT NULL,
     last_name VARCHAR(20) DEFAULT("NA"),
     age INT CHECK(age >= 18),
     gender ENUM('M', 'F'),
-    phone CHAR(10),
+    phone CHAR(10), # 10 is fixed memory here. So even if u give 2 chars it still allots for 10 chars while varchar can adjust memory allocation based on data. In CHAr the extra space is padded with spaces.
     email VARCHAR(20),
     dob DATE,
     address VARCHAR(100)
@@ -175,7 +176,7 @@ CREATE TABLE tbl_persons_1 (
     INDEX(age),
     -- PRIMARY KEY (id),
     CONSTRAINT UC_persons_1 UNIQUE (first_name, age), # UC is unique constraint. Naming a unique constraint and defining on multiple cols. (first_name + age) must be UNIQUE. So wither first_name or age can be unique in the combination.
-    CONSTRAINT PK_persons_1 PRIMARY KEY (id, first_name) # There is only ONE PRIMARY KEY (PK_persons_1). However, the VALUE of the primary key is made up of TWO COLUMNS (id + first_name).
+    CONSTRAINT PK_persons_1 PRIMARY KEY (id, first_name) # There is only ONE PRIMARY KEY (PK_persons_1). However, the VALUE of the primary key is made up of TWO COLUMNS (id + first_name). Composite key
 );
 -- INSERT INTO tbl_persons_1 
 -- VALUES
@@ -295,7 +296,7 @@ Partitioning
 CREATE TABLE tbl_sales (
    cust_id INT NOT NULL, 
    name VARCHAR(40), 
-   store_id VARCHAR(20) NOT NULL, 
+   store_id CHAR(20) NOT NULL, 
    bill_no INT NOT NULL,
    bill_date DATE PRIMARY KEY NOT NULL, 
    amount DECIMAL(8,2) NOT NULL

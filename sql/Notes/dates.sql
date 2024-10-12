@@ -35,6 +35,11 @@ SELECT DATE_SUB("2017-06-15", INTERVAL 10 DAY);
 SELECT DATEDIFF("2017-06-25", "2017-06-15"); # 10 (days)
 SELECT TIMEDIFF("2017-06-26 13:23:44", "2017-06-25 22:19:44"); # 15:04:00
 
+SELECT CAST("14:06:10" AS TIME); # 14:06:10
+SELECT CAST("2017/08/29" AS DATE); # 2017-08-29
+SELECT CAST('2008-11-11 13:23:44' AS DATE); # Directly get date from date time
+SELECT CAST('2008-11-11 13:23:44' AS TIME); # Directly get time from date time
+
 /*
 %d %H are format specifiers. Below are the only accepted specifiers. Else NULL or 0
 

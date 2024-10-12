@@ -75,7 +75,7 @@ DELETE FROM tbl_people_1 WHERE phone = "9999999999";
 # The LIMIT clause is useful on large tables with thousands of records. Returning a large number of records can impact performance.
 SELECT * FROM tbl_people_1 LIMIT 1; 
 
-# get 4 to 6 records. The SQL query below says "return only 3 records, start on record 4 (OFFSET 3)":
+# get 4 to 6 records. The SQL query below says "return only 3 records, start on record 4 (OFFSET 3 means omit first 3 records)":
 SELECT * FROM tbl_people_1 LIMIT 3 OFFSET 3;
 
 
@@ -99,6 +99,8 @@ FROM
 	tbl_people_1
 GROUP BY
 	is_active; # 3d output - n rows, n cols
+
+
 
 # COUNT() - The COUNT() function returns the number of rows that matches a specified criterion.
 # AVG() - The AVG() function returns the average value of a numeric column. 

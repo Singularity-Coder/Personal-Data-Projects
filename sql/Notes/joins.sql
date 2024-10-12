@@ -49,6 +49,7 @@ VALUES
 (35, "Kitesh", 50), 
 (36, "Litesh", 70);
 
+SELECT * FROM tbl_joins_1;
 
 
 # INNER JOIN - records from both tables that strictly satisfy the condition

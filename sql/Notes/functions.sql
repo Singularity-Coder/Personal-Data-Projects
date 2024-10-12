@@ -7,8 +7,18 @@ FIRST()
 LAST()
 */
 
+USE db_test;
+
+
+/*
+SQL Expressions - combo of stuff that return a value
+1. Numeric
+2. Boolean
+3. Date Time
+*/
+
 # String func
-SELECT CONCAT('Hitheh', ' ', 'Vadar');
+SELECT CONCAT('Hitheh', ' ', 'Vadar'); # Hitheh Vadar
 SELECT CONCAT("Hello", NULL); # NULL
 SELECT INSERT('Hih', 3, 1, 'thesh'); # 3 is the position to insert "thesh", 1 is the chars to replace after 3rd pos
 SELECT LENGTH('Hithesh');
@@ -43,6 +53,7 @@ SELECT MIN(quantity) FROM tbl_customer_purchases;
 SELECT ABS(-34);
 SELECT CEIL(2.1);
 SELECT 8.2 DIV 2.0; # returns 4. Does int div
+SELECT 8.2 / 2.0; # returns 4.10000
 SELECT FLOOR(2.9);
 SELECT POW(3, 2); # 3 ^ 2 = 9
 SELECT FLOOR(RAND()*(10-5+1)+5); # random number >= 5 and <=10. returns random decimal num without seed.
@@ -69,6 +80,9 @@ SELECT CAST(150 AS CHAR);
 SELECT CAST("14:06:10" AS TIME);
 SELECT CAST("2017/08/29" AS DATE);
 SELECT ISNULL(NULL); # retruns 1 which is true. 0 is false.
+SELECT ISNULL(0); # returns 0 or false
+SELECT ISNULL(1); # returns 0 or false
+SELECT ISNULL(""); # returns 0 or false
 SELECT 
 	CASE 
     WHEN 3 < 4 THEN "3 is small"

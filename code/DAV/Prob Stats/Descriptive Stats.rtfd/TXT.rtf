@@ -1,0 +1,134 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fswiss\fcharset0 Helvetica-Bold;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28300\viewh15520\viewkind0
+\deftab560
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf0 Descriptive Stats\
+
+\fs26 \
+1. Descriptive vs Inferential stats\
+2. Measures of central tendency\
+3. Measures of variability\
+4. Weighted average\
+5. IQR\
+6. Random variables\
+\
+\
+Descriptive stats - summarises the data - capture hidden pattern using stat tools like mean median.\
+\
+Inferential stats - generalise abt a larger group based on a small sample size - like calc avg height of men in a city using a small sample from that city.\
+\
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 ________________________________________________________________________________________________________________________________________________\
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 Measures of central tendency\
+1. Mean -  avg = sum of terms / no of terms. - it is sensitive to outliers - used for numerical data\
+2. Median - sort ascending - take middle value if odd - if even take mid 2 values n avg them - better for outliers - used for numerical data\
+3, Mode - most frequently occurring element - it can be 0, 1 or many modes - if there r 2 modes then its called bimodal, multimodal - if all unique then it can be 0 or all are modes - irrelevant - used for categorical data - frequently purchased item\
+\
+________________________________________________________________________________________________________________________________________________\
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 Weighted average\
+GPA = sum(grade * weight) / sum of weights\
+A survey of number of pets in a town saw that - 30% people had 0 pets, 40% had 1 pet, 10% had 2 pets, 20% had 3 pets. What is the average number of pets per person?\
+0(30) + 1(40) + 2(10) + 3(20) / 30+40+10+20 = 120/100 = 1.2\
+It cannot be avg num of pets.\
+Avg runs of a player - it is implied its per match = on an avg a player score x runs per match = u get per match by dividing total number of matches\
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 ________________________________________________________________________________________________________________________________________________\
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+Measures of variability\
+1. Range = max - min (sensitive to outliers)\
+2. IQR - inter quartile range - can handle outliers\
+IQR  = Q3-Q1\
+Left whisker value = Q1 - 1.5 (IQR)\
+\pard\pardeftab560\partightenfactor0
+\cf0 Right whisker value = Q3 + 1.5 (IQR)\
+Any value beyond left n right whisker ranges is considered an outlier \
+Here 1.5 is a random value stat guys decided\
+\pard\pardeftab560\partightenfactor0
+\cf0 99% percentile mean top 1%\
+Quartile: q1 is 25th percentile, q2 is 50 percentile which is median, q3 is 75 percentile, min is 0, max Is 100\
+Box plot is split into 4 regions with 3 quartiles - outliers fall beyond these 4 regions, beyond min max\
+So if 25th percentile value is 8, it means 25% of data is lying below value 8\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\b0\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-01-05 at 13.37.22.png \width22480 \height6240 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}
+\f0\b\fs26 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 ________________________________________________________________________________________________________________________________________________\
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\
+Variance vs Std Deviation\
+Variance is spread of the data - how do we quantify this is through variance n std deviation - how farther away the data points are from mean from the mean is variance.\
+Error is less if it\'92s closer to mean. If u minimize the error then variance is decreasing. If the spread is decreasing then variance is decreasing.\
+If a data point is away from the mean, the farther it is the greater the error .\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\b0\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-01-05 at 14.19.08.png \width10440 \height5520 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs26 \cf0 \
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+NOT CLEAR - watch at 1 hr 50 min mark \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 Height guessing game\
+Mean Sq Error\
+(Error1)^2 = (Guessed Height - Avg Height)^2 = (68-66)^2 = 4\
+Variance = ( (Error1)^2 + (Error2)^2 + (Error3)^2 + (Error4)^2 + \'85 + (ErrorN)^2 ) / 10 \
+We square it just to nullify negative effect. U can do modulus as well.
+\f0\fs26 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\b0\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-01-05 at 13.58.52.png \width21680 \height6080 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs26 \cf0 \
+\
+Std deviation = sqrt of variance\
+Use std dev instead of variance as units will be squared in variance for explaining stuff\
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 df.describe() gives u this descriptive stats\
+col.value_counts() \
+sns.histplot(col)\
+col.mean()\
+\
+Check consistency of batsman using IQR - NOT CLEAR - watch at 1 hr 50 min mark \
+If u have less outliers u r more consistent - how do u decide what is an outlier? Variance n std deviation - practice with numpy\
+If a player has higher std deviation then his performance is fluctuating more. Less consistent player. Less predictable.\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

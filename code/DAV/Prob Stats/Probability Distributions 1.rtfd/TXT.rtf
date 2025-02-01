@@ -1,0 +1,417 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 STIXGeneral-Regular;
+\f3\fnil\fcharset0 HelveticaNeue;\f4\fswiss\fcharset0 Arial-BoldMT;\f5\fswiss\fcharset0 ArialMT;
+\f6\froman\fcharset0 Times-Roman;\f7\fmodern\fcharset0 Courier;\f8\froman\fcharset0 Times-Bold;
+\f9\fnil\fcharset0 STIXTwoMath-Regular;}
+{\colortbl;\red255\green255\blue255;\red24\green24\blue24;\red255\green255\blue255;\red107\green0\blue109;
+\red0\green0\blue0;\red64\green64\blue64;\red157\green0\blue210;\red245\green245\blue245;\red19\green85\blue52;
+\red79\green95\blue123;}
+{\*\expandedcolortbl;;\cssrgb\c12157\c12157\c12157;\cssrgb\c100000\c100000\c100000;\cssrgb\c50196\c0\c50196;
+\cssrgb\c0\c0\c0;\cssrgb\c31765\c31765\c31765;\cssrgb\c68627\c0\c85882;\cssrgb\c96863\c96863\c96863;\cssrgb\c6667\c40000\c26667;
+\cssrgb\c38039\c45098\c55686;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20240\viewh16080\viewkind0
+\deftab560
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf0 Probability Distributions 1\
+
+\fs26 \
+1. Random Variables\
+2. Distribution functions\
+3. Empirical vs Theoretical Prob\
+4. Binomial distribution\
+5. Bernouli distribution\
+\
+____________________________________________________________________________\
+\
+Random Variables\
+1. Discrete RV = possible outcomes r countable - mathematically we can list values the random var contains - coin toss - RV x represents outcome of coin toss - H or T - we can assign nums to these outcomes - x =1 reps heads, x =0 reps tail where x is RV. The idea is to assign a particular numerical value \
+2. Continuous RV = Not countable like height of person = so 2.2 to 3.4 u have infinite values\
+\
+\
+[2.2, 3.4] = square brackets means extremes r inclusive so 2.2 to 3.4 both inclusive\
+(2.2, 3.4) this does not include \
+\
+____________________________________________________________________________\
+ \
+Distribution function - CDF is not clear\
+\
+Distribution can be captured with the help of random variables.\
+\
+Statistical analysis we do r the essential process of data science. It helps  us to understand n make some predictions on actual data. When distribution data is given we can use PMF, PDF, CDF, PPF are distribution functions. These help us do some stat analysis when distribution is given.\
+\
+____________________________________________________________________________\
+\
+PDF = prob density func = continuous data. \
+PDF does not provide the probability of a specific value but gives the probability of the random variable falling within a certain interval. Ex: 
+\f1\b0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+"What are the chances that the next height chosen will fall between 62 and 65 inches?"
+\f0\b\fs26 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\
+____________________________________________________________________________\
+\
+\
+PMF = prob mass func = for discrete data = allows us to quantify prob for each unique score = P(H) is what is the prob of head, P(x = H) = prob of random var x that can only take head = PMF tells u how likely each score might occur = PDF will help us understand how values r distributed within a range. Within a bin size. What is the prob of a RV taking a value in a particular range.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+if we have a discrete random variable\'a0
+\f2\i\fs39 \uc0\u55349 \u56395 
+\f1\i0\fs32 \'a0representing the outcome of rolling a fair six-sided die, the PMF might look like\
+P(X = 1) = 1/6, P(X = 2) = 1/6, \'85
+\f0\b\fs26 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic download (4).png \width4800 \height3264 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\
+____________________________________________________________________________\
+\
+CDF = cumulative distribution function = both discrete n continuous = CDF accumulates all ur PMF & PDF = number of heads in a 10 trial coin flip experiment. What is the prob the num of heads is <= 7. For discrete CDF tries to capture the essence of summation. For continuous its integration. Use CDF if u want aggression, summation, integration. Ex: Find the prob for height < 75 inches. P(H <= 75), H = [65, 85]\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+describes the\'a0\cf4 probability that a random variable takes on a value less than or equal to a given value\cf2 .
+\f0\b\fs26 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-01-08 at 08.42.03.png \width12000 \height6440 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\
+CDF Discrete\
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-01-08 at 08.44.41.png \width7280 \height12000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\
+CDF continuous\
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-01-08 at 08.44.32.png \width9060 \height12000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+____________________________________________________________________________\
+\
+Empirical vs Theoretical Prob\
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-01-08 at 08.48.13.png \width12000 \height8200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab560\partightenfactor0
+
+\f3\b0 \cf0 Pre trial prob of H & T is 0.5 always for any sample size. Post trial for small sample size u might get 7 H & 3 T so prob can be 7/10 = 0.7 for sample size of 10 trials. But if u take sufficiently large sample size prob comes closer to 0.5 n matches theoretical prob.\
+\
+Bernoulli is a special case in Binomial distribution\
+\
+____________________________________________________________\
+\
+
+\fs72 WATCH AGAIN - 1 hr 8 mins
+\fs26 \
+\
+Qs: Casino case study - Get qs at 1 hr 8 mins\
+\
+Stake\
+U win 150 Rs\
+U lose 10 rs\
+\
+Should u be playing this game?\
+\
+Winning prob P(X = 4)\
+Losing prob 1 - P(X = 4)\
+\
+Binary outcome based event. U either win or lose\
+\
+\
+Bernoulli Trial - In the context of this game when u r drawing balls from this bag a Bernoulli trials refers to a single experiment. Success or failure. For every single ball drawn if its red its success, else failure. Not the overall success but we decide based on the sub-experminet success n the collective success results is the overall success of the experiment. Small game success within the big game success.\
+\
+You use binomial distribution to model the problem\
+\
+Multiple Bernoulli trials. Independent trials. If ur denominator keeps decreasing ur probability score will also get updated if it is dependent event.\
+\
+1. Binary outcomes\
+2. Independent trials\
+3. Fixed # of. Trials\
+4. Const prob for success
+\f0\b \
+\pard\pardeftab560\qc\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+n C k combination of n trials taken k at a time\
+\
+4 C 4 is success & all others is failure \
+\
+0! = 1\
+\
+Do weighted avg at the end.\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs40 \AppleTypeServices\AppleTypeServicesF65539 \cf0 \cb3 \expnd0\expndtw0\kerning0
+Suppose that we float 10 quizzes, with 4 options each.\cb1 \
+\cb3 Only 1 option is correct, and we are guessing the answers.\'a0What is the probability that we will get at least 4 answers correct?\
+0.2241 = 22% chance that u will get at least 4 correct answers\
+\
+\
+Suppose that we float 10 quizzes, with 4 options each.\cb1 \
+\cb3 Only 1 option is correct.\'a0What is the probability that we will get exactly 2 answers correct?
+\f0\fs26 \AppleTypeServices \cb1 \kerning1\expnd0\expndtw0  \
+0.281 = 28% chance that u will get exactly 2 correct answers\
+\pard\pardeftab720\partightenfactor0
+
+\f5\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf6 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs26 \AppleTypeServices \cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\partightenfactor0
+
+\f3\b0 \cf0 ____________________________________________________________\
+\
+
+\f0\b\fs48 Binomial Distrubution \
+\
+\pard\pardeftab560\partightenfactor0
+
+\f3\b0\fs26 \cf0 {{\NeXTGraphic Screenshot 2025-01-26 at 00.06.34.png \width12000 \height6680 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab560\partightenfactor0
+
+\f0\b \cf0 {{\NeXTGraphic Screenshot 2025-01-25 at 23.56.25.png \width12000 \height7220 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+
+\f3\b0 \cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-01-26 at 00.06.50.png \width16000 \height16780 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f6\fs24 \cf0 \expnd0\expndtw0\kerning0
+The binomial distribution is a discrete probability distribution.\
+The formula for the binomial distribution involves the binomial coefficient, the probability of success, and the probability of failure.
+\f0\b\fs26 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 The binomial distribution is a probability distribution that models the number of successes in a fixed number of independent Bernoulli trials (experiments with two possible outcomes: success or failure). \
+\
+\
+Use cases:\
+- Quality control\
+- Medical testing\
+- Survey sampling\
+- Analyzing rare events\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f7\b0\fs28 \cf7 \cb8 \expnd0\expndtw0\kerning0
+from\cf0  scipy.stats \cf7 import\cf0  binom\cb1 \
+\cb8 prob_0_red = binom.pmf(n=\cf9 4\cf0 ,p=\cf9 3\cf0 /\cf9 5\cf0 ,k=\cf9 0\cf0 )\cb1 \
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs26 \cf0 \kerning1\expnd0\expndtw0 \
+\
+\pard\pardeftab560\partightenfactor0
+
+\f3\b0 \cf0 ____________________________________________________________\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f5\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf10 \cb3 \expnd0\expndtw0\kerning0
+In a factory, the probability of producing a defective bulb is\'a0
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 0.25
+\f5\b0 \AppleTypeServices\AppleTypeServicesF65539 . A sample of\'a0
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 40
+\f5\b0 \AppleTypeServices\AppleTypeServicesF65539 \'a0bulbs is collected.\
+What is the probability that\'a0
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 exactly 10
+\f5\b0 \AppleTypeServices\AppleTypeServicesF65539 \'a0bulbs are defective?\
+\cf6 This problem involves the probability of obtaining a certain number of successes (defective bulbs in this case) in a fixed number of independent trials (the sample of 40 bulbs)
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f5\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf6 \expnd0\expndtw0\kerning0
+Given,\uc0\u8232 n=40\u8232 k=10\u8232 p=0.25\u8232 q=1-p=0.75\u8232 \u8232 Using Binomial Distribution expression :\'a0
+\f4\b\fs24 \AppleTypeServices\AppleTypeServicesF65539 n
+\fs32 \AppleTypeServices\AppleTypeServicesF65539 C
+\fs24 \AppleTypeServices\AppleTypeServicesF65539 k
+\fs32 \AppleTypeServices\AppleTypeServicesF65539 (p
+\fs24 \AppleTypeServices\AppleTypeServicesF65539 k
+\fs32 \AppleTypeServices\AppleTypeServicesF65539 )(1-p)
+\fs24 \AppleTypeServices\AppleTypeServicesF65539 (n-k)
+\f5\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \uc0\u8232 exactly_10 =\'a0
+\fs24 \AppleTypeServices\AppleTypeServicesF65539 40
+\fs32 \AppleTypeServices\AppleTypeServicesF65539 C
+\fs24 \AppleTypeServices\AppleTypeServicesF65539 10
+\fs32 \AppleTypeServices\AppleTypeServicesF65539 \'a0x (0.25)
+\fs24 \AppleTypeServices\AppleTypeServicesF65539 10
+\fs32 \AppleTypeServices\AppleTypeServicesF65539 \'a0x (0.75)
+\fs24 \AppleTypeServices\AppleTypeServicesF65539 30
+\fs32 \AppleTypeServices\AppleTypeServicesF65539 \
+We can evaluate this using the following Python code:\
+
+\f7 \AppleTypeServices import scipy.stats as stats\
+\
+from scipy.stats import binom\
+n=40 # Sample size\
+\
+p=0.25 # probability of producing a defective bulb\
+\
+k=10 # exactly 10\
+\
+binomial = binom.pmf(k,n,p)\
+\
+print('The probability that exactly 10 bulbs are defective is %1.4f' %binomial)\
+
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 Output:
+\f5\b0 \AppleTypeServices\AppleTypeServicesF65539 \uc0\u8232 \u8232 The probability that exactly 10 bulbs are defective is\'a0
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 0.1444
+\f5\b0 \AppleTypeServices\AppleTypeServicesF65539 .
+\f0\b\fs26 \AppleTypeServices \cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+
+\f3\b0 \cf0 ____________________________________________________________\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f5\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf10 \cb3 \expnd0\expndtw0\kerning0
+The probability of a person\'a0
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 not boarding
+\f5\b0 \AppleTypeServices\AppleTypeServicesF65539 \'a0a cab despite having paid for the seat is\'a0
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 0.4
+\f5\b0 \AppleTypeServices\AppleTypeServicesF65539 . A rideshare app always sells\'a0
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 6 seats
+\f5\b0 \AppleTypeServices\AppleTypeServicesF65539 \'a0in their cabs which can only accommodate\'a0
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 4 people
+\f5\b0 \AppleTypeServices\AppleTypeServicesF65539 .\
+What is the probability that everyone who shows up for the ride\'a0
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 gets a seat
+\f5\b0 \AppleTypeServices\AppleTypeServicesF65539 ?\
+\pard\pardeftab560\partightenfactor0
+
+\f3\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-01-26 at 00.28.50.png \width18000 \height15880 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+
+\f0\b \cf0 {{\NeXTGraphic Screenshot 2025-01-26 at 00.29.43.png \width18000 \height18180 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f8\fs28 \cf0 \expnd0\expndtw0\kerning0
+Approximation (Optional):\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f6\b0\fs24 \cf0 If exact calculation is tedious, you can use statistical software, calculators, or an approximation like the 
+\f8\b normal distribution
+\f6\b0  to simplify the computation for large
+\f9  n.
+\f6 \
+\pard\pardeftab560\partightenfactor0
+
+\f3\fs26 \cf0 \kerning1\expnd0\expndtw0 ____________________________________________________________
+\f0\b \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f5\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf10 \cb3 \expnd0\expndtw0\kerning0
+A large-scale survey by government automation authority found that 12% of the cars have faulty brake lights. Find the probability that in a random sample of 10 cars, less than 4 cars have faulty brake lights ?
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-01-26 at 00.43.00.png \width18000 \height6460 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\
+You can either use cdf or for iterate pmf with the exact number of successes necessary.\
+\
+
+\f3\b0 ____________________________________________________________
+\f0\b \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f5\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf10 \cb3 \expnd0\expndtw0\kerning0
+A basketball player takes\'a0
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 5
+\f5\b0 \AppleTypeServices\AppleTypeServicesF65539 \'a0independent free throws with a probability of\'a0
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 0.6
+\f5\b0 \AppleTypeServices\AppleTypeServicesF65539 \'a0for getting a basket on each shot.\
+Find the probability that he gets\'a0
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 exactly 3
+\f5\b0 \AppleTypeServices\AppleTypeServicesF65539 \'a0baskets.\
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+
+\f5\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf6 \cb3 \expnd0\expndtw0\kerning0
+The question follows Binomial distribution with 2 possible outcomes i.e. getting a basket or not getting a basket,
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+
+\f3\b0 \cf0 ____________________________________________________________
+\f0\b \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f5\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf10 \cb3 \expnd0\expndtw0\kerning0
+A\'a0
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 fair
+\f5\b0 \AppleTypeServices\AppleTypeServicesF65539 \'a0coin is flipped\'a0
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 4 times
+\f5\b0 \AppleTypeServices\AppleTypeServicesF65539 . What is the probability of landing\'a0
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 3 or less than 3 heads
+\f5\b0 \AppleTypeServices\AppleTypeServicesF65539 ?
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-01-26 at 00.53.11.png \width18000 \height13500 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

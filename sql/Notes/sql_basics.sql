@@ -63,6 +63,26 @@ Order of execution Advanced
 
 # All Definitons have this structure - what is it, where its used, what does it do.
 
+/*
+Primary Key: Unique and Non Null
+Foreign Key: Not unique and nullable
+Candidate Key: Potential PK. Multiple columns have the potential to be a PK provided they satisfy unique and non null conditons.
+Composite Key: Combine multiple columns to create a PK.
+*/
+
+
+/*
+DBMS types
+Relational
+NoSQL
+Object oriented
+
+BigQuery is not DBMS. Its data warehouse. Diff is not clear.
+*/
+
+/*
+In MySQL u can do aggreation without GROUP BY by just using aggreate funcs. But if u introduce a col without agg func u need group by
+*/
 
 
 # Import data sets - tbl_customer, tbl_customer_purchases, tbl_product

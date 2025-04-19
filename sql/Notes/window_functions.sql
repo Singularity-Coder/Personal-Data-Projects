@@ -23,6 +23,7 @@ FROM
 
 # Analytical Ranking Window Functions
 # DENSE_RANK, RANK, ROW_NUMBER, NTILE, CUME_DIST
+# To operate on a fixed set of rows based on the value of the column use PARTITION BY to apply the window func on those rows only - check https://datalemur.com/questions/rolling-average-tweets
 
 # DENSE_RANK
 SELECT 

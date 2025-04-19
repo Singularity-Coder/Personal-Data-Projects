@@ -1,0 +1,167 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fswiss\fcharset0 Helvetica;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww7780\viewh15520\viewkind0
+\deftab560
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf0 CLT & Confidence Interval\
+
+\fs26 \
+Agenda\
+1. CLT - Central limit theorem\
+2. Confidence Interval\
+	a. Using CLT\
+	b. using Bootstrapping (with replacement)\
+\
+In real world scenarios we see Gaussian dist naturally.\
+CLT says it does not matter whether original dist is Gaussian or not but if u start taking out samples from this dist & u take a metric like mean for each of the sample & then u plot individual points of mean u will end up getting a dist similar to a Gaussian dist.\
+\
+Generally sample size should be >=30. It is something stats guys decided after lot of experiments. >=30 is a good num which represents the population nicely. It\'92s not 30% & is not 30/100. Sample size \'93n\'94 should be >=30. n>=30 will determine if its sufficiently large.\
+\
+Sampling dist or sample mean dist will follow Gaussian dist. CLT says that as sample size inccrease n>=30 the sampling dist will approximate a normal Gaussian dist or bell curve regardless of how population dist looked like. This is generally only true if n>=30. Simply increasing the num of sample without increasing the sample size maynot lead to Gaussian unless n>=30 or the underlying population dist is already a normal dist.\
+\
+CLT also applies for sum of the samples done on large iterations. if u plot the sum or avg it will also follow Gaussian dist.\
+\
+{{\NeXTGraphic Screenshot 2025-02-05 at 09.10.38.png \width14760 \height9840 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+Above shows what ever the pop dist if sample size is 2 then the dist need not be gaussian but if u take size 30 then it will be gaussian.\
+\
+Stat guys like to work with Gausian dist as it\'92s easy. So they transform non gaussian dist to gaussian using some techinques like Box cos, log normal. Non normal data would rely on median or percentile which is tricky to work with. They behave unexpectedly. Less established theory unlike Guassian which has PDF, PPF, PMF, CDF. But will it not change the nature of the data?\
+\
+Conditions of CLT:\
+1. Randomisation: data should be randomly sampeld.\
+2. Independence: each value should be independent\
+3. large smaple conditon: n >= 30\
+\
+above 3 can be abbreviated as IID - indpeendnet & idnetically dis\
+\
+
+\fs72 At 50 min mark check numpy code\
+
+\fs26 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 import numpy as np\
+import pandas as pd\
+import seaborn as Sns\
+import matplotlib.pyplot as plt\
+from scipy.stats import norm
+\f0\fs26 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+df = pd.read_csv(\'93data.csv\'94)\
+df.head()\
+df_height = df[\'93Height\'94]\
+sns.histplot(df_height)\
+\
+# pop avg\
+mu = df_height.mean()\
+\
+# std dev - step size or z score or how far away from the mean\
+sigma = df_height.std()\
+\
+# 5 random samples - not ideal & should be >=30\
+df_height.sample(5)\
+\
+# mean of 5 random samples\
+np.mean(df_height.sample(5))\
+\
+# mean of 5 random samples done 10k times\
+sample_5 = [np.mean(df_height.sample(5)) for i in range(10_000)]\
+\
+sns.histplot(sample_5, ked=True)\
+\
+\
+
+\fs72 1 hr 3 mins question
+\fs26 \
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-02-05 at 11.21.44.png \width18000 \height9360 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+Standard error is std dev of sample mean\
+\
+____________________________________________________________________________________________________________________\
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 Q: 
+\f2\b0\fs24 In an e-commerce website, the average purchase amount per customer is $80 with a standard deviation of $15. If we randomly select a sample of 50 customers, what is the probability that the average purchase amount in the sample will be less than $75?\
+\
+FInd area under the curve for values < 75. for <= cdf is the tool
+\f0\b\fs26 \
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-02-07 at 08.52.16.png \width8000 \height6360 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-02-07 at 08.47.59.png \width9160 \height9760 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 ____________________________________________________________________________________________________________________\
+\
+\
+
+\fs48 Confidence Interval (CI)
+\fs26 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+When u take the avg of a sample from a population there is no gaurentee that the sample avg will be same as pop avg. To capture that uncertainity we will say the pop avg lies in a certain range.\
+\
+Range of the sample +- some error\
+We can claim with some level of certainity the pop mean will also lie in that range. That is CI. CI gives estimation on capturing pop parameters with certain amt of confidence.\
+\
+CI estimates the range in which we can expect our pop param mean to lie based on our sample mean.\
+\
+ex of 95% confidence: 95% of the time the estimate will fall btw lower & upper values. 95% confidence means 5% error margin.\
+\
+1. Calc CI using CLT\
+CI falls btw 2 z scores.\
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-02-07 at 09.08.43.png \width6520 \height7240 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+New question at 1 hr 35 min\
+\pard\pardeftab560\partightenfactor0
+\cf0 New question at 1 hr 44 min\
+New question at 1 hr 46 min\
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+True mean means population mean.\
+\
+2. Calc CI using Bootstrapping (with replacement)\
+- The problem with CLT method is that it\'92s great for mean and sum but not for percentiles, median, mode.\
+- Bootstrapping does not require any assumption abt the dist of data. That makes it suitable for even skewed dist where the median might be more appropriate measure for the central tendency of the data than mean. Median is also less sensitive to outliers than mean. So bootstrapping can provide a reliable estimate of the median\'92s variability & CI. \
+- Bootstrapping can be applied to small sample sizes. There is also no constraint of n>=30 & also it doesnt require that the underlying dist be a guassian.\
+- Parametric assumes the dist of data, non-parametric does not make any assumption abt the dist of original data. Bootstrapping is non-parametric. CLT is parametric.\
+\
+\
+np.median([1, 2, 3, \'85])\
+\
+
+\fs72 NOT CLEAR
+\fs26 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

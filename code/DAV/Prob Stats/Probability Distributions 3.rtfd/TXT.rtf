@@ -1,0 +1,443 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fswiss\fcharset0 Arial-BoldMT;\f2\fswiss\fcharset0 ArialMT;
+\f3\fswiss\fcharset0 Arial-ItalicMT;\f4\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red255\green255\blue255;\red0\green0\blue0;\red79\green95\blue123;
+\red14\green18\blue30;\red247\green249\blue250;\red247\green242\blue255;\red64\green64\blue64;\red64\green64\blue64;
+}
+{\*\expandedcolortbl;;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0;\cssrgb\c38039\c45098\c55686;
+\cssrgb\c6275\c9412\c15686;\cssrgb\c97647\c98039\c98431;\cssrgb\c97647\c96078\c100000;\cssrgb\c31765\c31765\c31765;\cssrgb\c31765\c31765\c31765;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww18920\viewh15520\viewkind0
+\deftab560
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf0 Probability Distributions 3\
+
+\fs26 \
+Agenda\
+1. Gaussian Distribution - normal\
+2. Empirical Rule (68 / 95 / 99.7) rule\
+3. Z score\
+4. PPF - percent point function - calcs percentile\
+5. Std normal dist\
+6. Standardisation - scaling method\
+\
+If u want to do some math computation w.r.t dist given to u. If it\'92s discrete then  we use PMF - prob of random var x picking up exactly a single value. PDF - continuous value, prob of random var picking up a single point is 1/infinity which is 0. PDF every single point will have certain value in PDF. CDF looks at area under curve.\
+\
+__________________________________________________________________________________________\
+\
+\pard\pardeftab560\partightenfactor0
+
+\fs48 \cf0 Gaussian Distribution or normal dist\
+\pard\pardeftab560\partightenfactor0
+
+\fs26 \cf0 \
+height of people is continuous as u have 5 ft, 5.1111 ft etc. Btw 5 & 5.1 u have an infinity. Find pattern in these heights. Create bins. 5 to 5.2, 5.2 to 5.4 etc. Histogram.\
+\
+To create Gaussian distribution out of histogram u need Mean (Mu) & std dev (sigma). Mean or avg tells u the central tendency or value where most of the data points would lie. Std deviation tells us how spread the data points are around the mean. How far they are away from the mean. 1 std dev, 2 std dev away from mean.\
+\
+Out of histogram plot gaussian / normal curve. When u do it smoothens the curve in KDE plot. This happens due to the square term in the formula. In the histogram when u increase the num of samples, more num of values occur in every bin. Tha is why it smoothens the curve.  KDE is smoothened histogram plot. It\'92s also called Bell or symmetric curve.\
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-02-01 at 13.31.47.png \width14000 \height11060 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\
+__________________________________________________________________________________________\
+\
+\pard\pardeftab560\partightenfactor0
+
+\fs48 \cf0 Emperical Rule
+\fs26 \
+\
+(68 / 95 / 99.7) rule. how many data points lie within the 68th percentile of the Gaussian dist.\
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-02-01 at 13.33.27.png \width14000 \height9380 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\
+In the graph above, 65 is the mean which is the middle point. Std dev is 2.5. From mean 2.5 units to the left and right are plotted. [Mu +- Sigma] = 68% means within that range of 2 std dev 68% of data points exist.\
+\
+[Mu +- Sigma] = 68%\
+ [Mu +- 2 Sigma] = 95% = [65 +- 2 * 2.5]\
+ [Mu +- 3 Sigma] = 99% = [65 +- 3 * 2.5]\
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-02-01 at 13.40.48.png \width12000 \height5980 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\
+% of data lying within thsese ranges: ex: -1sd to 1sd. This is used for determining the confidence of a hypothesis.\
+\
+Ignore the derivatiion of why it is 68, 95, 99\
+\
+Generally if graph is not bell shape we can say it\'92s not gaussian. But we use the  68, 95, 99 % data points to determine it.\
+\
+QQ Plot checks for all 100 percentiels while Gaussian checks only for above 3. We should check for all percentiels.\
+\
+_________\
+\
+Q: 
+\f1 \AppleTypeServices\AppleTypeServicesF65539 \cb2 \expnd0\expndtw0\kerning0
+The height of people is Gaussian with mean 65 inches and standard deviation 2.5 inches.\
+\pard\pardeftab720\partightenfactor0
+\cf0 What is the fraction of people whose height is between 60 and 72.5?\
+\
+Ans: 0.9735
+\f0 \AppleTypeServices \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+If u plot the graph with 65 as mean in the middle u will add 2 std devs to the left & 3 std devs to the right. Since std dev * 2 is 95 percentile. Left side of the mean is 2 std devs & right side is 3 std devs.\
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-02-02 at 12.50.35.png \width14000 \height12020 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-02-02 at 12.51.21.png \width14000 \height9020 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-02-02 at 12.51.58.png \width14000 \height2920 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+_________\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \AppleTypeServices\AppleTypeServicesF65539 \cf0 \cb2 \expnd0\expndtw0\kerning0
+The height of people is Gaussian with mean 65 inches and standard deviation 2.5 inches.\
+What fraction of people are shorter than 67.5?\
+\
+Ans: 0.84
+\f0 \AppleTypeServices \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+Plot the graph. U will see 60 to 65 is half of 2 std devs which is 95/2 & 67.5 is half of 1 std dev which is 68/2. \
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic cb2b71e2-cbaf-4a64-912a-97e335099a0e.jpg \width10137 \height6818 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-02-01 at 14.15.00.png \width18000 \height16980 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-02-02 at 12.49.47.png \width14000 \height8400 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 __________________________________________________________________________________________\
+\
+
+\fs48 Z Score
+\fs26 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+What fraction of people are shorter than 69.1 inches.\
+P[X < 69.1] is > than 1 std devs but < than 2 std devs. So it\'92s not possible with empirical rule. So u need a standardised scoring method.\
+\
+When we say Z std dev, it is Z times std dev. What fraction should we multiply to get a particular value like 69.1\
+\
+So we can say 69.1 is Z std dev away from 65\
+\
+69.1 = 65 + Z (2.5)\
+* 2.5 is std dev sigma\
+* 65 is mean (Mu)\
+\
+Z = (69.1 - 65) / 2.5 = 1.64 \
+\
+69.1 is 1.64 std dev away from mean\
+\
+ {{\NeXTGraphic Screenshot 2025-02-02 at 13.04.22.png \width14000 \height8580 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+Z score dist or std normal dist\
+\
+\
+Z scaling or Standardisation\
+Z = (X - mu) / sigma\
+It converts from one scale range say in inches to another\
+When u scale it down the new mean is 0 & is 1 std dev away.\
+So u can have a z score for every data point\
+\
+So we use Z score to standardise the output of a plot irrespective of the units used. If we take a graph in inches and another in centimers the graph can be more or less spread which is not desirable since we are repreenting the same data with diff units. To avoid this variation of insights we use z score to standarise the plot. That is why it\'92s called std normal dist. Mu = 0 & std dev = 1 irrespetive of units u use.\
+\
+
+\fs96 Resume at 1 hr 26 min. 
+\fs26 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-02-02 at 14.08.25.png \width18000 \height10020 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+94.949 % poeple are shorter than 69.1 \
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-02-02 at 14.10.39.png \width14760 \height13000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 __________________________________________________________________________________________\
+\
+
+\fs48 Percent point function (PPF) - NOT CLEAR
+\fs26 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 Inverse of CDF is PPF\
+\
+\
+__________________________________________________________________________________________\
+\
+Q: 
+\f2\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 A random Variable (e.g height) X follows Normal distribution shown in blue color.\
+\pard\pardeftab720\partightenfactor0
+\cf4 Superimposed are the curves (A, B) for the sampling distributions (from random variable X) of the sample mean with sample sizes n1, n2 respectively\
+\cb1 {{\NeXTGraphic Screenshot_2023-05-08_at_5.05.31_PM.png \width8740 \height3800 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\cb2 \
+Choose the correct statement regarding the sample sizes.\
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+A & B are samples taken from the population given in blue color. B has narrower taller curve as it has averages of large samples. Larger than samples of A.\
+- 
+\f2\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf5 \cb6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 This type of graph is called a sampling distribution. It shows how sample means are distributed for different sample sizes, superimposed on the population distribution (the blue normal curve).\
+- The normal distribution curve (blue) represents the population distribution of the variable (e.g., height). It's the baseline from which we're sampling, showing how the entire population is distributed.
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+- 
+\f2\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf5 \cb6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 For curve B, all the samples it represents are of the same size n2. Similarly, curve A represents samples all of size n1. The difference in their shapes comes from the different sample sizes they represent.\
+- Curve B represents the distribution of sample means from many larger samples. \cf5 \cb7 \strokec5 B represents avg of lots of large samples. \cf5 \cb6 \strokec5 \'a0It represents the sampling distribution of sample means for many samples of size n2. Each point on this curve represents the average of a sample of size n2.\cf5 \cb7 \strokec5 \
+- X axis is values of means of samples, Y axis\cf5 \cb6 \strokec5  typically represents probability density or frequency. For the normal distribution (blue curve), it shows how likely different values of the variable (e.g., heights) are in the population. U can say Y axis has the size of the samples.\
+- \cf5 \cb7 \strokec5 all samples are of same size but sligtly diff values, hence the curve. \cf5 \cb6 \strokec5 \'a0All samples for curve B are the same size (n2), but their means vary slightly due to random sampling. This variation in sample means creates the smooth curve we see. we use a continuous line to show how likely different sample means are. Each point on the curve represents a possible sample mean and its probability.\
+- The curve represents a continuous probability distribution. Each point on the x-axis has a corresponding y-value (probability density), forming a smooth curve rather than discrete points.\
+- For sampling distributions (curves A and B), a taller peak actually means more sample means are clustered around the population mean. This indicates less variation and more precision, typically associated with larger sample sizes. \cf5 \cb7 \strokec5 \'a0if its taller then only few variations are in that region\
+- \cf5 \cb6 \strokec5 The sampling distribution shows the distribution of sample means from many samples. A large sample size for each individual sample leads to more consistent and accurate estimates, which is reflected in the narrower curve B. So the height of the curve is controlled by size of the sample and the width of the curve by the quantity of sample means.\
+- a smaller sample could be close to the population average by chance. But the sampling distribution shows what happens on average across many samples.\
+- A taller, narrower curve (like B) means the sample means are clustering closer to the true population mean. This happens with larger sample sizes.\
+- If you measure 10 people's heights, how close do you think that average would be to the true average height of the whole population? Now, what if you measured 100 people? \cf5 \cb7 \strokec5 sample avg will differ from population avg when sample size is small but as sample size increases it will be closer to pop avg.
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf8 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Correct ans :
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \'a0n1 < n2\
+
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 Explanation:
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \
+The sampling distribution of the mean refers to the distribution of sample means obtained from repeated sampling from a population. It provides information about the possible values that the sample mean could take and how likely each value is, given different sample sizes.\
+As the sample size increases, the sampling distribution of the mean becomes more narrow, meaning that the spread or variance of the distribution decreases. This phenomenon occurs due to the following reasons:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \cf8 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Reduction in Sampling Error:
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \'a0Larger sample sizes provide more information about the population, leading to a reduction in sampling error.\
+\ls1\ilvl0
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Increased Precision:
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \'a0Larger sample sizes result in more precise estimates of the population parameters. As sample size increases, the variability in sample means decreases, leading to a narrower sampling distribution and more precise estimates of the population mean.\
+\pard\pardeftab720\partightenfactor0
+\cf8 Overall, as the sample size increases, the sampling distribution of the mean becomes more reliable, with less variability\
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs26 \AppleTypeServices \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+__________________________________________________________________________________________\
+\
+Q: 
+\f2\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 Suppose you reside in a city with a large population. The weight of people living in your city follows a Gaussian distribution with a mean of\'a0
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 60
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 \'a0kgs with a\'a0
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 standard
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 \'a0
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 deviation
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 \'a0of\'a0
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 10
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 \'a0kgs.\
+\pard\pardeftab720\partightenfactor0
+\cf4 You weigh\'a0
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 65
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 \'a0kg. What is the probability that a randomly selected person in your city is\'a0
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 heavier than you
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 ?\
+\pard\pardeftab720\partightenfactor0
+
+\f3\i \AppleTypeServices \cf4 \cb2 \strokec4 (Round off the answer to 4 decimal points)\
+\
+- This qs can be solved by both empricial rule as well as z score. But empricial is used for rought estimates while z score for exact probabilities. In this case we need z score as its asking exactly how heavy is a randomly selected person heavier than you given ur weight is 65kg.\
+- 
+\f2\i0 \AppleTypeServices\AppleTypeServicesF65539 \cf5 \cb6 \strokec5 z-scores allow us to calculate exact probabilities for any value, not just the standard deviations in the empirical rule.\
+- for this problem, we need an exact probability. The question asks for a specific weight (65 kg) that doesn't align with the standard deviations in the empirical rule.\
+- The empirical rule is actually for 68-95-99.7%. It's used for quick estimates within 1, 2, or 3 standard deviations from the mean. For precise probabilities or values outside these, we use z-scores.\
+- The empirical rule could give a rough estimate, but it wouldn't be accurate enough for this problem. We need a precise probability for 65 kg, which isn't exactly 0.5 or 1 standard deviation away from the mean. That's why we use a z-score here.\
+- If the mean is 60 and standard deviation is 5, what would be the values for 1, 2, and 3 standard deviations away from the mean? \cf5 \cb7 \strokec5 65 70 75\
+- \cf5 \cb6 \strokec5 calculate the values for -1, -2, and -3 standard deviations from the mean? \cf5 \cb7 \strokec5 55 50 45\
+- \cf5 \cb6 \strokec5 the empirical rule tells us about the data within these ranges. Can you recall what percentages it gives for 1, 2, and 3 standard deviations? The percentages 68%, 95%, and 99.7% refer to the data within 1, 2, and 3 standard deviations respectively. 68% of the data lies within 1 standard deviation on both sides of the mean. In this case, that's between 55 and 65.\'a0\
+- The empirical rule gives us ranges, not specific points. We need the exact probability for 65 kg, not just the range it falls in. That's why we use z-scores for precise calculations.
+\f3\i \AppleTypeServices \cf4 \cb2 \strokec4 \
+\
+\pard\pardeftab560\partightenfactor0
+
+\f0\i0\b\fs26 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 ______\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf8 \cb2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Let X denote the weight.\
+Compute the probability that X > 65 kgs using the normal distribution.
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf8 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 Given,\uc0\u8232 Let X denote the weight.\u8232 \u956  = 60\u8232 \u963  = 10\u8232 \u8232 Based on normal distribution,\
+The z-score is a measure of how many standard deviations an observation is away from the mean.\uc0\u8232 It can be calculated using the formula:\
+\pard\pardeftab720\partightenfactor0
+
+\f3\i\fs38\fsmilli19360 \AppleTypeServices \cf8 \strokec8 z
+\f2\i0 \AppleTypeServices\AppleTypeServicesF65539 =
+\f3\i\fs27\fsmilli13552 \AppleTypeServices \cf9 \outl0\strokewidth0 x
+\f2\i0 \AppleTypeServices\AppleTypeServicesF65539 \uc0\u8722 
+\f3\i \AppleTypeServices \uc0\u956 /\u963 
+\f2\i0\fs38\fsmilli19360 \AppleTypeServices\AppleTypeServicesF65539 \cf8 \outl0\strokewidth0 \strokec8 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf8 \strokec8 Substituting the values into the formula, we get:\uc0\u8232 
+\f3\i\fs38\fsmilli19360 \AppleTypeServices \cf8 \strokec8 z
+\f2\i0 \AppleTypeServices\AppleTypeServicesF65539 =
+\fs27\fsmilli13552 \AppleTypeServices\AppleTypeServicesF65539 \cf9 \outl0\strokewidth0 65\uc0\u8722 60/10
+\fs38\fsmilli19360 \AppleTypeServices\AppleTypeServicesF65539 \cf8 \outl0\strokewidth0 \strokec8 =0.5
+\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf8 \strokec8 \
+now using 1 - norm.cdf(z) as we want probability of person heavier than 65\
+
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \
+Code:
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \
+\pard\pardeftab720\partightenfactor0
+
+\f4 \AppleTypeServices \cf8 \strokec8 from scipy.stats import norm \
+prob = 1 - norm.cdf(0.5) \
+print("Probability that a person is heavire than you is",round(prob,4))\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \cf8 \strokec8 \
+Output:
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \uc0\u8232 Probability that a person is heavire than you is 0.3085\
+\
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs26 \AppleTypeServices \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 ______\
+\
+Solve using empirical rule\
+
+\f2\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf8 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 {{\NeXTGraphic Screenshot 2025-02-04 at 10.42.26.png \width14960 \height24080 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+{{\NeXTGraphic Screenshot 2025-02-04 at 10.45.24.png \width14440 \height9360 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+
+\f0\b\fs26 \AppleTypeServices \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 I think 50% is added here since the qs asks for weight > 65 and since u calculated the value for above the mean data, you simply add 50%\
+__________________________________________________________________________________________\
+\
+\
+Q: 
+\f2\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 A packaging plant fills bags with cement.\
+\pard\pardeftab720\partightenfactor0
+\cf4 The weight of the cement bags can be modelled by a\'a0
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 normal
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 \'a0
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 distribution
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 \'a0with a\'a0
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 mean
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 \'a0of\'a0
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 50kg
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 \'a0and a\'a0
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 standard deviation
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 \'a0of\'a0
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 2 kg
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 .\
+Find the weight\'a0
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 x\'a0
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 that is\'a0
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 exceeded
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 \'a0by\'a0
+\f1\b \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 99%
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb2 \strokec4 \'a0of the bags.\
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb2 \strokec8 Probability(Area under Curve). i.e, z value is -2.326 for 0.01 percentile.\
+\
+- \cf5 \cb7 \strokec5 how big can z score be? \cf5 \cb6 \strokec5 The z-score can theoretically be any real number, but in practice, values beyond \'b13 or \'b14 are rare in normal distributions. Why do you think this might be relevant to our problem?\
+- We're looking for a weight that 99% of bags exceed. Can you think of how this relates to the normal distribution we're dealing with?\
+- let's think about percentages. If 99% of bags exceed a certain weight, what percentage falls below that weight? This might help us connect to the normal distribution concept. 1%.\
+- Exactly! Now, in a normal distribution, we often use z-scores to find percentiles. Do you remember what a z-score represents?\
+- A z-score actually represents how many standard deviations a value is from the mean. For our problem, we need to find the z-score that corresponds to 1% (remember, we're looking at the lower end). Do you know how to find this z-score? \cf5 \cb7 \strokec5 x - mean / std dev\
+- \cf5 \cb6 \strokec5 That's the formula for calculating a z-score. But we need to go the other way - we know the percentage (1%) and need to find the corresponding z-score. This z-score is approximately -2.326. Can you use this to find x? The -2.326 z-score for 1% comes from statistical tables or calculators. It's a standard value for normal distributions. Now, how can we use this z-score with the given mean (50kg) and standard deviation (2kg) to find x? The -2.326 value is a standard z-score for 1% in a normal distribution, typically found in statistical tables. It's not calculated; it's a known value.\'a0Z-score tables are commonly found in statistics textbooks or online resources. For now, let's use -2.326 as given. we use -2.326 for this problem because we're looking for the value that 99% of bags exceed, which means 1% fall below. This z-score corresponds to the 1st percentile in a standard normal distribution.\cf8 \cb2 \strokec8 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf4 \cb2 \strokec4 {{\NeXTGraphic Screenshot 2025-02-05 at 11.41.00.png \width17720 \height14240 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+{{\NeXTGraphic Screenshot 2025-02-05 at 11.33.49.png \width14240 \height25440 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+{{\NeXTGraphic Screenshot 2025-02-05 at 11.34.58.png \width14760 \height25200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+{{\NeXTGraphic Screenshot 2025-02-05 at 11.38.53.png \width16000 \height29800 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\
+}

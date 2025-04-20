@@ -1,0 +1,486 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\froman\fcharset0 Times-Roman;\f2\froman\fcharset0 Times-Bold;
+\f3\fswiss\fcharset0 ArialMT;\f4\fswiss\fcharset0 Arial-BoldMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red79\green95\blue123;\red255\green255\blue255;
+\red251\green0\blue7;\red255\green255\blue255;\red79\green95\blue123;\red64\green64\blue64;\red14\green18\blue30;
+\red247\green242\blue255;\red247\green249\blue250;\red243\green249\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c38039\c45098\c55686;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c100000\c12195\c0;\cssrgb\c100000\c100000\c99985;\cssrgb\c38152\c45225\c55766;\cssrgb\c31765\c31765\c31765;\cssrgb\c6275\c9412\c15686;
+\cssrgb\c97647\c96078\c100000;\cssrgb\c97647\c98039\c98431;\cssrgb\c96078\c98039\c100000;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat5\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid1\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww14900\viewh16080\viewkind0
+\deftab560
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf0 Probability Distributions 2\
+
+\fs26 \
+Agenda\
+1. Population vs sample\
+2. sample statistics - mean, variance, std deviation\
+3. point estimates\
+4. std error - imp\
+5. Sampling techniques\
+6. Random sampling\
+7. uniform distribution \
+\
+descriptive vs inferential stats\
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 ____________________________________________________________________________________\
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+
+\fs48 \cf0 Population vs sample
+\fs26 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+Its not possible to know everythign there is know about a population. which is why we need inferential stats which help us make an educated guess based on a sample of data.\
+\
+Sample comes from the population itself. this is used to estimate population paramters.\
+\
+The process of collecting data from a small section of population and generalising it over entire population is called sampling.\
+\
+The larger the sample the better the results. if we want ot find the avg salary of poeple in a city,\
+\
+Since there will be bias we have a way of selecting a sample\
+\
+Min smaple size should be at least 30. This is a num that stat guys decided.\
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-01-31 at 00.18.33.png \width18000 \height21540 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-01-31 at 00.20.19.png \width16000 \height4740 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+____________________________________________________________________________________\
+\
+
+\fs48 Sample statistics - mean, variance, std deviation\
+
+\fs26 \
+\pard\pardeftab560\partightenfactor0
+\cf0 Sampel mean = same as mean formula\
+\
+Sample variance\
+\
+Has Bessel\'92s correction - this is done to counter the deviation caused by outlier values to the population variance. Generally sample variance < population variance as it will not always have outliers. But it can be other way round as well in which case u will have to revisit ur samplign technique. n - 1 is sometihng stat guys found it to be an ideal thing to do after a lot of trial & error\
+\
+Degrees of freedom\
+\
+Sample std deviation\
+\
+____________________________________________________________________________________\
+\
+
+\fs48 Point Estimates
+\fs26 \
+\
+Best guess of our population paramter. It\'92s a single value that will help us to approximate population paramter. We are estimating the population through the sample parameters. Which are the above sample mean, sample variance, sample std deviation. It\'92s just a fancy term. A single value estimate.\
+\
+\
+____________________________________________________________________________________\
+\
+
+\fs48 Sampling Techinques
+\fs26 \
+\
+1. Probability based\
+2. Non prob based\
+\
+Probability based - everyone gets a fair chance of getting selection. \
+1. Simple random sampling\
+2. Systematic sampling\
+3. stratified sampling\
+4. Cluster sampling\
+\
+Non prob based - is quick but can have bias\
+1. Judgemental sampling\
+2. Convienience sampling\
+3. Snow ball sampling\
+\
+Simple random sampling - everyone gets a fair chance of getting selection. This assumes it is a fair system  \
+\
+____________________________________________________________________________________\
+\
+
+\fs48 Standard Error
+\fs26 \
+\
+If we are collecting a sample from the same population again and agian & they are not giving me the same point estimate of the mean, it is better to quantify the variability. Quantify variance accross samples.\
+\
+sample A = 10\
+sample B = 11\
+sample C = 9.5\
+\
+There is variability across samples. Quantifying this variability is standard error.\
+\
+Standard error is variability across samples A, B, C. Std deviation is variability within each sample liek just A or just B.\
+\
+As the size of the sample increases the estimates get better. SE is inversely prop to size. So the larger the size of the sample the smaller the std error - this can be observed in the formula as sample size is in denominator. Quantify the variance.\
+\
+On an avg sample size should be at least 30 else its too less to make any assumption.\
+\
+{{\NeXTGraphic Screenshot 2025-01-31 at 00.25.55.png \width18000 \height13880 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+Q: 
+\f1\b0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Samples of size 100 are selected from a population with a mean of 37 and a standard deviation of 12. The standard error of the sampling distribution of sample means is :\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec2 In this case, the given 
+\f2\b standard deviation of 12
+\f1\b0  refers to the 
+\f2\b population standard deviation (\uc0\u963 )
+\f1\b0 , not the sample standard deviation. This is because it's provided as the standard deviation of the entire population, rather than calculated from a sample.\
+\
+{{\NeXTGraphic Screenshot 2025-01-31 at 00.40.03.png \width18000 \height16940 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+
+\f0\b\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {{\NeXTGraphic Screenshot 2025-01-31 at 00.40.19.png \width18000 \height10380 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 ____________________________________________________________________________________\
+\
+
+\fs48 Uniform Distribution
+\fs26 \
+\
+Discrete UD:\
+\
+PMF formula P(X = x) = 1 / (b - a + 1) given a <= x <= b & x belongs to [a, b] where a is min value & b is max \
+\
+PMF for binomial dist is diff from PMF for uniform dist\
+\
+The denominator is range formula = max - min + 1\
+Since if in a dice u do 6 - 1 you get 5\
+\
+Prob of an event in a dice roll is 1/6 in a fair dice which can be written as 1 / (6 - 1 + 1)\
+\
+CDF is summation of individual PMFs. For discrete dist.\
+{{\NeXTGraphic Screenshot 2025-01-29 at 00.44.02.png \width18000 \height9440 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+6. x = 6, F(6) =-14.444 \'b0C P(X <= 6) = P(x=1) + P(x=2)\'85 + P(x=6) = 1 * (1/6) = 1\
+\
+1 hr 36 min	\
+\
+Continuous UD:\
+PDF & CDF\
+\
+PDF = f(x) = 1 / (b - a) where a <= x <= b\
+\
+We are not worried abt data points but rather the operating range. which is why just 1 / (b-a) rather than 1 / (b-a + 1) as we do not include the edges, min max values in range.\
+\
+Calc area under curve. Area = Base * Height\
+{{\NeXTGraphic Screenshot 2025-01-29 at 00.57.53.png \width12000 \height9840 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+\
+\
+____________________________________________________________________________________\
+\
+\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 Q: An Aadhar card 
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 \cf5 \cb6 \strokec7 number
+\f3\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf3 \cb4 \strokec3  is selected at random from a database. Suppose X denotes the last digit of the selected Aadhar card number.\
+a)What is the probability that the last digit of the selected number is 7?\
+b) What is the probability that the last digit of the selected number is less than 4?\
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+a) is 1/10 since its random selection and each num is equally likely to occur\
+b) Since num is randomly selected the last digit can be any number. which is 1/10. But if it has to be < 4 then from 0 to 9 there are 4 options 0,1,2,3. And each can occur 1/10 times. So 4 * 1/10\
+\
+____________________________________________________________________________________\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 Q: A warehouse receives orders for a particular product regularly. When an order is placed, customers can order 1,2,3 or 4 units of the product. Past data suggests that the size of any given order is equally likely to be any of the four units.\
+a)What is the probability that the customer orders at least two units?\
+b) Calculate the mean of the customer order size.\
+c) Calculate the standard deviation of the customer order size.\
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab720\sa280\partightenfactor0
+
+\f2\fs28 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Why is this a Uniform Distribution?\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 A 
+\f2\b discrete uniform distribution
+\f1\b0  occurs when all possible values of a discrete random variable have the 
+\f2\b same probability
+\f1\b0 .
+\f0\b\fs26 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+{{\NeXTGraphic Screenshot 2025-01-31 at 09.11.16.png \width18000 \height14100 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+\
+____________________________________________________________________________________\
+\
+Q: 
+\f3\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 Suppose there are 20 different types of coupons and suppose that each time one obtains a coupon it is equally likely to be any one of the types. Compute the expected number of different types that are contained in the set for 10 coupons.\
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb4 \strokec8 Here the scenario of question follows the uniform distribution as each drawn coupon is equally likely to be any of the 20 types.
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1\b0\fs24 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The expected number of 
+\f2\b different
+\f1\b0  coupon types in a collection of 
+\f2\b 10 draws
+\f1\b0  is 
+\f2\b approximately 8.14
+\f1\b0 .\
+Even though the result is 
+\f2\b not a whole number
+\f1\b0 , it represents an 
+\f2\b average
+\f1\b0  over many trials. In some cases, you might collect exactly 
+\f2\b 8 different types
+\f1\b0 , in others 
+\f2\b 9 or even 10
+\f1\b0 , but on average, across many repetitions, you would collect about 
+\f2\b 8.14 different types
+\f1\b0  of coupons.\
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs26 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {{\NeXTGraphic Screenshot 2025-02-01 at 08.24.39.png \width18000 \height9580 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf9 \cb10 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec9 we are calculating probability of types that might not be in the 10 selected. Then we are removing them from the total probability. \
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb11 \strokec9 Can you think of how we might calculate the probability of a specific type not being selected in 10 picks?
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf9 \cb10 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec9 since prob of selecting 1 out 20 is 1/20 as it is given in qs. prob of not getting a type when we draw is the complement.1 - 1/20. I didnt understand after this\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb11 \strokec9 You're correct about the probability of not selecting a specific type in one draw. Now, how would you extend this to 10 draws? Think about what happens when you repeat an independent event multiple times.\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb10 \strokec9 yes we power 10 to this. so these are 10 draws which have types we will never get\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb11 \strokec9 So, (19/20)^10 is the probability of not getting a specific type in 10 draws. How can we use this to find the expected number of different types we do get?\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb10 \strokec9 So for 10 draws the expected types we will get will be 1 - (19/20)^10\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb11 \strokec9 Close! But remember, that's for one type. How many types are there in total? How would you apply this to all types?\
+Think of it this way: for each of the 20 types, what's the probability we do get it? It's 1 minus the probability we don't get it. So we sum this up 20 times. Does that help explain the multiplication?\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb10 \strokec9 (19/20)^10 is the probability of not getting a specific type in 10 draws - is this for a single draw?\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb11 \strokec9 No, (19/20)^10 is for all 10 draws together. It's the probability of not getting a specific type in any of the 10 draws. For a single draw, it would just be 19/20. Does this clarify things?\cf9 \cb10 \strokec9 \
+\cf9 \cb11 \strokec9 We multiply by 20 because we're calculating this for each of the 20 types. Each type has a chance of being selected, and we sum these chances. It's like asking "How many heads do you expect in 20 coin flips?"\'a0\cf9 \cb10 \strokec9 \
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+____________________________________________________________________________________\
+\
+\
+Q: 
+\f3\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 In a game of Tetris, there are seven different shapes: I, J, L, O, S, T, and Z.\
+\pard\pardeftab720\partightenfactor0
+\cf3 Assume that, at any stage of the game, all seven shapes are equally likely to be produced, independent of whatever pieces have been produced previously.\
+Consider the sequences of three consecutive pieces observed during a game of Tetris, such as JLL, ZOS, ZSZ, III and so on.\
+What is the probability that a\'a0
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 \cf3 \cb4 \strokec3 'T'
+\f3\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf3 \cb4 \strokec3 \'a0does not occur in the first three-piece sequence, but does occur in the second such sequence?\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\b \AppleTypeServices\AppleTypeServicesF65539 \cf3 \cb4 \strokec3 Note:
+\f3\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf3 \cb4 \strokec3 \'a0Here we are considering non-overlapping sequences of three pieces.\
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+{{\NeXTGraphic Screenshot 2025-02-01 at 09.04.05.png \width18000 \height8060 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf9 \cb11 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec9 Non-overlapping sequences mean that each group of three pieces is separate and doesn't share any pieces with other groups. For example, if we have pieces IJLOSTZ, we'd consider IJL and OST as two separate sequences, not JLO or LOS.\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb10 \strokec9 how do we calculate prob of 1st sequence & 2nd sequence together\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb11 \strokec9 To calculate the probability of events in two separate sequences, we often use the multiplication rule. Can you think of what two events we need to consider here?\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb10 \strokec9 1st is not getting a T in 1st sequence. So i think its 3(1 - 1/7)\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb11 \strokec9 You're on the right track! The probability of not getting a T in one pick is indeed (1 - 1/7). But for the entire first sequence of three, how would you extend this?\
+\
+For independent events, we multiply probabilities, not add. So for not getting T in all 3 slots, it would be (6/7) * (6/7) * (6/7).\
+\
+\'a0Now, can you think about what the probability would be for getting at least one T in the second sequence?\
+\
+Close, but not quite. 1/7 is the probability of getting T in a single pick. For the second sequence, we want at least one T in three picks. Think about the opposite: what's the probability of not getting T in all three picks?\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb10 \strokec9 1 - (6/7)^3\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb11 \strokec9 Now, can you combine the probabilities for both sequences to get the final answer?\
+\
+Remember, we need to combine the probability of no T in the first sequence AND at least one T in the second. How do we combine probabilities of independent events?\
+\
+We're looking for the probability of both events happening together (A AND B), not their union (A OR B). For independent events, how do we calculate P(A AND B)?\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb10 \strokec9 but both dont happen together right. its one after another\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb11 \strokec9 You're right that they happen one after another, but we still want both events to occur. For independent events occurring in sequence, we multiply their individual probabilities. So it's P(no T in first) * P(at least one T in second).
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+____________________________________________________________________________________\
+\
+Q: 
+\f3\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf3 \cb4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 Buses arrive at a specified stop at 15- minute intervals starting at 7 am. That is they arrive at 7, 7:15, 7:30, 7:45, and so on. If a passenger arrives at the stop at a time that is uniformly distributed between 7 and 7:30. Find the probability that he waits\
+\pard\pardeftab720\partightenfactor0
+\cf3 a) Less than 5 minutes for a bus.\cf3 \cb1 \strokec3 \uc0\u8232 \cf3 \cb4 \strokec3 b) At least 12 minutes for a bus.\
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf8 \cb4 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec8 P(c<X<d) = d-c /b-a where b,a is obtained from the given interval.\
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb12 \strokec8 Let X denote the time in minutes past 7 am that the passenger arrives at the stop. Since X is the uniformly distributed random variable over the interval (0,30). It follows that the passenger will have to wait less than 5 minutes if he arrives between 7:10 and 7:15 or 7: 25 and 7:30. Hence, the desired probability for\
+\
+a)P(10<X<15) + P(25<X<30)= 5/30 + 5/30 = 1/3\
+\
+Similarly, he would have to wait atleast 12 minutes if he arrives between 7 and 7:03 or 7:15 and 7:18 and so, the probability for\
+\
+b)P(0<X<3)+P(15<X<18) = 3/30 + 3/30 = 1/5\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb10 \strokec9 since its <5 min, we have 0 to 4 which are total 5 values, hence 5/15. is this correct\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb11 \strokec9 Your approach is on the right track, but there's a small misunderstanding. Let's think about it differently. What's the total time range we're considering, and how does it relate to the bus schedule?\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb10 \strokec9 since uniform dist i assumed 1 min scale. since bus arrives at 7:15 we have 15 mins duration.\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb11 \strokec9 You're right about the 15-minute duration, which is good! But remember, in a uniform distribution, we don't need to think about discrete minute values. Instead, think about the proportion of the total time. What fraction of 15 minutes is less than 5 minutes?\
+\
+You've got it right. 5 minutes is indeed 1/3 of 15 minutes. This means the probability of waiting less than 5 minutes is 1/3. Now, can you figure out the probability for waiting at least 12 minutes?\
+\
+For a uniform distribution between 0 and T, the probability of waiting less than t minutes is t/T. Can you apply this to our problem?\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb10 \strokec9 5/15\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb11 \strokec9 But remember, we're looking for the probability of waiting less than 5 minutes. In a uniform distribution, the formula is P(X \uc0\u8804  t) = t/T, where T is the total interval. What's our T here?\
+\
+Correct! T = 15 minutes. Now, what's our t for "less than 5 minutes"? And how would you write the formula?\
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf9 \cb10 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	5	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec9 since its 0,1,2,3,4\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs26 \AppleTypeServices \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf9 \cb11 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec9 You're close, but remember we're dealing with a continuous uniform distribution, not discrete values. In this case, "less than 5 minutes" means any time from 0 up to (but not including) 5. So, t = 5. Can you write the formula now?\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb10 \strokec9 that is what 0 to 4 is right\cf9 \cb11 \strokec9 \
+\
+I understand your confusion. In a continuous distribution, we include all real numbers from 0 to 5, not just whole numbers. So it's actually all values from 0 to 4.99\'85 Can you write the probability formula now?
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\b0\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf9 \cb11 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec9 Let's break it down step-by-step. The formula for uniform distribution is P(X \uc0\u8804  t) = t/T. Here, t = 5 (less than 5 minutes) and T = 15 (total interval). Can you put these numbers into the formula?\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb10 \strokec9 5/15\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb11 \strokec9 Now, can you apply the same logic to find the probability of waiting at least 12 minutes?\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb10 \strokec9 since its >=12 min, its 12,13,14,15 so 4/15 is time he waits less than12 mins. So complement of that would be 1-4/15\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb11 \strokec9 You're on the right track with using the complement, but remember this is a continuous distribution. We want P(X \uc0\u8805  12), so we need 1 - P(X < 12). Can you calculate P(X < 12) first?\
+\
+\pard\pardeftab720\partightenfactor0
+\cf9 \cb10 \strokec9 prob to wait < 12 min is 12/15, so >= 12 would be 1 - 12/15
+\f0\b\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+}

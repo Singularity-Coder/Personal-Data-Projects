@@ -1,0 +1,1 @@
+Creating file in write mode. If exists then overwrite content.

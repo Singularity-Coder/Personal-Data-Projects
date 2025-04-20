@@ -1,0 +1,154 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww9600\viewh15520\viewkind0
+\deftab560
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf0 Probability Distributions 4\
+
+\fs26 \
+Agenda\
+1. Log Normal Dist\
+2. Poisson Dist\
+3 Poisson aprox of Binomial \
+\
+\pard\pardeftab560\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-02-07 at 11.08.45.png \width14000 \height10540 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\pardeftab560\partightenfactor0
+\cf0 \
+Discrete - poisson, Continuous - log normal\
+\
+{{\NeXTGraphic Screenshot 2025-02-07 at 11.11.20.png \width14000 \height7620 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+\
+\
+\
+
+\fs48 Log Normal
+\fs26 \
+1. Right tail - positively skewed data\
+2. Left tail or\
+\
+{{\NeXTGraphic Screenshot 2025-02-07 at 11.15.22.png \width14000 \height7660 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+above example is delivery time of logistics apps. Most of them would deliver in the 30 min mark.\
+If x is log normal then log of x is normally dist.\
+When u apply log to each of the data points it becomes a normal dist. Its a transformation technique.\
+\
+{{\NeXTGraphic Screenshot 2025-02-07 at 11.17.59.png \width14000 \height9120 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+above is left tailed or negatively skewed data\
+most people die at a certain age. ex: 70 \
+\
+{{\NeXTGraphic Screenshot 2025-02-07 at 11.19.23.png \width14000 \height6620 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+0 skweness\
+\
+Reference: https://en.wikipedia.org/wiki/Log-normal_distribution\
+\
+
+\fs72 Code at 28 min 
+\fs26 \
+\
+When u have 2 unknown variables u can use numerical methods like - Newton Raphson method\
+\
+For normal dist mean & median are same.\
+\
+Log normal transformation:\
+1. we achieve symmetry - if its right skewed it ransforms to normal dist\
+2. Stabbilised variance\
+\
+{{\NeXTGraphic Screenshot 2025-02-08 at 22.58.05.png \width14000 \height6080 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+The peak is mode since most freq occur. \
+Median is mid value so right after mode\
+mean is affected by outlisers so its on the right\
+Variance is high here.\
+\
+Log(1) = 0\
+\
+After log normal transform every consecutive point becomes equidistant thereby stabilising variance.\
+\
+\
+Key characteristics of log normal dist:\
+1. All values r positive. log value of any +ve num is always +ve real value\
+2. Skewedness\
+3. Multiplicative porceses\
+\
+log normal dist are suitable for modelling scenarios where the final outcome is influenced by the porduct of independent factors\
+\
+You can calc expected delivery time with log normal dist.\
+\
+\
+
+\fs72 Qs at 1hr 17 min mark
+\fs26 \
+\
+____________________________________________________________\
+\
+
+\fs48 Log normal & poisson dist
+\fs26 \
+\
+1. Log normal (continuous)\
+2. poisson dist\
+3. poisson approx of binomial\
+\
+\
+Poisson dist\
+Captures disctrete events. Discrete prob dist\
+useful when events occur randomly and independently. it has a well known avg\
+Ex: capture the num of vehicles in a given period time. Event here is - vehicle passing through the toll booth. avg rate of vehicles passing thrugh the toll booth. Fixed interval is 1 hr. rate is num of vehicles per hr\
+\
+
+\fs72 code 1 hr 41 min\
+code 1 hr 57 min\
+Qs 2 hr 6 min\
+
+\fs26 \
+cdf will extract left side of the graph <=\
+\
+\
+____________________________________________________________\
+\
+
+\fs48 From Binomial we can summarise Poisson
+\fs26 \
+\
+Binomial depicts high porb events\
+Poisson depicts rare events\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

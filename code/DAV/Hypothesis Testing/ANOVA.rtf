@@ -1,0 +1,211 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fmodern\fcharset0 Courier;
+\f3\fswiss\fcharset0 Helvetica;\f4\fnil\fcharset0 HelveticaNeue;\f5\fswiss\fcharset0 ArialMT;
+\f6\fnil\fcharset0 STIXGeneral-Regular;\f7\fswiss\fcharset0 Arial-BoldMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red221\green221\blue220;
+\red183\green111\blue179;\red203\green203\blue202;\red89\green156\blue61;\red212\green212\blue212;\red107\green0\blue109;
+\red221\green221\blue220;\red64\green64\blue64;\red14\green19\blue30;\red107\green0\blue109;\red220\green220\blue220;
+\red42\green42\blue42;\red255\green255\blue255;\red65\green195\blue76;\red202\green202\blue202;\red23\green23\blue23;
+\red212\green212\blue212;\red194\green126\blue101;}
+{\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c99985\c0;\cssrgb\c89216\c89216\c88993;
+\cssrgb\c77407\c52698\c75307;\cssrgb\c83320\c83320\c83112;\cssrgb\c41424\c66113\c30653;\cssrgb\c86465\c86464\c86248;\cssrgb\c50280\c3786\c50276;
+\cssrgb\c89216\c89215\c88993;\cssrgb\c31765\c31765\c31765;\cssrgb\c6369\c9521\c15779;\cssrgb\c50281\c3786\c50276;\cssrgb\c89020\c89020\c89020;
+\cssrgb\c21961\c21961\c21961;\cssrgb\c100000\c100000\c100000;\cssrgb\c29412\c79216\c36863;\cssrgb\c83137\c83137\c83137;\cssrgb\c11765\c11765\c11765;
+\cssrgb\c86275\c86275\c86275;\cssrgb\c80784\c56863\c47059;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid2\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid102\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid103\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li2160\lin2160 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww24760\viewh12820\viewkind0
+\deftab560
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 ANOVA\
+\
+\pard\pardeftab720\sa120\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+One-way ANOVA:
+\f0\fs40 \cf2 \cb3 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 from\cf2 \cb3 \strokec6  scipy.stats \cf2 \cb3 \strokec5 import\cf2 \cb3 \strokec6  f_oneway \cf2 \cb3 \strokec7 # Numeric Vs categorical for many categories\cf2 \cb3 \strokec6 \
+\cf2 \cb3 \strokec7 # H0: All groups have the same mean\cf2 \cb3 \strokec6 \
+\cf2 \cb3 \strokec7 # Ha: One or more groups have different mean\cf2 \cb3 \strokec6 \
+f_stats\cf2 \cb3 \strokec8 ,\cf2 \cb3 \strokec6  p_value = f_oneway\cf2 \cb3 \strokec8 (\cf2 \cb3 \strokec6 income_g1\cf2 \cb3 \strokec8 ,\cf2 \cb3 \strokec6  income_g2\cf2 \cb3 \strokec8 ,\cf2 \cb3 \strokec6  income_g3\cf2 \cb3 \strokec8 )\cf2 \cb3 \strokec6 \
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+Kruskal-Wallis Test:
+\f0\fs40 \cf2 \cb3 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 from\cf2 \cb3 \strokec6  scipy.stats \cf2 \cb3 \strokec5 import\cf2 \cb3 \strokec6  kruskal\
+\cf2 \cb3 \strokec7 # If assumptions of ANOVA fail, use kruskal\cf2 \cb3 \strokec6 \
+stat\cf2 \cb3 \strokec8 ,\cf2 \cb3 \strokec6  p_value = kruskal\cf2 \cb3 \strokec8 (\cf2 \cb3 \strokec6 income_g1\cf2 \cb3 \strokec8 ,\cf2 \cb3 \strokec6  income_g2\cf2 \cb3 \strokec8 ,\cf2 \cb3 \strokec6  income_g3\cf2 \cb3 \strokec8 )\cf2 \cb3 \strokec6 \
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\pard\pardeftab720\sa200\partightenfactor0
+
+\f3\b0 \cf2 \cb3 \expnd0\expndtw0\kerning0
+Shapiro-Wilk test:
+\f0\b \cf2 \cb3 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 from\cf2 \cb3 \strokec6  scipy.stats \cf2 \cb3 \strokec5 import\cf2 \cb3 \strokec6  shapiro \cf2 \cb3 \strokec7 # Test Gaussian (50 to 200 samples)\cf2 \cb3 \strokec6 \
+\cf2 \cb3 \strokec7 # H0: Data is Gaussian\cf2 \cb3 \strokec6 \
+\cf2 \cb3 \strokec7 # Ha: Data is not Gaussian\cf2 \cb3 \strokec6 \
+test_stat\cf2 \cb3 \strokec8 ,\cf2 \cb3 \strokec6  p_value = shapiro\cf2 \cb3 \strokec8 (\cf2 \cb3 \strokec6 height_subset\cf2 \cb3 \strokec8 )\cf2 \cb3 \strokec6 \
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\pard\pardeftab720\sa230\partightenfactor0
+
+\f3\b0\fs46 \cf2 \cb3 \expnd0\expndtw0\kerning0
+Levene Test
+\f0\b\fs40 \cf2 \cb3 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 from\cf2 \cb3 \strokec6  scipy.stats \cf2 \cb3 \strokec5 import\cf2 \cb3 \strokec6  levene \cf2 \cb3 \strokec7 # Test variance\
+# H0: Variances are equal\cf2 \cb3 \strokec6 \
+\cf2 \cb3 \strokec7 # Ha: Variances are not equal\cf2 \cb3 \strokec6 \
+levene_stat\cf2 \cb3 \strokec8 ,\cf2 \cb3 \strokec6  p_value = levene\cf2 \cb3 \strokec8 (\cf2 \cb3 \strokec6 height_men\cf2 \cb3 \strokec8 ,\cf2 \cb3 \strokec6  height_women\cf2 \cb3 \strokec8 )\cf2 \cb3 \strokec6 \
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls1\ilvl1
+\f3\b0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 \
+\pard\pardeftab560\partightenfactor0
+
+\f4\fs26 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf2 \cb3 \
+\pard\pardeftab720\sa120\partightenfactor0
+\ls2\ilvl1
+\f1\b\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 One-way ANOVA test
+\f3\b0 \cf2 \cb3 \strokec10 .\
+\pard\pardeftab720\sa120\partightenfactor0
+\ls2\ilvl1\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\cf2 \cb3 \expnd0\expndtw0\kerning0
+"Which product generates the highest income for us?"\cf2 \cb3 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl1\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\cf2 \cb3 \expnd0\expndtw0\kerning0
+While we have used tests like T-test and Z-test to compare two products at a time, this approach isn't efficient when you have many products.\
+\ls2\ilvl1\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\cf2 \cb3 \expnd0\expndtw0\kerning0
+To handle multiple groups (products) effectively, we need a more powerful tool:\'a0
+\f1\b \cf2 \cb3 One-way ANOVA
+\f3\b0 \cf2 \cb3 .\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\partightenfactor0
+\ls2\ilvl1\cf2 \cb3 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u9702 	}\cf2 \cb3 \expnd0\expndtw0\kerning0
+This powerful statistical test allows you to analyze the income generated by all products simultaneously.\cf2 \cb3 \outl0\strokewidth0 \strokec10 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl1
+\f2\fs28\fsmilli14400 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 One:
+\f3\fs32 \cf2 \cb3 \strokec10 \'a0Refers to the single independent variable used in the analysis.(i.e., Product)\
+\ls2\ilvl1
+\f2\fs28\fsmilli14400 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 Way:
+\f3\fs32 \cf2 \cb3 \strokec10 \'a0Indicates the direction of the analysis, which is comparing the mean of the dependent variable (i.e., Income) across different groups defined by the independent variable (i.e., Product).\
+\ls2\ilvl1
+\f2\fs28\fsmilli14400 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 ANOVA:
+\f3\fs32 \cf2 \cb3 \strokec10 \'a0Analysis of Variance.\
+\pard\pardeftab720\sa120\partightenfactor0
+\ls2\ilvl1\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 This test steps in when we're dealing with a categorical feature that can consist of two or more categories\
+\ls2\ilvl1\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec10 It helps us figure out if there's a significant difference between them.\
+\ls2\ilvl1\AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}Assumptions of ANOVA:
+\f5 \AppleTypeServices\AppleTypeServicesF65539 \cf11 \cb1 \
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\sa120\partightenfactor0
+\ls2\ilvl2\cf11 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec11 Populations from which samples are drawn should be normal\
+\pard\tx1660\tx2160\pardeftab720\li2160\fi-2160\partightenfactor0
+\ls2\ilvl2\cf11 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec11 the samples should be drawn randomly and independently\
+\ls2\ilvl2\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8259 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec11 the variability between the dependent variables within different groups is equal.
+\f3 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \outl0\strokewidth0 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa120\partightenfactor0
+\cf2 \cb3 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \AppleTypeServices \cf2 \cb3 \outl0\strokewidth0 \strokec10 Kruskal-Wallis Test:\
+\pard\pardeftab720\partightenfactor0
+
+\f3\b0 \cf2 \cb3 \strokec10 It is an alternative to the one-way ANOVA, making it useful when data is not normally distributed.\
+\
+\
+\
+\pard\pardeftab720\sa200\partightenfactor0
+
+\fs40 \cf2 \cb3 \strokec13 Shapiro-Wilk test:\
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \cf2 \cb3 \strokec10 used to assess the normality of data\
+\
+\
+\
+\
+\pard\pardeftab720\sa230\partightenfactor0
+
+\fs46 \cf2 \cb3 \strokec13 Levene Test\cf2 \cb3 \strokec10 \
+\pard\pardeftab720\sa120\partightenfactor0
+
+\fs32 \cf2 \cb3 \strokec10 Imagine you have multiple groups, and you want to see if the variability (spread) of data within each group is roughly the same. 
+\f1\b \cf2 \cb3 \strokec10 How would we go about verifying that?
+\f3\b0 \cf2 \cb3 \strokec10 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec10 \
+\
+
+\fs46 QQ (quantile quantile) Plot:\
+
+\fs32 \cf14 \cb15 \strokec14 different ways to check if our data is Gaussian or not.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf14 \cb15 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 Think of it as a side-by-side comparison between your data and a hypothetical Gaussian (normal) distribution.\
+\ls3\ilvl0\cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}\cb15 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 We know that when a variable follows Normal Distribution, then 99.7% of values lie between\'a0
+\f6\fs39 \cf14 \cb15 \up0 \strokec14 \'b1
+\f3 \cb1  
+\fs32 \cf14 \cb15 \up0 \strokec14 3 standard deviations\
+\ls3\ilvl0\cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u8226 	}
+\f7\b \AppleTypeServices\AppleTypeServicesF65539 \cf16 \cb17 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec16 A histogram, showing the typical mound-like appearance of the Normal distribution, is more helpful than a QQ plot for assessing Normality.
+\f3\b0 \AppleTypeServices \cf14 \cb1 \strokec14 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec10 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs28 \cf18 \cb19 \strokec18 qqplot\cf20 \cb19 \strokec20 (\cf18 \cb19 \strokec18 height\cf20 \cb19 \strokec20 ,\cf18 \cb19 \strokec18  line=\cf21 \cb19 \strokec21 "s"\cf20 \cb19 \strokec20 )\cf18 \cb1 \strokec18 \
+\cb19 plt.show\cf20 \cb19 \strokec20 ()\cf18 \cb1 \strokec18 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs32 \cf2 \cb3 \strokec10 \
+\
+\
+\
+\
+\
+
+\fs40 \cf2 \cb3 \strokec10 \
+\pard\pardeftab720\partightenfactor0
+
+\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \outl0\strokewidth0 \
+}

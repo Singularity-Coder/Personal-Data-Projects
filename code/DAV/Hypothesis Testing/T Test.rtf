@@ -1,0 +1,135 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;\f2\fswiss\fcharset0 ArialMT;
+\f3\fswiss\fcharset0 Arial-BoldMT;\f4\fmodern\fcharset0 Courier;\f5\fswiss\fcharset0 Helvetica-Bold;
+\f6\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red64\green64\blue64;\red243\green249\blue255;\red64\green64\blue64;
+\red14\green18\blue30;\red247\green249\blue250;}
+{\*\expandedcolortbl;;\cssrgb\c31765\c31765\c31765;\cssrgb\c96078\c98039\c100000;\cssrgb\c31765\c31765\c31765;
+\cssrgb\c6275\c9412\c15686;\cssrgb\c97647\c98039\c98431;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid101\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid102\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid201\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid202\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid3}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww24760\viewh12820\viewkind0
+\deftab560
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf0 T Test
+\f1\b0\fs26 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0
+\f2\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 The distribution of variable y is normal. Hence, we can use Z-test or T-test. If there is skewness we can\'92t use these 2 tests.\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \AppleTypeServices \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3\b\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 One sample T-test:\
+
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 Since we will be performing Right Tail Test, we will set\'a0
+\f4 \AppleTypeServices \cf2 \cb3 \strokec2 alternative = "greater"\
+
+\f2 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \strokec2 The test is one-tailed because the focus is in a particular direction of the distribution.
+\f1\fs26 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs32 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 from scipy.stats import ttest_1samp\
+\pard\pardeftab720\partightenfactor0
+\cf4 \outl0\strokewidth0 test_statistic\cf2 \outl0\strokewidth0 \strokec2 , pvalue = ttest_1samp(sample_data, popmean, alternative = "greater")\
+\pard\pardeftab720\partightenfactor0
+\cf2 \
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3\b \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \strokec2 Two Sample T-test:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb1 \strokec2 Since we need to compare two different samples, whose sample size is small (<30), we will use Two Sample T-test\
+Further, in order to test for the proposed alternate hypothesis, we will have to perform a Two Tailed Test.\
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb6 \strokec5 You don't know which is better, you just want to know if there's a difference. That's when you'd use a two-tailed test.\cf2 \cb1 \strokec2 \
+\pard\pardeftab720\partightenfactor0
+
+\f4 \AppleTypeServices \cf2 \strokec2 from scipy.stats import ttest_ind\
+# Performing 2 Sample Two-Tailed T-test \
+test_statistic, pvalue = ttest_ind(sample1, sample2, alternative ='two-sided')\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3\b \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \strokec2 Paired T-test:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb1 \strokec2 The nature of data here is in the form of \'93Before\'94 and \'93After\'94 the new Zumba dance routine. Hence we will use Paired T-test using\'a0
+\f4\fs38\fsmilli19200 \AppleTypeServices \cf2 \strokec2 ttest_rel()
+\f2\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \strokec2 \
+Further, in order to test our proposed alternate hypothesis, we would have to perform Right Tail test\
+\pard\pardeftab720\partightenfactor0
+
+\f4 \AppleTypeServices \cf2 \strokec2 from scipy.stats import ttest_rel\
+t_stat, pvalue = ttest_rel(data_before, data_after, alternative="greater")\
+\
+\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 Significance level - generally 0.05 or 5% or 95% confidence\
+Confidence level - generally 95% or 5% significance.\
+\
+\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls2\ilvl0
+\f5\b\fs38\fsmilli19200 \AppleTypeServices\AppleTypeServicesF65539 \cf5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 Types of t-tests
+\f6\b0 \AppleTypeServices\AppleTypeServicesF65539 :
+\fs32 \AppleTypeServices\AppleTypeServicesF65539 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa120\partightenfactor0
+\ls2\ilvl1
+\f5\b \AppleTypeServices\AppleTypeServicesF65539 \cf5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 One-Sample t-test
+\f6\b0 \AppleTypeServices\AppleTypeServicesF65539 : Used to determine if the sample mean is significantly different from a known population mean.\
+\ls2\ilvl1
+\f5\b \AppleTypeServices\AppleTypeServicesF65539 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 Two-Sample t-test
+\f6\b0 \AppleTypeServices\AppleTypeServicesF65539 : Compares means from two independent samples to determine if they come from populations with equal means.\
+\ls2\ilvl1
+\f5\b \AppleTypeServices\AppleTypeServicesF65539 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 Paired t-test
+\f6\b0 \AppleTypeServices\AppleTypeServicesF65539 : Compares means from the same group at different times.\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa120\partightenfactor0
+\cf5 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls3\ilvl0
+\f5\b\fs38\fsmilli19200 \AppleTypeServices\AppleTypeServicesF65539 \cf5 \strokec5 t Distribution vs. z Distribution
+\f6\b0 \AppleTypeServices\AppleTypeServicesF65539 :
+\fs32 \AppleTypeServices\AppleTypeServicesF65539 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa120\partightenfactor0
+\ls3\ilvl1
+\f5\b \AppleTypeServices\AppleTypeServicesF65539 \cf5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 t Distribution
+\f6\b0 \AppleTypeServices\AppleTypeServicesF65539 : Used when the population standard deviation is unknown and the sample size is small. Approximates the normal distribution as sample size increases (Central Limit Theorem).\
+\ls3\ilvl1
+\f5\b \AppleTypeServices\AppleTypeServicesF65539 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 z Distribution
+\f6\b0 \AppleTypeServices\AppleTypeServicesF65539 : Used when the population standard deviation is known. More accurate with larger sample sizes.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls3\ilvl0
+\f5\b\fs38\fsmilli19200 \AppleTypeServices\AppleTypeServicesF65539 \cf5 \
+Standard Error (SE)
+\f6\b0 \AppleTypeServices\AppleTypeServicesF65539 :
+\fs32 \AppleTypeServices\AppleTypeServicesF65539 \
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa120\partightenfactor0
+\ls3\ilvl1\cf5 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 Calculation: SE = s / \uc0\u8730 n where s is the sample standard deviation.\
+\ls3\ilvl1\kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\uc0\u9702 	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 A measure of the variability of a sample mean estimate.\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa120\partightenfactor0
+\cf5 \strokec5 \
+}

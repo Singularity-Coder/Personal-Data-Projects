@@ -1,0 +1,125 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww24760\viewh13380\viewkind0
+\deftab560
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf0 Correlation\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b0\fs26 \cf0 from scipy.stats import spearmanr\
+from scipy.stats import pearsonr\
+a = [10.0, 8.0, 13.0, 9.0, 11.0, 14.0, 6.0, 4.0, 12.0, 7.0, 5.0]\
+b = [8.04, 6.95, 7.58, 8.81, 8.33, 9.96, 7.24, 4.26, 10.84, 4.82, 5.68]\
+pearsonr(a, b)\
+spearmanr(a, b)
+\f0\b\fs40 \
+\pard\pardeftab560\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\b0\fs26 \cf0 When u have 2 Continuous variables we use correlation test. Ex: if height increases weight also increases. So ht n wt have +ve correlation. Age vs energy
+\f0\b \
+\
+
+\f1\b0 {{\NeXTGraphic Screenshot 2024-11-06 at 10.40.17.png \width16840 \height13480 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}
+\f0\b \
+\
+\
+Correlation != Causation\
+Ex: AC sales go up in winter or AC sales go down in summer. Does not mean people like to use AC in winter. It could be because of discount in winter. Or price increase in summer.\
+\
+You should think of examples on ur own; At least 5 to 10 of them.\
+
+\f1\b0 {{\NeXTGraphic Screenshot 2024-11-06 at 10.44.49.png \width15880 \height12000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}
+\f0\b \
+\
+\
+
+\f1\b0 Rho value: Correlation values can be from -1 , 0 , 1. \
+1 means a perfect linear correlation. Which mean if x values increases y also increases positively.\
+0 means no correlation.\
+-1 means -ve corr.
+\f0\b \
+\
+\
+
+\f1\b0 Rho can be +1 for scenarios like GST vs service charges or celsius vs Farenheit \
+\
+{{\NeXTGraphic Screenshot 2024-11-06 at 11.02.34.png \width16520 \height8600 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+If there are clusters of diff categories of data in same graph then the results can go against ur intuition. Identify categories first.\
+\
+Less scattering means stronger linear correlation\
+\
+\
+Non linear correlation - height vs age. Until certain age there is strong correlation.\
+\
+{{\NeXTGraphic Screenshot 2024-11-06 at 11.19.04.png \width17160 \height9800 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
++ve monotonic func\
+{{\NeXTGraphic Screenshot 2024-11-06 at 11.20.44.png \width14760 \height10120 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+-ve monotonic func\
+{{\NeXTGraphic Screenshot 2024-11-06 at 11.20.32.png \width14160 \height11040 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+{{\NeXTGraphic Screenshot 2024-11-06 at 11.37.40.png \width14240 \height7720 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+\
+\
+\pard\pardeftab560\sa40\partightenfactor0
+
+\f0\b\fs32 \cf0 Covariance:
+\f1\b0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs26 \cf0 Correct options :
+\f1\b0 \
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls1\ilvl0
+\f2\fs18 \cf0 {\listtext	\uc0\u8226 	}
+\f1\fs26 If data values are doubled, the relationship between the features would remain unchanged, however the covariance value will change.\
+\ls1\ilvl0
+\f2\fs18 {\listtext	\uc0\u8226 	}
+\f1\fs26 Covariance cannot tell if the line of best fit is steep or not steep.\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b \cf0 Explanation :
+\f1\b0 \
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls2\ilvl0
+\f2\fs18 \cf0 {\listtext	\uc0\u8226 	}
+\f1\fs26 When the values of the data is doubled, the data only scales up in the size. And because of this the variance will also change, but the relationship between the features will always be the same.\
+\ls2\ilvl0
+\f2\fs18 {\listtext	\uc0\u8226 	}
+\f1\fs26 Covariance is not a parameter to define how good the line of best fit is, and thus it also cannot tell how close the data points are to the line of best fit.\
+\ls2\ilvl0
+\f2\fs18 {\listtext	\uc0\u8226 	}
+\f1\fs26 Covariance cannot tell if the line of best fit is steep or not steep, Though it does tell us whether the slope of best fit is positive or negative.\
+\ls2\ilvl0
+\f2\fs18 {\listtext	\uc0\u8226 	}
+\f1\fs26 If the covariance is compared for the data with the same scales the option D holds true. But, when the scale of the same data is changed, it is not mandatory that the covariance will have a higher value.\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+\
+\
+Nominal data is\'a0a type of qualitative data that is used to label or classify variables into categories that cannot be ordered or measured. Ex: Some examples of nominal data include hair color, nationality, relationship status, preferred mode of public transportation, blood type, political parties voted for, attachment style, personality type, and employment status.\'a0\
+\
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf0 \
+}

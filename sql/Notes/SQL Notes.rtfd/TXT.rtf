@@ -1,0 +1,81 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fswiss\fcharset0 ArialMT;
+\f3\fswiss\fcharset0 Arial-BoldMT;}
+{\colortbl;\red255\green255\blue255;\red14\green18\blue30;\red255\green255\blue255;\red14\green18\blue30;
+\red247\green249\blue250;\red79\green95\blue123;\red255\green255\blue255;\red14\green18\blue30;\red247\green249\blue250;
+\red247\green242\blue255;\red14\green18\blue30;}
+{\*\expandedcolortbl;;\cssrgb\c6322\c9466\c15733;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c6275\c9412\c15686;
+\cssrgb\c97647\c98039\c98431;\cssrgb\c38039\c45098\c55686;\cssrgb\c100000\c100000\c100000;\cssrgb\c6275\c9412\c15686;\cssrgb\c97647\c98039\c98431;
+\cssrgb\c97647\c96078\c100000;\cssrgb\c6322\c9466\c15733;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww13620\viewh11880\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+
+\f1\b\fs72 SQL Notes
+\f0\b0\fs24 \
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf2 \cb3 \expnd0\expndtw0\kerning0
+SQL Tricky Qs: https://chatgpt.com/c/67f5f5ed-3c54-800a-9afa-2803b49e0066\
+\
+SQL Optimsations Qs: https://chatgpt.com/c/67f606a3-c31c-800a-aa3e-8a9af9cf9a20\
+\
+\
+\cf4 \cb5 _________________________________________________________________
+\f0\fs24 \AppleTypeServices \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+{{\NeXTGraphic Screenshot_2023-04-06_at_3.40.44_PM.png \width6840 \height5300 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \AppleTypeServices\AppleTypeServicesF65539 \cf6 \cb7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 what kind of\'a0
+\f3\b \AppleTypeServices\AppleTypeServicesF65539 relationship
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \'a0exists between the\'a0
+\f3\b \AppleTypeServices\AppleTypeServicesF65539 movies
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \'a0and\'a0
+\f3\b \AppleTypeServices\AppleTypeServicesF65539 movie_actor
+\f2\b0 \AppleTypeServices\AppleTypeServicesF65539 \'a0tables.\
+its not many to many as it is relationship btw normal table and junction table. \
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb9 \strokec8 The movie_actor table is a junction table that connects movies and actors. It allows one movie to have many actors, and one actor to be in many movies. This creates an overall many-to-many relationship between movies and actors.\
+The keys in red are indeed Primary Keys (PK). This is a common convention in ER diagrams.\
+\
+A junction table, like movie_actor, is used to connect two tables that have a many-to-many relationship. It contains foreign keys from both tables, allowing multiple connections between them.\
+\
+Using Foreign Keys (FKs) directly would limit each movie to one actor and each actor to one movie. A junction table allows for multiple connections, which is needed for many-to-many relationships.\
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb10 \strokec8 U can add PK of first tabel in 2nd table and PK of 2nd table in 1st right. \cf8 \cb9 \strokec8 While that approach might seem logical, it would create data redundancy and potentially inconsistent data. The junction table (movie_actor) is a more efficient and flexible solution.\'a0\
+\
+\pard\pardeftab720\partightenfactor0
+\AppleTypeServices\AppleTypeServicesF65539 \cf4 \cb5 \outl0\strokewidth0 _________________________________________________________________\AppleTypeServices\AppleTypeServicesF65539 \cf8 \cb9 \outl0\strokewidth0 \strokec8 \
+\pard\pardeftab720\partightenfactor0
+\cf11 \cb3 \strokec11 \
+\pard\pardeftab720\partightenfactor0
+\cf11 \
+\pard\pardeftab720\partightenfactor0
+\cf11 \
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\cf8 \cb9 \strokec8 \
+}

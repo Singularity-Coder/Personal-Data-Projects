@@ -1,129 +1,81 @@
-fun main(args: Array<String>) {
-    val matrix: Array<IntArray> = randomMatrix(M = 3, N = 3, min = 0, max = 9)
-//    printMatrix(matrix)
-//    matrix.forEach { println(it.contentToString()) }
-    rotateImage90degreesInPlace(matrix)
-//    println()
-//    printMatrix(matrix)
-//    matrix.forEach { println(it.contentToString()) }
-//    rotateMatrix90Deg(matrix)
-}
-
-fun rotateMatrix90Deg(matrix: Array<IntArray>): Boolean {
-    // check if matrix has same width n height - square matrix
-    if (matrix.isEmpty() || matrix.size != matrix[0].size) return false
-
-    for (i in 0..matrix.lastIndex) {
-        for (j in 0..matrix[i].lastIndex) {
-            // a11 will be a13
-            // a21 will be a12
-            // a31 will be a11
-            val backup = matrix[i][j]
-            matrix[i][j] = matrix[matrix.lastIndex - i][j]
-        }
+fun main() {
+    var first = LinkedListNode(0, null, null) //AssortedMethods.randomLinkedList(1000, 0, 2);
+    val head: LinkedListNode = first
+    var second: LinkedListNode = first
+    for (i in 1..7) {
+        second = LinkedListNode(i % 2, null, null)
+        first.setNext(second)
+        second.setPrevious(first)
+        first = second
     }
-
-    return false
+    System.out.println(head.printForward())
+    deleteDups(head)
+    System.out.println(head.printForward())
 }
 
-
-fun randomMatrix(
-    M: Int,
-    N: Int,
-    min: Int,
-    max: Int
-): Array<IntArray> {
-    // array of size 3 with inital value of 0 value arrays
-    /*
-    [0, 0, 0]
-    [0, 0, 0]
-    [0, 0, 0]
-    * */
-    val matrix = Array(M) { IntArray(N) }
-//    for (i in 0 until M) {
-//        for (j in 0 until N) {
-//            matrix[i][j] = randomIntInRange(min, max)
-////            matrix[i][j] = randomInt(max)
-//        }
-//    }
-
-    return arrayOf(
-        intArrayOf(9, 5, 3),
-        intArrayOf(8, 8, 3),
-        intArrayOf(5, 3, 6),
-    )
-}
-
-fun randomIntInRange(min: Int, max: Int): Int = randomInt(max + 1 - min) + min
-
-fun randomInt(n: Int): Int = (Math.random() * n).toInt()
-
-fun printMatrix(matrix: Array<IntArray>) {
-    for (i in matrix.indices) {
-        for (j in matrix[i].indices) {
-            if (matrix[i][j] in -10..10) {
-                print(" ")
-            }
-            if (matrix[i][j] in -100..100) {
-                print(" ")
-            }
-            if (matrix[i][j] >= 0) {
-                print(" ")
-            }
-            // The above conditions are for space control when prinitng the matrix if the numbers are big. If 2 digit number add 1 space, if 3 digit number add 2 spaces. This is to make the matrix look nice
-            // Else this print is enough
-            print(" " + matrix[i][j])
+fun deleteDups(n: LinkedListNode?) {
+    var n: LinkedListNode? = n
+    val set = HashSet<Int>()
+    var previous: LinkedListNode? = null
+    while (n != null) {
+        if (set.contains(n.data)) {
+            previous?.next = n.next
+        } else {
+            set.add(n.data)
+            previous = n
         }
-        println()
+        n = n.next
     }
 }
 
-// The idea is to shift the positions across arrays
-// u should know if its left or right rotation
-// How many rotations
-// All rows become columns
-// all nested arrays u have to set nested loops - outer loop controls the outer array and each outer iteration will execute the complete inner iteration
-// to change an element in every array, u need all iterations of outer array. 1 rotation requires modification in all inner arrays
-fun rotateImage90degreesInPlace(matrix: Array<IntArray>): Boolean {
-    if (matrix.size == 0 || matrix.size != matrix[0].size) return false // Not a square
+class LinkedListNode {
+    var next: LinkedListNode? = null
+    var prev: LinkedListNode? = null
+    var last: LinkedListNode? = null
+    var data = 0
 
-    matrix.forEach { println(it.contentToString()) }
-    println()
+    constructor(d: Int, n: LinkedListNode?, p: LinkedListNode?) {
+        data = d
+        setNext(n!!)
+        setPrevious(p)
+    }
 
-    // Why matrix.size / 2
-    for (i in 0 until matrix.size / 2) { // if matrix size is 3 then it goes for 1 iteration
-        val last = matrix.lastIndex - i // Get the last item in each layer. Layer is just the list of arrays. Each layer is a list. Decresing counter
-//        println("last: $last")
+    constructor(d: Int) {
+        data = d
+    }
 
-        // row becomes column from bottom. last row becomes first column
-        for (j in i until last) {
-            val offset = j - i // counter - if
-//            println("offset: $offset")
+    constructor()
 
-            val top = matrix[i][j] // save top - first column last value will be the top if u rotate to the right
-//            println("top: $top")
-
-            // Shift elements as per the rotation. Its easier when u have visuals
-
-            // left -> top - here left is bottom left, top is top left
-//            println("matrix[last - offset][layer]: ${matrix[last - offset][i]}")
-            matrix[i][j] = matrix[last - offset][i]
-
-            // bottom -> left
-//            println("matrix[last][last - offset]: ${matrix[last][last - offset]}")
-            matrix[last - offset][i] = matrix[last][last - offset]
-
-            // right -> bottom
-//            println("matrix[i][last]: ${matrix[j][last]}")
-            matrix[last][last - offset] = matrix[j][last]
-
-            // top -> right
-//            println("new top: $top")
-            matrix[j][last] = top // right <- saved top
-
-            matrix.forEach { println(it.contentToString()) }
-            println()
+    fun setNext(n: LinkedListNode) {
+        next = n
+        if (this === last) {
+            last = n
+        }
+        if (n != null && n.prev !== this) {
+            n.setPrevious(this)
         }
     }
-    return true
+
+    fun setPrevious(p: LinkedListNode?) {
+        prev = p
+        if (p != null && p.next !== this) {
+            p.setNext(this)
+        }
+    }
+
+    fun printForward(): String {
+        return if (next != null) {
+            data.toString() + "->" + next!!.printForward()
+        } else {
+            data.toString()
+        }
+    }
+
+    fun clone(): LinkedListNode {
+        var next2: LinkedListNode? = null
+        if (next != null) {
+            next2 = next!!.clone()
+        }
+        return LinkedListNode(data, next2, null)
+    }
 }

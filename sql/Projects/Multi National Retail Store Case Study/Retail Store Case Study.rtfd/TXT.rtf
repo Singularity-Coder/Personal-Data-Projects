@@ -1,49 +1,52 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2759
+{\rtf1\ansi\ansicpg1252\cocoartf2821
 \cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 Menlo-Regular;
 \f3\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red40\green79\blue205;
-\red44\green55\blue61;\red21\green128\blue62;\red42\green55\blue62;\red40\green79\blue205;\red42\green55\blue62;
-\red238\green57\blue24;\red41\green80\blue206;\red44\green55\blue61;\red21\green128\blue62;\red42\green55\blue62;
-\red237\green56\blue23;\red44\green55\blue61;}
-{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c20298\c40742\c84246;
-\cssrgb\c22794\c27898\c30615;\cssrgb\c5039\c56433\c30904;\cssrgb\c21621\c27903\c31013;\cssrgb\c20298\c40741\c84246;\cssrgb\c21621\c27902\c31012;
-\cssrgb\c95572\c31583\c11464;\cssrgb\c20597\c41091\c84570;\cssrgb\c22843\c27954\c30642;\cssrgb\c4981\c56395\c30828;\cssrgb\c21672\c27962\c31045;
-\cssrgb\c95457\c31401\c11162;\cssrgb\c22745\c27843\c30588;}
-{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
-{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}}
-{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
-\paperw11900\paperh16840\margl1440\margr1440\vieww16680\viewh12440\viewkind0
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red22\green79\blue199;
+\red255\green255\blue255;\red24\green25\blue27;\red24\green112\blue43;\red46\green49\blue51;\red44\green55\blue61;
+\red40\green79\blue205;\red40\green79\blue205;\red42\green55\blue62;\red21\green128\blue62;\red22\green79\blue199;
+\red24\green25\blue27;\red46\green49\blue51;\red159\green77\blue4;\red24\green112\blue43;\red167\green0\blue95;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c9804\c40392\c82353;
+\cssrgb\c100000\c100000\c100000;\cssrgb\c12549\c12941\c14118;\cssrgb\c9412\c50196\c21961;\cssrgb\c23529\c25098\c26275;\cssrgb\c22794\c27898\c30615;
+\cssrgb\c20298\c40741\c84246;\cssrgb\c20298\c40742\c84246;\cssrgb\c21621\c27903\c31013;\cssrgb\c5039\c56433\c30904;\cssrgb\c9804\c40392\c82353;
+\cssrgb\c12549\c12941\c14118;\cssrgb\c23529\c25098\c26275;\cssrgb\c69020\c37647\c0;\cssrgb\c9412\c50196\c21961;\cssrgb\c72157\c2353\c44706;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28300\viewh16080\viewkind0
 \deftab720
 \pard\pardeftab720\partightenfactor0
 
-\f0\b\fs56 \cf2 \cb3 Retail Store CS\
-\pard\pardeftab720\partightenfactor0
+\f0\b\fs60 \cf2 Retail Store CS\
 
-\fs30 \cf2 _____________________________________________________________________________________________________________________\
+\fs24 \cb3 \
+To quickly search columns in BigQuery use Dataplex Catalog:\
+https://console.cloud.google.com/dataplex/dp-search?project=feb24scale\
+_____________________________________________________________________________________________________________________\
 \
-Q1.1\'a0Data type of all columns in the "customers" table.
-\f1\b0 \
+Q1.1\'a0Data type of all columns in the "customers" table.\
 \
+
+\f1\b0 \cb1 In BigQuery the db naming convention is: 
+\f0\b feb24scale
+\f1\b0  is project name, 
+\f0\b retial_cs
+\f1\b0  is DB name.\
+\cb3 \
 Ans:\'a0\
-\pard\pardeftab720\partightenfactor0
 
-\f2 \cf4 \expnd0\expndtw0\kerning0
-SELECT\cf5  \
-  column_name, data_type \
-\cf4 FROM\cf5  \
-  \cf6 `cs1.customers.INFORMATION_SCHEMA.COLUMNS`\cf5 \
-\cf4 WHERE\cf5 \
-  table_name = \cf6 `customers`\cf5 \
-\cf4 ORDER\cf5  \cf4 BY\cf5 \
-  ordinal_position
-\f1 \kerning1\expnd0\expndtw0 \
-\pard\pardeftab720\partightenfactor0
-\cf2 \
+\f2 \cf4 \cb5 SELECT\cf6  \
+  column_name,\
+  data_type \
+\cf4 FROM\cf6  \
+  \cf7 `feb24scale.retial_cs.INFORMATION_SCHEMA.COLUMNS`\cf6 \
+\cf4 WHERE\cf6 \
+  table_name = \cf7 'customers'\cf6 ;
+\f1 \
+\cf2 \cb3 \
 Screenshot:\'a0\
-\pard\pardeftab720\partightenfactor0
-\cf2 {{\NeXTGraphic pastedGraphic.png \width14920 \height7320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\pardeftab720\partightenfactor0
-\cf2 \
+{{\NeXTGraphic pastedGraphic.png \width14920 \height7320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
 \
 Insights: NA\
 \
@@ -58,22 +61,18 @@ Recommendation: NA\
 
 \f1\b0 \
 Ans:\
-\pard\pardeftab720\partightenfactor0
 
-\f2 \cf4 \expnd0\expndtw0\kerning0
-SELECT\cf5  \
-  \cf4 MIN\cf7 (\cf5 order_purchase_timestamp\cf7 )\cf5  \cf4 AS\cf5  \cf6 `min_purchase_time`\cf5 ,\
-  \cf4 MAX\cf7 (\cf5 order_purchase_timestamp\cf7 )\cf5  \cf4 AS\cf5  \cf6 `max_purchase_time`\cf5 \
-\cf4 FROM\cf5  \
-  \cf6 `cs1.orders`
-\f1 \cf5 \kerning1\expnd0\expndtw0 \
-\pard\pardeftab720\partightenfactor0
-\cf2 \
+\f2 \cf4 \cb5 SELECT\cf6  \
+  \cf4 MIN\cf8 (\cf6 order_purchase_timestamp\cf8 )\cf6  \cf4 AS\cf6  \cf7 `min_purchase_time`\cf6 ,\
+  \cf4 MAX\cf8 (\cf6 order_purchase_timestamp\cf8 )\cf6  \cf4 AS\cf6  \cf7 `max_purchase_time`\cf6 \
+\cf4 FROM\cf6  \
+  \cf7 `retial_cs.orders`
+\f1 \cf9 \
+\cf2 \cb3 \
 Screenshot:\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-\cf0 {{\NeXTGraphic Screenshot 2024-04-06 at 07.55.36.png \width18480 \height2080 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-\cf2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf2 {{\NeXTGraphic 1__#$!@%!#__pastedGraphic.png \width18480 \height2080 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Insights:\'a0\
@@ -91,22 +90,19 @@ Recommendation:\'a0\
 
 \f1\b0 \
 Ans:\
-\pard\pardeftab720\partightenfactor0
 
-\f2 \cf4 \expnd0\expndtw0\kerning0
-SELECT\cf5  \cf4 DISTINCT\cf5 \
-  \cf4 COUNT\cf7 (\cf4 DISTINCT\cf5  customer_city\cf7 )\cf5  \cf4 AS\cf5  \cf6 `city_count`\cf5 ,\
-  \cf4 COUNT\cf7 (\cf4 DISTINCT\cf5  customer_state\cf7 )\cf5  \cf4 AS\cf5  \cf6 `state_count`\cf5 \
-\cf4 FROM\cf5 \
-  \cf6 `cs1.customers`
-\f1 \cf5 \kerning1\expnd0\expndtw0 \
-\pard\pardeftab720\partightenfactor0
-\cf2 \
+\f2 \cf4 \cb5 SELECT\cf6 \
+  \cf4 COUNT\cf8 (\cf4 DISTINCT\cf6  customer_city\cf8 )\cf6  \cf4 AS\cf6  \cf7 `city_count`\cf6 ,\
+  \cf4 COUNT\cf8 (\cf4 DISTINCT\cf6  customer_state\cf8 )\cf6  \cf4 AS\cf6  \cf7 `state_count`\cf6 \
+\cf4 FROM\cf6 \
+  \cf7 `retial_cs.customers`
+\f1 \cf9 \
+\cf2 \cb3 \
 Screenshot:\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
 
-\f3 \cf0 {{\NeXTGraphic Screenshot 2024-04-06 at 08.10.30.png \width12360 \height2120 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\f3 \cf2 {{\NeXTGraphic 2__#$!@%!#__pastedGraphic.png \width12360 \height2120 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
 
 \f1 \cf2 \
 \pard\pardeftab720\partightenfactor0
@@ -116,11 +112,11 @@ Insights: \
 2. I cannot conclude on customer engagement in this but since the 4119 cities did place at least one order it is likely that they will place again so we can consider starting loyalty programs in these cities if its not already in place.\
 \
 \pard\pardeftab720\partightenfactor0
-\cf8 SELECT\cf5  \cf8 DISTINCT\cf5 \
-  \cf8 COUNT\cf9 (\cf8 DISTINCT\cf5  geolocation_state\cf9 )\cf5  \cf8 AS\cf5  \cf6 `state_count`\cf5 ,\
-  \cf8 COUNT\cf9 (\cf8 DISTINCT\cf5  geolocation_city\cf9 )\cf5  \cf8 AS\cf5  \cf6 `city_count`\cf5 \
-\cf8 FROM\cf5 \
-  \cf6 `cs1.geolocation`\cf5 \
+\cf10 SELECT\cf9 \
+  \cf11 COUNT\cf12 (\cf11 DISTINCT\cf9  geolocation_state\cf12 )\cf9  \cf11 AS\cf9  \cf13 `state_count`\cf9 ,\
+  \cf11 COUNT\cf12 (\cf11 DISTINCT\cf9  geolocation_city\cf12 )\cf9  \cf11 AS\cf9  \cf13 `city_count`\cf9 \
+\cf10 FROM\cf9 \
+  \cf13 `cs1.geolocation`\cf9 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Recommendation: \
@@ -134,32 +130,33 @@ Recommendation: \
 \f0\b Q2.1\'a0Is there a growing trend in the no. of orders placed over the past years?
 \f1\b0 \
 \
+Trend is observed by looking at the flow over a period of time.\
+\
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf4 \expnd0\expndtw0\kerning0
-SELECT\cf5 \
-  \cf4 EXTRACT\cf7 (\cf5 YEAR \cf4 FROM\cf5  order_purchase_timestamp\cf7 )\cf5  \cf4 AS\cf5  \cf6 `year`\cf5 ,\
-  \cf4 COUNT\cf7 (\cf5 order_id\cf7 )\cf5  \cf4 AS\cf5  \cf6 `total_orders_per_year`\cf5 \
-\cf4 FROM\cf5 \
-  \cf6 `cs1.orders`\cf5 \
-\cf4 GROUP\cf5  \cf4 BY\cf5 \
+\cf10 SELECT\cf9 \
+  \cf11 EXTRACT\cf12 (\cf9 YEAR \cf11 FROM\cf9  order_purchase_timestamp\cf12 )\cf9  \cf11 AS\cf9  \cf13 `year`\cf9 ,\
+  \cf11 COUNT\cf12 (\cf9 *\cf12 )\cf9  \cf11 AS\cf9  \cf13 `total_orders_per_year`\cf9 \
+\cf10 FROM\cf9 \
+  \cf13 `cs1.orders`\cf9 \
+\cf10 GROUP\cf9  \cf10 BY\cf9 \
   year\
-\cf4 ORDER\cf5  \cf4 BY\cf5 \
-  year\kerning1\expnd0\expndtw0 \
+\cf10 ORDER\cf9  \cf10 BY\cf9 \
+  year\
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
 \pard\pardeftab720\partightenfactor0
-\cf2 {{\NeXTGraphic 2__#$!@%!#__pastedGraphic.png \width14040 \height4040 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+\cf2 {{\NeXTGraphic 3__#$!@%!#__pastedGraphic.png \width14040 \height4040 \appleattachmentpadding0 \appleembedtype0 \appleaqc
 }¬}\pard\pardeftab720\partightenfactor0
 \cf2 \
 \
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
 
-\f3\fs24 \cf0 \cb1 {{\NeXTGraphic total_orders_per_year by year.jpeg \width21000 \height12800 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\f3 \cf2 \cb5 {{\NeXTGraphic 4__#$!@%!#__pastedGraphic.png \width21000 \height12800 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
 
-\f1\fs30 \cf2 \cb3 \
+\f1 \cf2 \cb3 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Insights: \
@@ -178,43 +175,26 @@ Recommendation: \
 \f1\b0 \
 \
 Ans:\
-\pard\pardeftab720\partightenfactor0
-\cf4 \expnd0\expndtw0\kerning0
-SELECT\cf5 \
-  \cf4 EXTRACT\cf7 (\cf5 YEAR \cf4 FROM\cf5  order_purchase_timestamp\cf7 )\cf5  \cf4 AS\cf5  \cf6 `year`\cf5 ,\
-  \cf4 EXTRACT\cf7 (\cf5 MONTH \cf4 FROM\cf5  order_purchase_timestamp\cf7 )\cf5  \cf4 AS\cf5  \cf6 `month`\cf5 ,\
-  \cf4 COUNT\cf7 (\cf5 order_id\cf7 )\cf5  \cf4 AS\cf5  \cf6 `total_orders_per_month`\cf5 \
-\cf4 FROM\cf5 \
-  \cf6 `cs1.orders`\cf5 \
-\cf4 GROUP\cf5  \cf4 BY\cf5 \
-  month,\
-  year\
-\cf4 ORDER\cf5  \cf4 BY\cf5 \
-  year \cf4 ASC\cf5 ,\
-  month \cf4 ASC\cf5 ;\kerning1\expnd0\expndtw0 \
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-Screenshot:\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
 
-\f3\fs24 \cf0 \cb1 {{\NeXTGraphic Screenshot 2024-04-06 at 09.36.05.png \width12480 \height11160 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf0 \
+\f2 \cf4 \cb5 SELECT\cf6 \
+  \cf4 EXTRACT\cf8 (\cf6 MONTH \cf4 FROM\cf6  order_purchase_timestamp\cf8 )\cf6  \cf4 AS\cf6  \cf7 `month`\cf6 ,\
+  \cf4 COUNT\cf8 (*)\cf6  \cf4 AS\cf6  \cf7 `num_orders`\cf6 \
+\cf4 FROM\cf6 \
+  \cf7 `retial_cs.orders`\cf6 \
+\cf4 GROUP\cf6  \cf4 BY\cf6 \
+  month\
+\cf4 ORDER\cf6  \cf4 BY\cf6 \
+  month \cf4 ASC\cf6 ;\
 \
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
 
-\f3\fs24 \cf0 {{\NeXTGraphic total_orders_per_month by month.jpeg \width20400 \height13680 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf0 \
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 {{\NeXTGraphic 1__#$!@%!#__total_orders_per_month by month.jpeg \width20400 \height17360 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf2 \cb3 \
+\f1 \cf2 \cb3 Screenshot:\
+{{\NeXTGraphic Screenshot 2025-05-02 at 10.42.59.png \width12520 \height12000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf2 \cb5 {{\NeXTGraphic Screenshot 2025-05-02 at 10.47.51.png \width25760 \height14840 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf2 \cb3 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Insights: \
@@ -230,76 +210,31 @@ Recommendation: \
 
 \f0\b Q2.3\'a0During what time of the day, do the Brazilian customers mostly place their orders? (Dawn, Morning, Afternoon or Night)\'a0
 \f1\b0 \
-\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls1\ilvl0
-\f0\b \cf2 {\listtext	\uc0\u8226 	}0-6 hrs : Dawn\'a0
-\f1\b0 \
-\ls1\ilvl0
-\f0\b {\listtext	\uc0\u8226 	}7-12 hrs : Mornings\'a0
-\f1\b0 \
-\ls1\ilvl0
-\f0\b {\listtext	\uc0\u8226 	}13-18 hrs : Afternoon\'a0
-\f1\b0 \
-\ls1\ilvl0
-\f0\b {\listtext	\uc0\u8226 	}19-23 hrs : Night
-\f1\b0 \
-\pard\pardeftab720\partightenfactor0
-\cf2 \
+\
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf4 \expnd0\expndtw0\kerning0
-WITH\cf5 \
-  \cf6 `T`\cf5  \cf4 AS\cf5  \cf7 (\cf5 \
-    \cf4 SELECT\cf5  \
-      G.geolocation_city,\
-      C.customer_id,\
-      O.order_id,\
-      \cf4 TIME\cf7 (\cf5 O.order_purchase_timestamp\cf7 )\cf5  \cf4 AS\cf5  \cf6 `order_purchase_timestamp`\cf5 ,\
-      \cf7 (\cf5 \
-        \cf4 CASE\cf5 \
-        \cf4 WHEN\cf5  \cf4 EXTRACT\cf7 (\cf5 HOUR \cf4 FROM\cf5  \cf4 TIME\cf7 (\cf5 O.order_purchase_timestamp\cf7 ))\cf5  \cf4 BETWEEN\cf5  \cf10 0\cf5  \cf4 AND\cf5  \cf10 6\cf5  \cf4 THEN\cf5  \cf6 "Dawn"\cf5 \
-\
-        \cf4 WHEN\cf5  \cf4 EXTRACT\cf7 (\cf5 HOUR \cf4 FROM\cf5  \cf4 TIME\cf7 (\cf5 O.order_purchase_timestamp\cf7 ))\cf5  \cf4 BETWEEN\cf5  \cf10 7\cf5  \cf4 AND\cf5  \cf10 12\cf5  \cf4 THEN\cf5  \cf6 "Mornings"\cf5 \
-\
-        \cf4 WHEN\cf5  \cf4 EXTRACT\cf7 (\cf5 HOUR \cf4 FROM\cf5  \cf4 TIME\cf7 (\cf5 O.order_purchase_timestamp\cf7 ))\cf5  \cf4 BETWEEN\cf5  \cf10 13\cf5  \cf4 AND\cf5  \cf10 18\cf5  \cf4 THEN\cf5  \cf6 "Afternoon"\cf5 \
-\
-        \cf4 WHEN\cf5  \cf4 EXTRACT\cf7 (\cf5 HOUR \cf4 FROM\cf5  \cf4 TIME\cf7 (\cf5 O.order_purchase_timestamp\cf7 ))\cf5  \cf4 BETWEEN\cf5  \cf10 19\cf5  \cf4 AND\cf5  \cf10 23\cf5  \cf4 THEN\cf5  \cf6 "Night"\cf5 \
-        \cf4 END\cf5 \
-      \cf7 )\cf5  \cf4 AS\cf5  \cf6 `time_of_day`\cf5 \
-    \cf4 FROM\cf5  \
-      \cf6 `cs1.geolocation`\cf5  \cf4 AS\cf5  \cf6 `G`\cf5  \cf4 RIGHT\cf5  \cf4 JOIN\cf5  \cf6 `cs1.customers`\cf5  \cf4 AS\cf5  \cf6 `C`\cf5  \
-      \cf4 ON\cf5  G.geolocation_zip_code_prefix = C.customer_zip_code_prefix\
-\
-      \cf4 RIGHT\cf5  \cf4 JOIN\cf5  \cf6 `cs1.orders`\cf5  \cf4 AS\cf5  \cf6 `O`\cf5 \
-      \cf4 ON\cf5  C.customer_id = O.customer_id\
-    \cf4 WHERE\cf5 \
-      \cf4 LOWER\cf7 (\cf5 geolocation_city\cf7 )\cf5  \cf4 LIKE\cf5  \cf6 "bra%"\cf5 \
-\cf7 )\cf5 \
-\cf4 SELECT\cf5 \
-  time_of_day,\
-  \cf4 COUNT\cf7 (\cf5 time_of_day\cf7 )\cf5  \cf4 AS\cf5  \cf6 `purchase_count_per_time_of_day`\cf5 ,\
-\cf4 FROM\cf5 \
-  T\
-\cf4 GROUP\cf5  \cf4 BY\cf5 \
-  time_of_day\
-\cf4 ORDER\cf5  \cf4 BY\cf5 \
-  purchase_count_per_time_of_day \cf4 DESC\cf5 ;\kerning1\expnd0\expndtw0 \
+
+\f2 \cf14 \cb5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 SELECT\cf15 \strokec15  \cb1 \
+\cb5   \cf14 \strokec14 CASE\cf15 \strokec15  \cb1 \
+\cb5     \cf14 \strokec14 WHEN\cf15 \strokec15  \cf14 \strokec14 EXTRACT\cf16 \strokec16 (\cf15 \strokec2 HOUR\strokec15  \cf14 \strokec14 FROM\cf15 \strokec15  \strokec2 order_purchase_timestamp\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 BETWEEN\cf15 \strokec15  \cf17 \strokec17 0\cf15 \strokec15  \cf14 \strokec14 AND\cf15 \strokec15  \cf17 \strokec17 6\cf15 \strokec15  \cf14 \strokec14 THEN\cf15 \strokec15  \cf18 \strokec18 'Dawn'\cf15 \cb1 \strokec15 \
+\cb5     \cf14 \strokec14 WHEN\cf15 \strokec15  \cf14 \strokec14 EXTRACT\cf16 \strokec16 (\cf15 \strokec2 HOUR\strokec15  \cf14 \strokec14 FROM\cf15 \strokec15  \strokec2 order_purchase_timestamp\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 BETWEEN\cf15 \strokec15  \cf17 \strokec17 7\cf15 \strokec15  \cf14 \strokec14 AND\cf15 \strokec15  \cf17 \strokec17 12\cf15 \strokec15  \cf14 \strokec14 THEN\cf15 \strokec15  \cf18 \strokec18 'Morning'\cf15 \cb1 \strokec15 \
+\cb5     \cf14 \strokec14 WHEN\cf15 \strokec15  \cf14 \strokec14 EXTRACT\cf16 \strokec16 (\cf15 \strokec2 HOUR\strokec15  \cf14 \strokec14 FROM\cf15 \strokec15  \strokec2 order_purchase_timestamp\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 BETWEEN\cf15 \strokec15  \cf17 \strokec17 13\cf15 \strokec15  \cf14 \strokec14 AND\cf15 \strokec15  \cf17 \strokec17 18\cf15 \strokec15  \cf14 \strokec14 THEN\cf15 \strokec15  \cf18 \strokec18 'Afternoon'\cf15 \cb1 \strokec15 \
+\cb5     \cf14 \strokec14 ELSE\cf15 \strokec15  \cf18 \strokec18 'Night'\cf15 \cb1 \strokec15 \
+\cb5   \cf14 \strokec14 END\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 time_of_day\strokec15 ,\cb1 \
+\cb5   \cf14 \strokec14 COUNT\cf16 \strokec16 (*)\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 num_orders\cb1 \strokec15 \
+\cf14 \cb5 \strokec14 FROM\cf15 \strokec15  \cf18 \strokec18 `retial_cs.orders`\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 GROUP\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 1\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 ORDER\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 2\cf15 \strokec15  \cf14 \strokec14 DESC\cf15 \strokec15 ;
+\f1 \cf9 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 \cb1 {{\NeXTGraphic Screenshot 2024-04-06 at 10.03.42.png \width13440 \height5200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf0 \
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 {{\NeXTGraphic purchase_count_per_time_of_day by time_of_day.jpeg \width21040 \height8800 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf2 \cb3 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf2 {{\NeXTGraphic Screenshot 2025-05-02 at 11.00.31.png \width15600 \height5560 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+{{\NeXTGraphic Screenshot 2025-05-02 at 11.00.51.png \width25840 \height13120 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Insights: \
@@ -318,50 +253,28 @@ Recommendation: \
 \
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf8 WITH\cf5 \
-  \cf6 `T`\cf5  \cf8 AS\cf5  \cf9 (\cf5 \
-    \cf8 SELECT\cf5  \
-      \cf9 *\cf5 ,\
-      \cf8 EXTRACT\cf9 (\cf5 YEAR \cf8 FROM\cf5  order_purchase_timestamp\cf9 )\cf5  \cf8 AS\cf5  \cf6 `year`\cf5 ,\
-      \cf8 EXTRACT\cf9 (\cf5 MONTH \cf8 FROM\cf5  order_purchase_timestamp\cf9 )\cf5  \cf8 AS\cf5  \cf6 `month`\cf5 \
-    \cf8 FROM\cf5  \
-      \cf6 `cs1.geolocation`\cf5  \cf8 AS\cf5  \cf6 `G`\cf5  \cf8 RIGHT\cf5  \cf8 JOIN\cf5  \cf6 `cs1.customers`\cf5  \cf8 AS\cf5  \cf6 `C`\cf5  \
-      \cf8 ON\cf5  G.geolocation_zip_code_prefix = C.customer_zip_code_prefix\
-      \
-      \cf8 RIGHT\cf5  \cf8 JOIN\cf5  \cf6 `cs1.orders`\cf5  \cf8 AS\cf5  \cf6 `O`\cf5 \
-      \cf8 ON\cf5  C.customer_id = O.customer_id\
-    \cf8 ORDER\cf5  \cf8 BY\cf5 \
-      year \cf8 ASC\cf5 ,\
-      month \cf8 ASC\cf5 \
-  \cf9 )\cf5 \
-\cf8 SELECT\cf5 \
-  geolocation_state \cf8 AS\cf5  \cf6 `state`\cf5 ,\
-  year,\
-  month,\
-  \cf8 COUNT\cf9 (\cf5 order_id\cf9 )\cf5  \cf8 AS\cf5  \cf6 `total_orders_per_month`\cf5 \
-\cf8 FROM\cf5 \
-  T\
-\cf8 GROUP\cf5  \cf8 BY\cf5 \
-  geolocation_state,\
-  month,\
-  year\
-\cf8 ORDER\cf5  \cf8 BY\cf5 \
-  year \cf8 ASC\cf5 ,\
-  month \cf8 ASC\cf5 ;\
+
+\f2 \cf14 \cb5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 SELECT\cf15 \strokec15  \cb1 \
+\cb5   \strokec2 c.customer_state\strokec15 ,\cb1 \
+\cb5   \cf14 \strokec14 EXTRACT\cf16 \strokec16 (\cf15 \strokec2 MONTH\strokec15  \cf14 \strokec14 FROM\cf15 \strokec15  \strokec2 order_purchase_timestamp\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 month\strokec15 ,\cb1 \
+\cb5   \cf14 \strokec14 COUNT\cf16 \strokec16 (*)\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 num_orders\cb1 \strokec15 \
+\cf14 \cb5 \strokec14 FROM\cf15 \strokec15  \cf18 \strokec18 `retial_cs.orders`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 o\cb1 \strokec15 \
+\cf14 \cb5 \strokec14 JOIN\cf15 \strokec15  \cf18 \strokec18 `retial_cs.customers`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 c\strokec15  \cf14 \strokec14 ON\cf15 \strokec15  \strokec2 o.customer_id\strokec15  = \strokec2 c.customer_id\cb1 \strokec15 \
+\cf14 \cb5 \strokec14 GROUP\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 1\cf15 \strokec15 , \cf17 \strokec17 2\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 ORDER\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 1\cf15 \strokec15 , \cf17 \strokec17 2\cf15 \strokec15 ;
+\f1 \cf9 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
-\pard\pardeftab720\partightenfactor0
-\cf2 {{\NeXTGraphic 5__#$!@%!#__pastedGraphic.png \width13840 \height11040 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\pardeftab720\partightenfactor0
+{{\NeXTGraphic Screenshot 2025-05-02 at 11.11.37.png \width20360 \height12000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+{{\NeXTGraphic Screenshot 2025-05-02 at 11.12.00.png \width25760 \height15720 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+{{\NeXTGraphic Screenshot 2025-05-02 at 11.15.15.png \width25920 \height15640 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
 \cf2 \
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 \cb1 {{\NeXTGraphic total_orders_per_month by state.jpeg \width30440 \height11440 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf2 \cb3 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Insights: \
@@ -380,32 +293,23 @@ Recommendation: \
 \
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf8 SELECT\cf5  \
-  customer_state \cf8 AS\cf5  \cf6 `state`\cf5 ,\
-  \cf8 COUNT\cf9 (\cf8 DISTINCT\cf5  customer_id\cf9 )\cf5  \cf8 AS\cf5  \cf6 `no_of_customers`\cf5 \
-\cf8 FROM\cf5  \
-  \cf6 `cs1.geolocation`\cf5  \cf8 AS\cf5  \cf6 `G`\cf5  \cf8 RIGHT\cf5  \cf8 JOIN\cf5  \cf6 `cs1.customers`\cf5  \cf8 AS\cf5  \cf6 `C`\cf5  \
-  \cf8 ON\cf5  G.geolocation_zip_code_prefix = C.customer_zip_code_prefix\
-\cf8 GROUP\cf5  \cf8 BY\cf5 \
-  customer_state\
-\cf8 ORDER\cf5  \cf8 BY\cf5 \
-  no_of_customers \cf8 DESC\cf5 ;\
+
+\f2 \cf14 \cb5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 SELECT\cf15 \strokec15  \cb1 \
+\cb5   \strokec2 customer_state\strokec15 ,\cb1 \
+\cb5   \cf14 \strokec14 COUNT\cf16 \strokec16 (\cf14 \strokec14 DISTINCT\cf15 \strokec15  \strokec2 customer_unique_id\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 num_customers\cb1 \strokec15 \
+\cf14 \cb5 \strokec14 FROM\cf15 \strokec15  \cf18 \strokec18 `retial_cs.customers`\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 GROUP\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 1\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 ORDER\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 2\cf15 \strokec15  \cf14 \strokec14 DESC\cf15 \strokec15 ;
+\f1 \cf9 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
-\pard\pardeftab720\partightenfactor0
-\cf2 {{\NeXTGraphic 6__#$!@%!#__pastedGraphic.png \width8280 \height11000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\pardeftab720\partightenfactor0
-\cf2 \
+{{\NeXTGraphic Screenshot 2025-05-02 at 11.25.13.png \width15520 \height12000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+{{\NeXTGraphic Screenshot 2025-05-02 at 11.25.33.png \width25840 \height15480 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
 \
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 \cb1 {{\NeXTGraphic no_of_customers by state.jpeg \width31080 \height10520 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf2 \cb3 \
-\pard\pardeftab720\partightenfactor0
-\cf2 \
 Insights:\
 1. State SP has highest customers with\'a041746 while state RR has lowest with 46.\
 \
@@ -428,31 +332,29 @@ Recommendation: \
 \
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf11 \expnd0\expndtw0\kerning0
-WITH\cf12 \
-  \cf13 `T`\cf12  \cf11 AS\cf12  \cf14 (\cf12 \
-    \cf11 SELECT\cf12  \cf11 DISTINCT\cf12 \
-      \cf11 EXTRACT\cf14 (\cf12 YEAR \cf11 FROM\cf12  order_purchase_timestamp\cf14 )\cf12  \cf11 AS\cf12  \cf13 `year`\cf12 ,\
-      \cf11 SUM\cf14 (\cf12 P.payment_value\cf14 )\cf12  \cf11 OVER\cf14 (\cf11 PARTITION\cf12  \cf11 BY\cf12  \cf11 EXTRACT\cf14 (\cf12 YEAR \cf11 FROM\cf12  order_purchase_timestamp\cf14 ))\cf12  \cf11 AS\cf12  \cf13 `pay_jan_to_aug`\cf12 \
-    \cf11 FROM\cf12  \
-      \cf13 `cs1.orders`\cf12  \cf11 AS\cf12  \cf13 `O`\cf12  \cf11 RIGHT\cf12  \cf11 JOIN\cf12  \cf13 `cs1.payments`\cf12  \cf11 AS\cf12  \cf13 `P`\cf12  \
-      \cf11 ON\cf12  O.order_id = P.order_id\
-    \cf11 WHERE\cf12 \
-      \cf11 EXTRACT\cf14 (\cf12 YEAR \cf11 FROM\cf12  order_purchase_timestamp\cf14 )\cf12  \cf11 BETWEEN\cf12  \cf15 2017\cf12  \cf11 AND\cf12  \cf15 2018\cf12 \
-      \cf11 AND\cf12 \
-      \cf11 EXTRACT\cf14 (\cf12 MONTH \cf11 FROM\cf12  order_purchase_timestamp\cf14 )\cf12  \cf11 BETWEEN\cf12  \cf15 1\cf12  \cf11 AND\cf12  \cf15 8\cf12 \
-  \cf14 )\cf12 \
-\cf11 SELECT\cf12 \
-  \cf11 ROUND\cf14 (((\cf11 MAX\cf14 (\cf12 pay_jan_to_aug\cf14 )\cf12  \cf14 -\cf12  \cf11 MIN\cf14 (\cf12 pay_jan_to_aug\cf14 ))\cf12  \cf14 /\cf12  \cf11 MIN\cf14 (\cf12 pay_jan_to_aug\cf14 ))\cf12  \cf14 *\cf12  \cf15 100\cf12 , \cf15 2\cf14 )\cf12  \cf11 AS\cf12  \cf13 `perc_incr_2017_to_2018`\cf12 \
-\cf11 FROM\cf12 \
-  T\cf5 \kerning1\expnd0\expndtw0 \
+
+\f2 \cf14 \cb5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 WITH\cf15 \strokec15  \strokec2 cost_2017\strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf16 \strokec16 (\cf15 \cb1 \strokec15 \
+\cb5   \cf14 \strokec14 SELECT\cf15 \strokec15  \cf14 \strokec14 SUM\cf16 \strokec16 (\cf15 \strokec2 payment_value\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 total_2017\cb1 \strokec15 \
+\cb5   \cf14 \strokec14 FROM\cf15 \strokec15  \cf18 \strokec18 `retial_cs.payments`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 p\cb1 \strokec15 \
+\cb5   \cf14 \strokec14 JOIN\cf15 \strokec15  \cf18 \strokec18 `retial_cs.orders`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 o\strokec15  \cf14 \strokec14 ON\cf15 \strokec15  \strokec2 p.order_id\strokec15  = \strokec2 o.order_id\cb1 \strokec15 \
+\cb5   \cf14 \strokec14 WHERE\cf15 \strokec15  \strokec2 o.order_purchase_timestamp\strokec15  \cf14 \strokec14 BETWEEN\cf15 \strokec15  \cf18 \strokec18 '2017-01-01'\cf15 \strokec15  \cf14 \strokec14 AND\cf15 \strokec15  \cf18 \strokec18 '2017-08-31'\cf15 \cb1 \strokec15 \
+\cf16 \cb5 \strokec16 )\cf15 \strokec15 ,\cb1 \
+\cb5 \strokec2 cost_2018\strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf16 \strokec16 (\cf15 \cb1 \strokec15 \
+\cb5   \cf14 \strokec14 SELECT\cf15 \strokec15  \cf14 \strokec14 SUM\cf16 \strokec16 (\cf15 \strokec2 payment_value\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 total_2018\cb1 \strokec15 \
+\cb5   \cf14 \strokec14 FROM\cf15 \strokec15  \cf18 \strokec18 `retial_cs.payments`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 p\cb1 \strokec15 \
+\cb5   \cf14 \strokec14 JOIN\cf15 \strokec15  \cf18 \strokec18 `retial_cs.orders`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 o\strokec15  \cf14 \strokec14 ON\cf15 \strokec15  \strokec2 p.order_id\strokec15  = \strokec2 o.order_id\cb1 \strokec15 \
+\cb5   \cf14 \strokec14 WHERE\cf15 \strokec15  \strokec2 o.order_purchase_timestamp\strokec15  \cf14 \strokec14 BETWEEN\cf15 \strokec15  \cf18 \strokec18 '2018-01-01'\cf15 \strokec15  \cf14 \strokec14 AND\cf15 \strokec15  \cf18 \strokec18 '2018-08-31'\cf15 \cb1 \strokec15 \
+\cf16 \cb5 \strokec16 )\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 SELECT\cf15 \strokec15  \cb1 \
+\cb5   \cf14 \strokec14 ROUND\cf16 \strokec16 (((\cf15 \strokec2 total_2018\strokec15  \cf16 \strokec16 -\cf15 \strokec15  \strokec2 total_2017\cf16 \strokec16 )\cf15 \strokec15  \cf16 \strokec16 /\cf15 \strokec15  \strokec2 total_2017\cf16 \strokec16 )\cf15 \strokec15  \cf16 \strokec16 *\cf15 \strokec15  \cf17 \strokec17 100\cf15 \strokec15 , \cf17 \strokec17 2\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 percent_increase\cb1 \strokec15 \
+\cf14 \cb5 \strokec14 FROM\cf15 \strokec15  \strokec2 cost_2017\strokec15 , \strokec2 cost_2018\strokec15 ;
+\f1 \cf9 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
-\pard\pardeftab720\partightenfactor0
-\cf2 {{\NeXTGraphic 7__#$!@%!#__pastedGraphic.png \width9320 \height1960 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\pardeftab720\partightenfactor0
-\cf2 \
+{{\NeXTGraphic Screenshot 2025-05-02 at 11.38.31.png \width7520 \height2320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
 \
 Insights:\'a0\
 1. 5025712 increase in amount or 137 % increase in payments from 2017 to 2018.\
@@ -466,51 +368,34 @@ Recommendation: NA\
 \f1\b0 \
 \
 
-\f0\b Q4.2\'a0Calculate the Total & Average value of order price for each state. (NEED CLARIFICATION)
+\f0\b Q4.2\'a0Calculate the Total & Average value of order price for each state.
 \f1\b0 \
 \
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf4 \expnd0\expndtw0\kerning0
-SELECT\cf5 \
-  \cf4 IFNULL\cf7 (\cf5 C.customer_state, \cf6 "Unknown"\cf7 )\cf5  \cf4 AS\cf5  \cf6 `state`\cf5 ,\
-  \cf4 ROUND\cf7 (\cf4 SUM\cf7 (\cf5 I.price\cf7 )\cf5 , \cf10 2\cf7 )\cf5  \cf4 AS\cf5  \cf6 `total_price`\cf5 ,\
-  \cf4 ROUND\cf7 (\cf4 AVG\cf7 (\cf5 I.price\cf7 )\cf5 , \cf10 2\cf7 )\cf5  \cf4 AS\cf5  \cf6 `avg_price`\cf5 \
-\cf4 FROM\cf5  \
-  \cf6 `cs1.orders`\cf5  \cf4 AS\cf5  \cf6 `O`\cf5  \cf4 RIGHT\cf5  \cf4 JOIN\cf5  \cf6 `cs1.order_items`\cf5  \cf4 AS\cf5  \cf6 `I`\cf5  \
-  \cf4 ON\cf5  O.order_id = I.order_id\
-\
-  \cf4 LEFT\cf5  \cf4 JOIN\cf5  \cf6 `cs1.customers`\cf5  \cf4 AS\cf5  \cf6 `C`\cf5 \
-  \cf4 ON\cf5  O.customer_id = C.customer_id\
-\cf4 GROUP\cf5  \cf4 BY\cf5 \
-  C.customer_state\
-\cf4 ORDER\cf5  \cf4 BY\cf5 \
-  total_price \cf4 DESC\cf5 ;
-\f2\fs24 \cf16 \cb1 \
+
+\f2 \cf14 \cb5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 SELECT\cf15 \cb1 \strokec15 \
+\cb5   \strokec2 c.customer_state\strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 state\strokec15 ,\cb1 \
+\cb5   \cf14 \strokec14 ROUND\cf16 \strokec16 (\cf14 \strokec14 SUM\cf16 \strokec16 (\cf15 \strokec2 oi.price\cf16 \strokec16 )\cf15 \strokec15 , \cf17 \strokec17 2\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 total_price\strokec15 ,\cb1 \
+\cb5   \cf14 \strokec14 ROUND\cf16 \strokec16 (\cf14 \strokec14 AVG\cf16 \strokec16 (\cf15 \strokec2 oi.price\cf16 \strokec16 )\cf15 \strokec15 , \cf17 \strokec17 2\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 avg_price\cb1 \strokec15 \
+\cf14 \cb5 \strokec14 FROM\cf15 \cb1 \strokec15 \
+\cb5   \cf16 \strokec16 (\cf18 \strokec18 `retial_cs.order_items`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 oi\strokec15  \cf14 \strokec14 JOIN\cf15 \strokec15  \cf18 \strokec18 `retial_cs.orders`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 o\strokec15  \cf14 \strokec14 ON\cf15 \cb1 \strokec15 \
+\cb5   \strokec2 oi.order_id\strokec15  = \strokec2 o.order_id\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 JOIN\cf15 \strokec15  \cf18 \strokec18 `retial_cs.customers`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \strokec2 c\strokec15  \cf14 \strokec14 ON\cf15 \cb1 \strokec15 \
+\cb5   \strokec2 c.customer_id\strokec15  = \strokec2 o.customer_id\cb1 \strokec15 \
+\cf14 \cb5 \strokec14 GROUP\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 1\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 ORDER\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 1\cf15 \cb1 \strokec15 \
 \pard\pardeftab720\partightenfactor0
 
-\f1\fs30 \cf2 \cb3 \kerning1\expnd0\expndtw0 \
+\f1 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 Screenshot:\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 \cb1 {{\NeXTGraphic Screenshot 2024-04-06 at 19.03.36.png \width10760 \height11200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf0 \
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 {{\NeXTGraphic avg_price by state.jpeg \width21040 \height15000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf0 \
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 {{\NeXTGraphic total_price by state.jpeg \width21040 \height15000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf2 \cb3 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf2 \cb5 {{\NeXTGraphic Screenshot 2025-05-03 at 11.59.11.png \width20600 \height12200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+{{\NeXTGraphic Screenshot 2025-05-03 at 12.00.12.png \width25840 \height16320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf2 \cb3 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Insights: \
@@ -524,49 +409,34 @@ Recommendation: \
 
 \f1\b0 \
 
-\f0\b Q4.3\'a0Calculate the Total & Average value of order freight for each state. (NEED CLARIFICATION)
+\f0\b Q4.3\'a0Calculate the Total & Average value of order freight for each state.
 \f1\b0 \
 \
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf4 \expnd0\expndtw0\kerning0
-SELECT\cf5 \
-  \cf4 IFNULL\cf7 (\cf5 C.customer_state, \cf6 "Unknown"\cf7 )\cf5  \cf4 AS\cf5  \cf6 `state`\cf5 ,\
-  \cf4 ROUND\cf7 (\cf4 SUM\cf7 (\cf5 I.freight_value\cf7 )\cf5 , \cf10 2\cf7 )\cf5  \cf4 AS\cf5  \cf6 `total_freight_value`\cf5 ,\
-  \cf4 ROUND\cf7 (\cf4 AVG\cf7 (\cf5 I.freight_value\cf7 )\cf5 , \cf10 2\cf7 )\cf5  \cf4 AS\cf5  \cf6 `avg_freight_value`\cf5 \
-\cf4 FROM\cf5  \
-  \cf6 `cs1.orders`\cf5  \cf4 AS\cf5  \cf6 `O`\cf5  \cf4 LEFT\cf5  \cf4 JOIN\cf5  \cf6 `cs1.order_items`\cf5  \cf4 AS\cf5  \cf6 `I`\cf5  \
-  \cf4 ON\cf5  O.order_id = I.order_id\
-\
-  \cf4 LEFT\cf5  \cf4 JOIN\cf5  \cf6 `cs1.customers`\cf5  \cf4 AS\cf5  \cf6 `C`\cf5 \
-  \cf4 ON\cf5  O.customer_id = C.customer_id\
-\cf4 GROUP\cf5  \cf4 BY\cf5 \
-  C.customer_state\
-\cf4 ORDER\cf5  \cf4 BY\cf5 \
-  total_freight_value \cf4 DESC\cf5 ;\kerning1\expnd0\expndtw0 \
+
+\f2 \cf14 \cb5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 SELECT\cf15 \cb1 \strokec15 \
+\cb5   \strokec2 c.customer_state\strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `state`\cf15 \strokec15 ,\cb1 \
+\cb5   \cf14 \strokec14 ROUND\cf16 \strokec16 (\cf14 \strokec14 SUM\cf16 \strokec16 (\cf15 \strokec2 oi.freight_value\cf16 \strokec16 )\cf15 \strokec15 , \cf17 \strokec17 2\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `total_freight`\cf15 \strokec15 ,\cb1 \
+\cb5   \cf14 \strokec14 ROUND\cf16 \strokec16 (\cf14 \strokec14 AVG\cf16 \strokec16 (\cf15 \strokec2 oi.freight_value\cf16 \strokec16 )\cf15 \strokec15 , \cf17 \strokec17 2\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `avg_freight`\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 FROM\cf15 \cb1 \strokec15 \
+\cb5   \cf16 \strokec16 (\cf18 \strokec18 `retial_cs.order_items`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `oi`\cf15 \strokec15  \cf14 \strokec14 JOIN\cf15 \strokec15  \cf18 \strokec18 `retial_cs.orders`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `o`\cf15 \strokec15  \cf14 \strokec14 ON\cf15 \cb1 \strokec15 \
+\cb5   \strokec2 oi.order_id\strokec15  = \strokec2 o.order_id\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 JOIN\cf15 \strokec15  \cf18 \strokec18 `retial_cs.customers`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `c`\cf15 \strokec15  \cf14 \strokec14 ON\cf15 \cb1 \strokec15 \
+\cb5   \strokec2 c.customer_id\strokec15  = \strokec2 o.customer_id\cb1 \strokec15 \
+\cf14 \cb5 \strokec14 GROUP\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 1\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 ORDER\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 1
+\f1 \cf9 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
-Screenshot:\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 \cb1 {{\NeXTGraphic Screenshot 2024-04-06 at 23.25.10.png \width13520 \height11160 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf0 \
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 {{\NeXTGraphic avg_freight_value by state.jpeg \width21040 \height16280 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf0 \
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 {{\NeXTGraphic total_freight_value by state.jpeg \width21040 \height16280 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf2 \cb3 \
+Screenshot:\cb5 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf2 {{\NeXTGraphic Screenshot 2025-05-03 at 12.19.36.png \width20480 \height11040 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+{{\NeXTGraphic Screenshot 2025-05-03 at 12.20.07.png \width25840 \height17000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf2 \cb3 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Insights: \
@@ -583,39 +453,28 @@ Recommendation:\
 
 \f0\b Q5.1\'a0Find the no. of days taken to deliver each order from the order\'92s purchase date as delivery time. Also, calculate the difference (in days) between the estimated & actual delivery date of an order. Do this in a single query. You can calculate the delivery time and the difference between the estimated & actual delivery date using the given formula:
 \f1\b0 \
-\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
-\ls2\ilvl0
-\f0\b \cf2 {\listtext	\uc0\u8226 	}time_to_deliver = order_delivered_customer_date - order_purchase_timestamp
-\f1\b0 \
-\ls2\ilvl0
-\f0\b {\listtext	\uc0\u8226 	}diff_estimated_delivery = order_delivered_customer_date - order_estimated_delivery_date
-\f1\b0 \
-\pard\pardeftab720\partightenfactor0
-\cf2 \
+\
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf8 SELECT\cf5 \
-  O.order_id,\
-  \cf8 ABS\cf9 (\cf8 DATE_DIFF\cf9 (\cf5 O.order_purchase_timestamp, O.order_delivered_customer_date, DAY\cf9 ))\cf5  \cf8 AS\cf5  \cf6 `time_to_deliver`\cf5 ,\
-  \cf8 ABS\cf9 (\cf8 DATE_DIFF\cf9 (\cf5 O.order_estimated_delivery_date, O.order_delivered_customer_date, DAY\cf9 ))\cf5  \cf8 AS\cf5  \cf6 `diff_estimated_delivery`\cf5 \
-\cf8 FROM\cf5  \
-  \cf6 `cs1.orders`\cf5  \cf8 AS\cf5  \cf6 `O`\cf5 \
-\cf8 ORDER\cf5  \cf8 BY\cf5 \
-  time_to_deliver \cf8 DESC\cf5 ;\
+
+\f2 \cf14 \cb5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 SELECT\cf15 \cb1 \strokec15 \
+\cb5   \strokec2 order_id\strokec15 ,\cb1 \
+\cb5   \cf14 \strokec14 ABS\cf16 \strokec16 (\cf14 \strokec14 DATE_DIFF\cf16 \strokec16 (\cf15 \strokec2 order_purchase_timestamp\strokec15 , \strokec2 order_delivered_customer_date\strokec15 , \strokec2 DAY\cf16 \strokec16 ))\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `time_to_deliver`\cf15 \strokec15 ,\cb1 \
+\cb5   \cf14 \strokec14 ABS\cf16 \strokec16 (\cf14 \strokec14 DATE_DIFF\cf16 \strokec16 (\cf15 \strokec2 order_estimated_delivery_date\strokec15 , \strokec2 order_delivered_customer_date\strokec15 , \strokec2 DAY\cf16 \strokec16 ))\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `diff_estimated_delivery`\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 FROM\cf15 \strokec15  \cb1 \
+\cb5   \cf18 \strokec18 `retial_cs.orders`\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 WHERE\cf15 \strokec15  \cb1 \
+\cb5   \strokec2 order_delivered_customer_date\strokec15  \cf14 \strokec14 IS\cf15 \strokec15  \cf14 \strokec14 NOT\cf15 \strokec15  \cf14 \strokec14 NULL\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 ORDER\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 2\cf15 \strokec15  \cf14 \strokec14 DESC\cf15 \strokec15 ;
+\f1 \cf9 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
-\pard\pardeftab720\partightenfactor0
-\cf2 {{\NeXTGraphic 10__#$!@%!#__pastedGraphic.png \width22200 \height11080 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\pardeftab720\partightenfactor0
+{{\NeXTGraphic Screenshot 2025-05-03 at 12.31.29.png \width21800 \height11960 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
 \cf2 \
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 \cb1 {{\NeXTGraphic diff_estimated_delivery by time_to_deliver.jpeg \width21040 \height14320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf2 \cb3 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Insights: \
@@ -638,87 +497,31 @@ Recommendation: \
 \
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf4 \expnd0\expndtw0\kerning0
-WITH\cf5 \
-  \cf6 `T`\cf5  \cf4 AS\cf5  \cf7 (\cf5 \
-    \cf4 SELECT\cf5 \
-      C.customer_state,\
-      I.freight_value\
-    \cf4 FROM\cf5  \
-      \cf6 `cs1.orders`\cf5  \cf4 AS\cf5  \cf6 `O`\cf5  \cf4 LEFT\cf5  \cf4 JOIN\cf5  \cf6 `cs1.order_items`\cf5  \cf4 AS\cf5  \cf6 `I`\cf5  \
-      \cf4 ON\cf5  O.order_id = I.order_id\
+
+\f2 \cf19 \cb5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec19 -- Highest Freight\cf15 \cb1 \strokec15 \
+\pard\pardeftab720\partightenfactor0
+\cf14 \cb5 \strokec14 SELECT\cf15 \strokec15  \cb1 \
+\cb5   \strokec2 customer_state\strokec15 , \cb1 \
+\cb5   \cf14 \strokec14 ROUND\cf16 \strokec16 (\cf14 \strokec14 AVG\cf16 \strokec16 (\cf15 \strokec2 freight_value\cf16 \strokec16 )\cf15 \strokec15 , \cf17 \strokec17 2\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `avg_freight`\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 FROM\cf15 \strokec15  \cf18 \strokec18 `retial_cs.order_items`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `oi`\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 JOIN\cf15 \strokec15  \cf18 \strokec18 `retial_cs.orders`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `o`\cf15 \strokec15  \cf14 \strokec14 ON\cf15 \strokec15  \strokec2 oi.order_id\strokec15  = \strokec2 o.order_id\cb1 \strokec15 \
+\cf14 \cb5 \strokec14 JOIN\cf15 \strokec15  \cf18 \strokec18 `retial_cs.customers`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `c`\cf15 \strokec15  \cf14 \strokec14 ON\cf15 \strokec15  \strokec2 o.customer_id\strokec15  = \strokec2 c.customer_id\cb1 \strokec15 \
+\cf14 \cb5 \strokec14 GROUP\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 1\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 ORDER\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 2\cf15 \strokec15  \cf14 \strokec14 DESC\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 LIMIT\cf15 \strokec15  \cf17 \strokec17 5\cf15 \strokec15 ;\cb1 \
 \
-      \cf4 LEFT\cf5  \cf4 JOIN\cf5  \cf6 `cs1.customers`\cf5  \cf4 AS\cf5  \cf6 `C`\cf5 \
-      \cf4 ON\cf5  O.customer_id = C.customer_id\
-  \cf7 )\cf5 ,\
-  \cf6 `T1`\cf5  \cf4 AS\cf5  \cf7 (\cf5 \
-    \cf4 SELECT\cf5 \
-      \cf4 IFNULL\cf7 (\cf5 customer_state, \cf6 "Unknown"\cf7 )\cf5  \cf4 AS\cf5  \cf6 `state`\cf5 ,\
-      \cf4 ROUND\cf7 (\cf4 AVG\cf7 (\cf5 freight_value\cf7 )\cf5 , \cf10 2\cf7 )\cf5  \cf4 AS\cf5  \cf6 `avg_freight_value`\cf5 \
-    \cf4 FROM\cf5  \
-      T\
-    \cf4 GROUP\cf5  \cf4 BY\cf5 \
-      customer_state\
-    \cf4 ORDER\cf5  \cf4 BY\cf5 \
-      avg_freight_value \cf4 DESC\cf5 \
-    \cf4 LIMIT\cf5  \cf10 5\cf5 \
-  \cf7 )\cf5 ,\
-  \cf6 `T2`\cf5  \cf4 AS\cf5  \cf7 (\cf5 \
-    \cf4 SELECT\cf5 \
-      \cf4 IFNULL\cf7 (\cf5 customer_state, \cf6 "Unknown"\cf7 )\cf5  \cf4 AS\cf5  \cf6 `state`\cf5 ,\
-      \cf4 ROUND\cf7 (\cf4 AVG\cf7 (\cf5 freight_value\cf7 )\cf5 , \cf10 2\cf7 )\cf5  \cf4 AS\cf5  \cf6 `avg_freight_value`\cf5 \
-    \cf4 FROM\cf5  \
-      T\
-    \cf4 GROUP\cf5  \cf4 BY\cf5 \
-      customer_state\
-    \cf4 ORDER\cf5  \cf4 BY\cf5 \
-      avg_freight_value \cf4 ASC\cf5 \
-    \cf4 LIMIT\cf5  \cf10 5\cf5 \
-  \cf7 )\cf5 ,\
-  \cf6 `T3`\cf5  \cf4 AS\cf5  \cf7 (\cf5 \
-    \cf4 SELECT\cf5 \
-      \cf4 ROW_NUMBER\cf7 ()\cf5  \cf4 OVER\cf7 ()\cf5  \cf4 AS\cf5  \cf6 `row`\cf5 ,\
-      \cf7 *\cf5 \
-    \cf4 FROM\cf5 \
-      T1\
-  \cf7 )\cf5 ,\
-  \cf6 `T4`\cf5  \cf4 AS\cf5  \cf7 (\cf5 \
-    \cf4 SELECT\cf5 \
-      \cf4 ROW_NUMBER\cf7 ()\cf5  \cf4 OVER\cf7 ()\cf5  \cf4 AS\cf5  \cf6 `row`\cf5 ,\
-      \cf7 *\cf5 \
-    \cf4 FROM\cf5 \
-      T2\
-  \cf7 )\cf5 \
-\cf4 SELECT\cf5 \
-  T3.state \cf4 AS\cf5  \cf6 `state_highest`\cf5 ,\
-  T3.avg_freight_value \cf4 AS\cf5  \cf6 `freight_value_highest`\cf5 ,\
-  T4.state \cf4 AS\cf5  \cf6 `state_lowest`\cf5 ,\
-  T4.avg_freight_value \cf4 AS\cf5  \cf6 `freight_value_lowest`\cf5 \
-\cf4 FROM\cf5 \
-  T3 \cf4 INNER\cf5  \cf4 JOIN\cf5  T4 \cf4 ON\cf5  T3.row = T4.row\kerning1\expnd0\expndtw0 \
+\pard\pardeftab720\partightenfactor0
+\cf19 \cb5 \strokec19 -- Lowest Freight (Replace DESC with ASC)
+\f1 \cf9 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 \cb1 {{\NeXTGraphic Screenshot 2024-04-07 at 00.01.49.png \width19920 \height6240 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf0 \
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 {{\NeXTGraphic freight_value_lowest by state_lowest.jpeg \width21040 \height12920 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf0 \
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 {{\NeXTGraphic freight_value_highest by state_highest.jpeg \width21040 \height12920 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf2 \cb3 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf2 {{\NeXTGraphic Screenshot 2025-05-03 at 12.37.11.png \width15520 \height6720 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+{{\NeXTGraphic Screenshot 2025-05-03 at 12.37.34.png \width18680 \height12840 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Insights: \
@@ -740,90 +543,36 @@ Recommendation: \
 \
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf4 \expnd0\expndtw0\kerning0
-WITH\cf5 \
-  \cf6 `T`\cf5  \cf4 AS\cf5  \cf7 (\cf5 \
-    \cf4 SELECT\cf5 \
-      C.customer_state,\
-      \cf4 ABS\cf7 (\cf4 DATE_DIFF\cf7 (\cf5 O.order_purchase_timestamp, O.order_delivered_customer_date, DAY\cf7 ))\cf5  \cf4 AS\cf5  \cf6 `delivery_time`\cf5 \
-    \cf4 FROM\cf5  \
-      \cf6 `cs1.orders`\cf5  \cf4 AS\cf5  \cf6 `O`\cf5  \cf4 LEFT\cf5  \cf4 JOIN\cf5  \cf6 `cs1.customers`\cf5  \cf4 AS\cf5  \cf6 `C`\cf5 \
-      \cf4 ON\cf5  O.customer_id = C.customer_id\
-  \cf7 )\cf5 ,\
-  \cf6 `T1`\cf5  \cf4 AS\cf5  \cf7 (\cf5 \
-    \cf4 SELECT\cf5 \
-      \cf4 IFNULL\cf7 (\cf5 customer_state, \cf6 "Unknown"\cf7 )\cf5  \cf4 AS\cf5  \cf6 `state`\cf5 ,\
-      \cf4 ROUND\cf7 (\cf4 AVG\cf7 (\cf5 delivery_time\cf7 )\cf5 , \cf10 2\cf7 )\cf5  \cf4 AS\cf5  \cf6 `avg_delivery_time`\cf5 \
-    \cf4 FROM\cf5  \
-      T\
-    \cf4 GROUP\cf5  \cf4 BY\cf5 \
-      customer_state\
-    \cf4 ORDER\cf5  \cf4 BY\cf5 \
-      avg_delivery_time \cf4 DESC\cf5 \
-    \cf4 LIMIT\cf5  \cf10 5\cf5 \
-  \cf7 )\cf5 ,\
-  \cf6 `T2`\cf5  \cf4 AS\cf5  \cf7 (\cf5 \
-    \cf4 SELECT\cf5 \
-      \cf4 IFNULL\cf7 (\cf5 customer_state, \cf6 "Unknown"\cf7 )\cf5  \cf4 AS\cf5  \cf6 `state`\cf5 ,\
-      \cf4 ROUND\cf7 (\cf4 AVG\cf7 (\cf5 delivery_time\cf7 )\cf5 , \cf10 2\cf7 )\cf5  \cf4 AS\cf5  \cf6 `avg_delivery_time`\cf5 \
-    \cf4 FROM\cf5  \
-      T\
-    \cf4 GROUP\cf5  \cf4 BY\cf5 \
-      customer_state\
-    \cf4 ORDER\cf5  \cf4 BY\cf5 \
-      avg_delivery_time \cf4 ASC\cf5 \
-    \cf4 LIMIT\cf5  \cf10 5\cf5 \
-  \cf7 )\cf5 ,\
-  \cf6 `T3`\cf5  \cf4 AS\cf5  \cf7 (\cf5 \
-    \cf4 SELECT\cf5 \
-      \cf4 ROW_NUMBER\cf7 ()\cf5  \cf4 OVER\cf7 ()\cf5  \cf4 AS\cf5  \cf6 `row`\cf5 ,\
-      \cf7 *\cf5 \
-    \cf4 FROM\cf5 \
-      T1\
-  \cf7 )\cf5 ,\
-  \cf6 `T4`\cf5  \cf4 AS\cf5  \cf7 (\cf5 \
-    \cf4 SELECT\cf5 \
-      \cf4 ROW_NUMBER\cf7 ()\cf5  \cf4 OVER\cf7 ()\cf5  \cf4 AS\cf5  \cf6 `row`\cf5 ,\
-      \cf7 *\cf5 \
-    \cf4 FROM\cf5 \
-      T2\
-  \cf7 )\cf5 \
-\cf4 SELECT\cf5 \
-  T3.state \cf4 AS\cf5  \cf6 `state_highest`\cf5 ,\
-  T3.avg_delivery_time \cf4 AS\cf5  \cf6 `delivery_time_highest`\cf5 ,\
-  T4.state \cf4 AS\cf5  \cf6 `state_lowest`\cf5 ,\
-  T4.avg_delivery_time \cf4 AS\cf5  \cf6 `delivery_time_lowest`\cf5 \
-\cf4 FROM\cf5 \
-  T3 \cf4 INNER\cf5  \cf4 JOIN\cf5  T4 \cf4 ON\cf5  T3.row = T4.row\kerning1\expnd0\expndtw0 \
+
+\f2 \cf14 \cb5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 SELECT\cf15 \strokec15  \cb1 \
+\cb5   \strokec2 customer_state\strokec15 ,\cb1 \
+\cb5   \cf14 \strokec14 ROUND\cf16 \strokec16 (\cf14 \strokec14 AVG\cf16 \strokec16 (\cf14 \strokec14 DATE_DIFF\cf16 \strokec16 (\cf15 \strokec2 o.order_estimated_delivery_date\strokec15 , \strokec2 o.order_delivered_customer_date\strokec15 , \strokec2 DAY\cf16 \strokec16 ))\cf15 \strokec15 , \cf17 \strokec17 2\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `avg_diff`\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 FROM\cf15 \strokec15  \cf18 \strokec18 `retial_cs.orders`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `o`\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 JOIN\cf15 \strokec15  \cf18 \strokec18 `retial_cs.customers`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `c`\cf15 \strokec15  \cb1 \
+\cf14 \cb5 \strokec14 ON\cf15 \strokec15  \strokec2 o.customer_id\strokec15  = \strokec2 c.customer_id\cb1 \strokec15 \
+\cf14 \cb5 \strokec14 WHERE\cf15 \strokec15  \strokec2 order_delivered_customer_date\strokec15  \cf14 \strokec14 IS\cf15 \strokec15  \cf14 \strokec14 NOT\cf15 \strokec15  \cf14 \strokec14 NULL\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 GROUP\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 1\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 ORDER\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \strokec2 2 DESC\strokec15 ;\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf9 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 \cb1 {{\NeXTGraphic Screenshot 2024-04-07 at 00.13.03.png \width20200 \height6200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf0 \
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 {{\NeXTGraphic delivery_time_highest by state_highest.jpeg \width21040 \height12920 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf0 \
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-\cf2 \cb3 \
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 \cb1 {{\NeXTGraphic delivery_time_lowest by state_lowest.jpeg \width21040 \height12920 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf0 \
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf2 {{\NeXTGraphic Screenshot 2025-05-03 at 13.08.12.png \width15560 \height11000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+{{\NeXTGraphic Screenshot 2025-05-03 at 13.08.37.png \width18720 \height14800 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf2 \cb5 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
 \cf2 \cb3 \
 \pard\pardeftab720\partightenfactor0
 \cf2 Insights: \
-1. RR state has highest delivery time while SP has lowest. There could be many reasons for this. Dense population, poor transportation, product demand, state laws, etc.\
+1. AL state has highest delivery time while AC has lowest. There could be many reasons for this. Dense population, poor transportation, product demand, state laws, etc.\
+2. Lower the difference, higher the delivery time.\
 \
 Recommendation: \
 1. Scout the area to get more info and optimise departments that are taking more time.\
@@ -839,73 +588,11 @@ Recommendation: \
 \
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf4 \expnd0\expndtw0\kerning0
-WITH\cf5 \
-  \cf6 `T`\cf5  \cf4 AS\cf5  \cf7 (\cf5 \
-    \cf4 SELECT\cf5 \
-      C.customer_state,\
-      \cf4 ABS\cf7 (\cf4 DATE_DIFF\cf7 (\cf5 O.order_purchase_timestamp, O.order_delivered_customer_date, DAY\cf7 ))\cf5  \cf4 AS\cf5  \cf6 `time_to_deliver`\cf5 ,\
-      \cf4 ABS\cf7 (\cf4 DATE_DIFF\cf7 (\cf5 O.order_purchase_timestamp, O.order_estimated_delivery_date, DAY\cf7 ))\cf5  \cf4 AS\cf5  \cf6 `estimated_time_to_deliver`\cf5 \
-    \cf4 FROM\cf5  \
-      \cf6 `cs1.orders`\cf5  \cf4 AS\cf5  \cf6 `O`\cf5  \cf4 LEFT\cf5  \cf4 JOIN\cf5  \cf6 `cs1.customers`\cf5  \cf4 AS\cf5  \cf6 `C`\cf5 \
-      \cf4 ON\cf5  O.customer_id = C.customer_id\
-  \cf7 )\cf5 \
-\cf4 SELECT\cf5  \cf4 DISTINCT\cf5 \
-  customer_state \cf4 AS\cf5  \cf6 `state`\cf5 ,\
-  \cf4 ROUND\cf7 (\cf4 AVG\cf7 (\cf5 time_to_deliver\cf7 )\cf5 , \cf10 2\cf7 )\cf5  \cf4 AS\cf5  \cf6 `avg_time_to_deliver`\cf5 ,\
-  \cf4 ROUND\cf7 (\cf4 AVG\cf7 (\cf5 estimated_time_to_deliver\cf7 )\cf5 , \cf10 2\cf7 )\cf5  \cf4 AS\cf5  \cf6 `avg_estimated_time_to_deliver`\cf5 ,\
-  \cf4 ROUND\cf7 (\cf4 ABS\cf7 (\cf4 AVG\cf7 (\cf5 time_to_deliver\cf7 )\cf5  \cf7 -\cf5  \cf4 AVG\cf7 (\cf5 estimated_time_to_deliver\cf7 ))\cf5 , \cf10 2\cf7 )\cf5  \cf4 AS\cf5  \cf6 `fast_by`\cf5 \
-\cf4 FROM\cf5 \
-  T\
-\cf4 WHERE\cf5 \
-  customer_state \cf4 IN\cf5  \cf7 (\cf5 \
-        \cf4 SELECT\cf5  \cf4 DISTINCT\cf5 \
-          customer_state \cf4 AS\cf5  \cf6 `state`\cf5 ,\
-        \cf4 FROM\cf5 \
-          T\
-        \cf4 WHERE\cf5 \
-          time_to_deliver \cf7 <\cf5  estimated_time_to_deliver \cf4 AND\cf5 \
-          customer_state \cf4 IS\cf5  \cf4 NOT\cf5  \cf4 NULL\cf5 \
-        \cf4 ORDER\cf5  \cf4 BY\cf5 \
-          state \cf4 ASC\cf5 \
-        \cf4 LIMIT\cf5  \cf10 5\cf5 \
-  \cf7 )\cf5 \
-\cf4 GROUP\cf5  \cf4 BY\cf5 \
-  customer_state\
-\cf4 ORDER\cf5  \cf4 BY\cf5 \
-  fast_by \cf4 DESC\cf5 ;\kerning1\expnd0\expndtw0 \
-\pard\pardeftab720\partightenfactor0
-\cf2 \
-Screenshot:\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
 
-\f3\fs24 \cf0 \cb1 {{\NeXTGraphic Screenshot 2024-04-07 at 00.35.07.png \width19000 \height6200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf0 \
+\f2 \cf4 \cb5 \expnd0\expndtw0\kerning0
+Same as above
+\f1 \cf2 \cb3 \kerning1\expnd0\expndtw0 \
 \
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 {{\NeXTGraphic avg_estimated_time_to_deliver by state.jpeg \width21040 \height11880 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf0 \
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 {{\NeXTGraphic avg_time_to_deliver by state.jpeg \width21040 \height11880 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf0 \
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 {{\NeXTGraphic fast_by by state.jpeg \width21040 \height11880 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf2 \cb3 \
-\pard\pardeftab720\partightenfactor0
-\cf2 \
 Insights: \
 1. State AC is faster by 20.13 days from its estimated delivery date 40.77 days. ~1/2 the time.\
 2. Faster deliveries improve customer satisfaction.\
@@ -914,8 +601,9 @@ Insights: \
 Recommendation: \
 1. Increase stock in AM state to make more deliveries.\
 \
+\pard\pardeftab720\partightenfactor0
 
-\f0\b _____________________________________________________________________________________________________________________
+\f0\b \cf2 _____________________________________________________________________________________________________________________
 \f1\b0 \
 \
 
@@ -924,47 +612,30 @@ Recommendation: \
 \
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf4 \expnd0\expndtw0\kerning0
-SELECT\cf5 \
-  \cf4 EXTRACT\cf7 (\cf5 YEAR \cf4 FROM\cf5  O.order_purchase_timestamp\cf7 )\cf5  \cf4 AS\cf5  \cf6 `year`\cf5 ,\
-  \cf4 EXTRACT\cf7 (\cf5 MONTH \cf4 FROM\cf5  O.order_purchase_timestamp\cf7 )\cf5  \cf4 AS\cf5  \cf6 `month`\cf5 ,\
-  P.payment_type,\
-  \cf4 COUNT\cf7 (\cf5 O.order_id\cf7 )\cf5  \cf4 AS\cf5  \cf6 `orders_placed`\cf5 \
-\cf4 FROM\cf5  \
-  \cf6 `cs1.orders`\cf5  \cf4 AS\cf5  \cf6 `O`\cf5  \cf4 LEFT\cf5  \cf4 JOIN\cf5  \cf6 `cs1.payments`\cf5  \cf4 AS\cf5  \cf6 `P`\cf5 \
-  \cf4 ON\cf5  O.order_id = P.order_id\
-\cf4 GROUP\cf5  \cf4 BY\cf5 \
-  year,\
-  month,\
-  P.payment_type\
-\cf4 HAVING\cf5 \
-  P.payment_type \cf4 IS\cf5  \cf4 NOT\cf5  \cf4 NULL\cf5 \
-\cf4 ORDER\cf5  \cf4 BY\cf5 \
-  year \cf4 ASC\cf5 ,\
-  month \cf4 ASC\cf5 ;\kerning1\expnd0\expndtw0 \
+
+\f2 \cf14 \cb5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 SELECT\cf15 \strokec15  \cb1 \
+\cb5   \cf14 \strokec14 EXTRACT\cf16 \strokec16 (\cf15 \strokec2 MONTH\strokec15  \cf14 \strokec14 FROM\cf15 \strokec15  \strokec2 order_purchase_timestamp\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `month`\cf15 \strokec15 ,\cb1 \
+\cb5   \strokec2 payment_type\strokec15 ,\cb1 \
+\cb5   \cf14 \strokec14 COUNT\cf16 \strokec16 (\cf14 \strokec14 DISTINCT\cf15 \strokec15  \strokec2 o.order_id\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `num_orders`\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 FROM\cf15 \strokec15  \cf18 \strokec18 `retial_cs.orders`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `o`\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 JOIN\cf15 \strokec15  \cf18 \strokec18 `retial_cs.payments`\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `p`\cf15 \strokec15  \cb1 \
+\cf14 \cb5 \strokec14 ON\cf15 \strokec15  \strokec2 o.order_id\strokec15  = \strokec2 p.order_id\cb1 \strokec15 \
+\cf14 \cb5 \strokec14 GROUP\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 1\cf15 \strokec15 , \cf17 \strokec17 2\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 ORDER\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 1\cf15 \strokec15 , \cf17 \strokec17 2\cf15 \strokec15 ;\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf9 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 \cb1 {{\NeXTGraphic Screenshot 2024-04-07 at 01.05.16.png \width14400 \height11240 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf0 \
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 {{\NeXTGraphic orders_placed by payment_type.jpeg \width20400 \height14840 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf0 \
-\
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f3\fs24 \cf0 {{\NeXTGraphic orders_placed by month.jpeg \width20400 \height15880 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\pardirnatural\partightenfactor0
-
-\f1\fs30 \cf2 \cb3 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf2 \cb5 {{\NeXTGraphic Screenshot 2025-05-03 at 13.19.18.png \width20520 \height12000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+{{\NeXTGraphic Screenshot 2025-05-03 at 13.19.55.png \width18720 \height13520 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf2 \cb3 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Insights: \
@@ -984,29 +655,37 @@ Recommendation: \
 \
 Ans:\
 \pard\pardeftab720\partightenfactor0
-\cf8 SELECT\cf5 \
-  \cf8 COUNT\cf9 (\cf5 O.order_id\cf9 )\cf5  \cf8 AS\cf5  \cf6 `orders_placed`\cf5 ,\
-  P.payment_sequential\
-\cf8 FROM\cf5  \
-  \cf6 `cs1.orders`\cf5  \cf8 AS\cf5  \cf6 `O`\cf5  \cf8 LEFT\cf5  \cf8 JOIN\cf5  \cf6 `cs1.payments`\cf5  \cf8 AS\cf5  \cf6 `P`\cf5 \
-  \cf8 ON\cf5  O.order_id = P.order_id\
-\cf8 GROUP\cf5  \cf8 BY\cf5 \
-  P.payment_sequential\
-\cf8 ORDER\cf5  \cf8 BY\cf5 \
-  orders_placed \cf8 DESC\cf5 ;\
+
+\f2 \cf14 \cb5 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec14 SELECT\cf15 \strokec15  \cb1 \
+\cb5   \strokec2 payment_installments\strokec15 ,\cb1 \
+\cb5   \cf14 \strokec14 COUNT\cf16 \strokec16 (\cf14 \strokec14 DISTINCT\cf15 \strokec15  \strokec2 order_id\cf16 \strokec16 )\cf15 \strokec15  \cf14 \strokec14 AS\cf15 \strokec15  \cf18 \strokec18 `num_orders`\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 FROM\cf15 \strokec15  \cf18 \strokec18 `retial_cs.payments`\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 GROUP\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 1\cf15 \cb1 \strokec15 \
+\cf14 \cb5 \strokec14 ORDER\cf15 \strokec15  \cf14 \strokec14 BY\cf15 \strokec15  \cf17 \strokec17 1\cf15 \strokec15 ;
+\f1 \cf9 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
 \pard\pardeftab720\partightenfactor0
 \cf2 \
 Screenshot:\
-\pard\pardeftab720\partightenfactor0
-\cf2 {{\NeXTGraphic 15__#$!@%!#__pastedGraphic.png \width11680 \height11040 \appleattachmentpadding0 \appleembedtype0 \appleaqc
-}¬}\pard\pardeftab720\partightenfactor0
-\cf2 \
+{{\NeXTGraphic Screenshot 2025-05-03 at 13.26.15.png \width12520 \height12000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+{{\NeXTGraphic Screenshot 2025-05-03 at 13.26.37.png \width18520 \height14680 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
 \
 Insights: \
-1. It looks like most orders are placed in a single up-front payment. This is good.\
+1. Highest payment installement is 1\
 \
-Recommendation: \
-1. We should stick to the existing plan here.\
+\
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls1\ilvl0
+\fs26 \cf0 \cb1 {\listtext	1.	}Focus on High-Growth States:\'a0SP and RJ show the highest order volumes. Invest in logistics here.\
+{\listtext	2.	}Optimize Delivery Times:\'a0States like RR and AP have slow deliveries; improve carrier partnerships.\
+{\listtext	3.	}Leverage Payment Trends:\'a0Credit card usage dominates; offer installment promotions.\
+{\listtext	4.	}Seasonal Campaigns:\'a0Boost marketing during November (holiday season) and address January slumps.\
+{\listtext	5.	}Freight Cost Reduction:\'a0Negotiate lower freight rates in high-cost states (e.g., RR).\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf2 \cb3 \
 \
 \pard\pardeftab560\partightenfactor0
 \cf2 \

@@ -1,0 +1,1342 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2821
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;\f2\fswiss\fcharset0 Helvetica;
+\f3\fnil\fcharset0 LucidaGrande;\f4\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red154\green154\blue154;\red0\green0\blue233;\red22\green79\blue199;
+\red255\green255\blue255;\red24\green25\blue27;\red46\green49\blue51;\red159\green77\blue4;\red24\green112\blue43;
+\red167\green0\blue95;}
+{\*\expandedcolortbl;;\csgray\c66667;\cssrgb\c0\c0\c93333;\cssrgb\c9804\c40392\c82353;
+\cssrgb\c100000\c100000\c100000;\cssrgb\c12549\c12941\c14118;\cssrgb\c23529\c25098\c26275;\cssrgb\c69020\c37647\c0;\cssrgb\c9412\c50196\c21961;
+\cssrgb\c72157\c2353\c44706;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid1\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}}{\leveltext\leveltemplateid401\'01\'00;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{circle\}}{\leveltext\leveltemplateid402\'01\uc0\u9702 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid5}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww12720\viewh7800\viewkind0
+\deftab560
+\pard\pardeftab560\partightenfactor0
+
+\f0\b\fs40 \cf0 EDA of Billion Dollar Retail Store Outlet\
+\pard\pardeftab560\partightenfactor0
+
+\f1\b0\fs26 \cf0 This is an EDA done on the Android logs of \'93Firebase Performance\'94 metrics for a Billion Dollar Retail Store Outlet.
+\f0\b\fs40 \
+\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\b0\fs26 \cf0 event_timestamp
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 TIMESTAMP
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\fs26 \cf0 Timestamp since Epoch when event started on client device (trace start, network start, etc). Timestamp since Epoch when event started on client device (trace start, network start, etc)\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1 \cf0 app_display_version
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 STRING
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 The display version of the application. VersionName for Android; CFBundleShortVersionString for iOS. E.g. "4.1.7".\
+The display version of the application. VersionName for Android; CFBundleShortVersionString for iOS. E.g. "4.1.7".
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 app_build_version
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 STRING
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 The build version of the application. VersionCode for Android; CFBundleVersion for iOS. E.g. "1523456".\
+The build version of the application. VersionCode for Android; CFBundleVersion for iOS. E.g. "1523456".
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 os_version
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 STRING
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 Android API level or iOS version. E.g. "26" (Android) or "11.4" (iOS).\
+Android API level or iOS version. E.g. "26" (Android) or "11.4" (iOS).
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 device_name
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 STRING
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 Name of the client device. E.g. "Google Pixel".\
+Name of the client device. E.g. "Google Pixel".
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 country
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 STRING
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 2-letter country code of the country from which the event took place. E.g. "US" or "ZZ" (unknown).\
+2-letter country code of the country from which the event took place. E.g. "US" or "ZZ" (unknown).
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 carrier
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 STRING
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 Carrier of the client device.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 radio_type
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 STRING
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 Active radio type when the event took place. E.g. "WIFI".\
+Active radio type when the event took place. E.g. "WIFI".
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 custom_attributes
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 RECORD
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 All custom attributes attached to this event.\
+All custom attributes attached to this event.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 event_type
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 STRING
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 Type of the event. Possible values: DURATION_TRACE (including app start, foreground, background, and all developer instrumented traces); SCREEN_TRACE (traces spanning the lifetime of screens); TRACE_METRIC (developer instrumented metrics that are associated with traces, previously known as counters); NETWORK_REQUEST.\
+Type of the event. Possible values: DURATION_TRACE (including app start, foreground, background, and all developer instrumented traces); SCREEN_TRACE (traces spanning the lifetime of screens); TRACE_METRIC (developer instrumented metrics that are associated with traces, previously known as counters); NETWORK_REQUEST.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 event_name
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 STRING
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 Name of the event. For DURATION_TRACE, the trace name. For SCREEN_TRACE: "_st_" followed by the trace name. For NETWORK_REQUEST: the network request url pattern. For TRACE_METRIC: the metric name.\
+Name of the event. For DURATION_TRACE, the trace name. For SCREEN_TRACE: "_st_" followed by the trace name. For NETWORK_REQUEST: the network request url pattern. For TRACE_METRIC: the metric name.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 parent_trace_name
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 STRING
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 Name of the parent trace that carries the trace metric. Only present for TRACE_METRIC.\
+Name of the parent trace that carries the trace metric. Only present for TRACE_METRIC.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 trace_info
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 RECORD
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 Only present for DURATION_TRACE, SCREEN_TRACE, TRACE_METRIC.\
+Only present for DURATION_TRACE, SCREEN_TRACE, TRACE_METRIC.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 duration_us
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 INTEGER
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 For DURATION_TRACE, SCREEN_TRACE: duration that this trace lasts. For TRACE_METRIC: duration that the parent trace lasts. Unit: microsecond.\
+For DURATION_TRACE, SCREEN_TRACE: duration that this trace lasts. For TRACE_METRIC: duration that the parent trace lasts. Unit: microsecond.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 screen_info
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 RECORD
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 Only present for SCREEN_TRACE.\
+Only present for SCREEN_TRACE.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 slow_frame_ratio
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 FLOAT
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 The ratio of slow frames for this screen trace, between 0 and 1. E.g. a value of 0.05 means 5% of the frames for this screen instance took more than 16ms to load.\
+The ratio of slow frames for this screen trace, between 0 and 1. E.g. a value of 0.05 means 5% of the frames for this screen instance took more than 16ms to load.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 frozen_frame_ratio
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 FLOAT
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 The ratio of frozen frames for this screen trace, between 0 and 1. E.g. a value of 0.05 means 5% of the frames for this screen instance took more than 700ms to load.\
+The ratio of frozen frames for this screen trace, between 0 and 1. E.g. a value of 0.05 means 5% of the frames for this screen instance took more than 700ms to load.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 metric_info
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 RECORD
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 Only present for TRACE_METRIC.\
+Only present for TRACE_METRIC.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 metric_value
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 INTEGER
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 Value of the trace metric.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 network_info
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 RECORD
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 Only present for NETWORK_REQUEST.\
+Only present for NETWORK_REQUEST.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 response_code
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 INTEGER
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 HTTP response code for the network response. E.g. 200 or 404.\
+HTTP response code for the network response. E.g. 200 or 404.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 response_mime_type
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 STRING
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 MIME type of the network response. E.g. "text/html".\
+MIME type of the network response. E.g. "text/html".
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 request_http_method
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 STRING
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 HTTP method of the network request. E.g. "GET" or "POST".\
+HTTP method of the network request. E.g. "GET" or "POST".
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 request_payload_bytes
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 INTEGER
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 Size of the network request payload. Unit: byte.\
+Size of the network request payload. Unit: byte.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 response_payload_bytes
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 INTEGER
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 Size of the network response payload. Unit: byte.\
+Size of the network response payload. Unit: byte.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 request_completed_time_us
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 INTEGER
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 Microseconds after event_timestamp when network request sending is complete. Unit: microsecond.\
+Microseconds after event_timestamp when network request sending is complete. Unit: microsecond.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 response_initiated_time_us
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 INTEGER
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 Microseconds after event_timestamp when network response is initiated. Unit: microsecond.\
+Microseconds after event_timestamp when network response is initiated. Unit: microsecond.
+\f2\fs24 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt \clshdrawnil \clwWidth4040\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx2880
+\clvertalt \clshdrawnil \clwWidth2260\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx5760
+\clvertalt \clshdrawnil \clwWidth14960\clftsWidth3 \clbrdrt\brdrs\brdrw20\brdrcf2 \clbrdrl\brdrs\brdrw20\brdrcf2 \clbrdrb\brdrs\brdrw20\brdrcf2 \clbrdrr\brdrs\brdrw20\brdrcf2 \clpadt20 \clpadl100 \clpadb20 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 response_completed_time_us
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 INTEGER
+\f2\fs24 \cell 
+\pard\intbl\itap1\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 Microseconds after event_timestamp when network response is completed. Unit: microsecond.\
+Microseconds after event_timestamp when network response is completed. Unit: microsecond.\cell \lastrow\row
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+Big Query Console: {\field{\*\fldinst{HYPERLINK "https://console.cloud.google.com/welcome"}}{\fldrslt https://console.cloud.google.com/welcome}}\
+\
+Big Query Documentation: {\field{\*\fldinst{HYPERLINK "https://cloud.google.com/bigquery/docs/reference/standard-sql/date_functions#extract"}}{\fldrslt https://cloud.google.com/bigquery/docs/reference/standard-sql/date_functions#extract}}\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 How to setup data in BigQuery:
+\f1\b0\fs26 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	\uc0\u8226 	}All Firebase data is Stored in Google Cloud infrastructure.\
+{\listtext	\uc0\u8226 	}Firebase retains performance data for 30 days.\
+{\listtext	\uc0\u8226 	}
+\f0\b \expnd0\expndtw0\kerning0
+Go to Firebase Console
+\f1\b0  - {\field{\*\fldinst{HYPERLINK "https://console.firebase.google.com"}}{\fldrslt https://console.firebase.google.com}}\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Go back to Firebase 
+\f3 \uc0\u8594 
+\f1  
+\f0\b Project Settings 
+\f3\b0 \uc0\u8594 
+\f0\b  Integrations
+\f1\b0 \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Find 
+\f0\b BigQuery
+\f1\b0  and click 
+\f0\b "Link"
+\f1\b0 .\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+After linking, Firebase will begin exporting daily 
+\f0\b Analytics event data
+\f1\b0  into BigQuery automatically.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Go to BigQuery Console - {\field{\*\fldinst{HYPERLINK "https://console.cloud.google.com/bigquery"}}{\fldrslt https://console.cloud.google.com/bigquery}}\kerning1\expnd0\expndtw0 \
+{\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Required Permissions for Linking Firebase to BigQuery - 
+\f0\b Firebase Admin
+\f1\b0  or 
+\f0\b Owner
+\f1\b0  role on the Firebase project for linking services. \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+In Google Cloud Console, go to 
+\f0\b IAM & Admin
+\f1\b0  
+\f3 \uc0\u8594 
+\f1  Search your user email. Confirm if you have both Firebase Admin and BigQuery Admin/Data Editor roles. \
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Make sure 
+\f0\b BigQuery API
+\f1\b0  is enabled in Google Cloud Console.\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+Go to {\field{\*\fldinst{HYPERLINK "https://analytics.google.com/"}}{\fldrslt \cf3 \ul \ulc3 analytics.google.com}} and select the GA4 property connected to your app.\kerning1\expnd0\expndtw0 \
+\pard\tx220\tx720\pardeftab560\li720\fi-720\slleading20\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	\uc0\u8226 	}Use Project ID or property ID in Firebase Analytics or GA4 to 
+\f0\b SEARCH
+\f1\b0  in Bigquery after you integrate Bigquery in both of them. You will find Project ID in settings.\
+{\listtext	\uc0\u8226 	}They are like plugins that must be enabled in Integrations tab on firebase and Admin -> product Links -> Bigquery Links in GA4.\
+{\listtext	\uc0\u8226 	}Wait at least 24 hrs after events are fired from Frontend.\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-05-23 at 18.08.34.png \width24400 \height9280 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-05-23 at 18.09.47.png \width12000 \height21680 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+Note: Only the first 10 rows are shown in the screenshot. To see the full picture you must execute the query.\
+\
+____________________________________________________________________________________\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 Total records
+\f1\b0\fs26 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+SELECT\cf6  \cf4 COUNT\cf7 (*)\cf6  \cf4 FROM\cf6  `project---prod.firebase_performance.com_project_ANDROID`
+\f1\fs26 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+12464469 - 1.2 million records\
+\
+Maybe we should optimise the number of events sent per device.\
+\
+____________________________________________________________________________________\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 \
+Date range of this data?
+\f1\b0\fs26 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+SELECT\cf6  \cb1 \
+\cb5   \cf4 MIN\cf7 (\cf4 EXTRACT\cf7 (\cf4 DATE\cf6  \cf4 FROM\cf6  event_timestamp\cf7 ))\cf6  \cf4 AS\cf6  `min_date`,\cb1 \
+\cb5   \cf4 MAX\cf7 (\cf4 EXTRACT\cf7 (\cf4 DATE\cf6  \cf4 FROM\cf6  event_timestamp\cf7 ))\cf6  \cf4 AS\cf6  `max_date`\cb1 \
+\cf4 \cb5 FROM\cf6  \cb1 \
+\cb5   `project---prod.firebase_performance.com_project_ANDROID`\cb1 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-05-22 at 16.33.35.png \width12520 \height2400 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+Past 2 months from today 22 May 2025\
+\
+____________________________________________________________________________________\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 Display versions
+\f1\b0\fs26 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+SELECT\cf6  \cb1 \
+\cb5   app_display_version,\cb1 \
+\cb5   \cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf4 AS\cf6  `count`,\cb1 \
+\cb5    \cf4 ROUND\cf7 (\cf6 \cb1 \
+\cb5     \cf7 (\cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf7 *\cf6  \cf8 100\cf7 )\cf6  \cf7 /\cf6  \cf7 (\cf4 SELECT\cf6  \cf4 COUNT\cf7 (*)\cf6  \cf4 AS\cf6  `total` \cf4 FROM\cf6  `order-fulfillment---prod.firebase_performance.com_hibbett_orderfulfillment_ANDROID`\cf7 )\cf6 , \cf8 2\cf6 \cb1 \
+\cb5     \cf7 )\cf6  \cf4 AS\cf6  `percent`\cb1 \
+\cf4 \cb5 FROM\cf6  \cb1 \
+\cb5   `order-fulfillment---prod.firebase_performance.com_hibbett_orderfulfillment_ANDROID`\cb1 \
+\cf4 \cb5 GROUP\cf6  \cf4 BY\cf6  \cf8 1\cf6 \cb1 \
+\cf4 \cb5 ORDER\cf6  \cf4 BY\cf6  \cf8 2\cf6  \cf4 DESC\cf6 \cb1 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screenshot 2025-05-23 at 18.43.12.png \width14480 \height11120 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+1.2.21 to 1.2.46 a total of 22 records\
+\
+1.2.46 has 2178 hits which is the latest version.\
+\
+Most used is 1.2.35 with 10796488 hits followed by 1.2.31 with 1616318.\
+\
+Interestingly version 1.2.21 has 2235 hits. Old version is still being used. No wonder we see the same errors on crashlytics.\
+\
+____________________________________________________________________________________\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 Build Versions
+\f1\b0\fs26 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+SELECT\cf6  \cb1 \
+\cb5   app_build_version,\cb1 \
+\cb5   \cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf4 AS\cf6  `count`,\cb1 \
+\cb5    \cf4 ROUND\cf7 (\cf6 \cb1 \
+\cb5     \cf7 (\cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf7 *\cf6  \cf8 100\cf7 )\cf6  \cf7 /\cf6  \cf7 (\cf4 SELECT\cf6  \cf4 COUNT\cf7 (*)\cf6  \cf4 AS\cf6  `total` \cf4 FROM\cf6  `order-fulfillment---prod.firebase_performance.com_hibbett_orderfulfillment_ANDROID`\cf7 )\cf6 , \cf8 2\cf6 \cb1 \
+\cb5     \cf7 )\cf6  \cf4 AS\cf6  `percent`\cb1 \
+\cf4 \cb5 FROM\cf6  \cb1 \
+\cb5   `order-fulfillment---prod.firebase_performance.com_hibbett_orderfulfillment_ANDROID`\cb1 \
+\cf4 \cb5 GROUP\cf6  \cf4 BY\cf6  \cf8 1\cf6 \cb1 \
+\cf4 \cb5 ORDER\cf6  \cf4 BY\cf6  \cf8 2\cf6  \cf4 DESC
+\f1\fs26 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-05-23 at 18.44.00.png \width20320 \height11200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+2374 to 2398 a total of 22 records.\
+\
+Latest build 2398 has 2178 hits.\
+\
+Most used build is 2387 with 10795615 followed by 2383 with 1617104 hits.\
+\
+Interestingly build 2374 still has 2358 hits in the past 2 months. Which shows why we still get old errors on crashlytics. Old versions are still used.\
+\
+____________________________________________________________________________________\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 Most used OS?
+\f1\b0\fs26 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+SELECT\cf6  \cb1 \
+\cb5   os_version,\cb1 \
+\cb5   \cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf4 AS\cf6  `count`,\cb1 \
+\cb5    \cf4 ROUND\cf7 (\cf6 \cb1 \
+\cb5     \cf7 (\cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf7 *\cf6  \cf8 100\cf7 )\cf6  \cf7 /\cf6  \cf7 (\cf4 SELECT\cf6  \cf4 COUNT\cf7 (*)\cf6  \cf4 AS\cf6  `total` \cf4 FROM\cf6  `order-fulfillment---prod.firebase_performance.com_hibbett_orderfulfillment_ANDROID`\cf7 )\cf6 , \cf8 2\cf6 \cb1 \
+\cb5     \cf7 )\cf6  \cf4 AS\cf6  `percent`\cb1 \
+\cf4 \cb5 FROM\cf6  \cb1 \
+\cb5   `order-fulfillment---prod.firebase_performance.com_hibbett_orderfulfillment_ANDROID`\cb1 \
+\cf4 \cb5 GROUP\cf6  \cf4 BY\cf6  \cf8 1\cf6 \cb1 \
+\cf4 \cb5 ORDER\cf6  \cf4 BY\cf6  \cf8 2\cf6  \cf4 DESC\cf6 \cb1 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screenshot 2025-05-23 at 18.45.26.png \width12680 \height11240 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+\cf0 \
+\
+{{\NeXTGraphic Screenshot 2025-05-23 at 18.45.49.png \width17880 \height14040 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}
+\f4 \cf6 \expnd0\expndtw0\kerning0
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0  \
+We can set min SDK for android to 30 to leverage all the new features and better security. This also makes the dev process easier as we don\'92t have to support older APIs.\
+\
+Highly recommend the client to transition all devices to Android 30 or higher for better security and perf. \
+\
+Key security enhancements in 
+\f0\b Android 11 (API level 30)
+\f1\b0 :\
+\pard\pardeftab560\pardirnatural\partightenfactor0
+\ls3\ilvl0
+\f4\fs18 \cf0 {\listtext	\uc0\u8226 	}
+\f0\b\fs26 One-time permissions
+\f1\b0  for location, camera, and microphone.\
+\ls3\ilvl0
+\f4\fs18 {\listtext	\uc0\u8226 	}
+\f0\b\fs26 Auto-reset of permissions
+\f1\b0  for unused apps.\
+\ls3\ilvl0
+\f4\fs18 {\listtext	\uc0\u8226 	}
+\f0\b\fs26 Scoped storage enforcement
+\f1\b0  to isolate app data.\
+\ls3\ilvl0
+\f4\fs18 {\listtext	\uc0\u8226 	}
+\f0\b\fs26 Stricter background location access
+\f1\b0  (requires user to enable in settings).\
+\ls3\ilvl0
+\f4\fs18 {\listtext	\uc0\u8226 	}
+\f0\b\fs26 Foreground service requirement
+\f1\b0  for background access to sensitive data.\
+\ls3\ilvl0
+\f4\fs18 {\listtext	\uc0\u8226 	}
+\f0\b\fs26 Data access auditing APIs
+\f1\b0  for tracking how apps access user data.\
+\ls3\ilvl0
+\f4\fs18 {\listtext	\uc0\u8226 	}
+\f0\b\fs26 Components default to non-exported
+\f1\b0  unless explicitly declared.\
+\ls3\ilvl0
+\f4\fs18 {\listtext	\uc0\u8226 	}
+\f0\b\fs26 Incremental APK installation
+\f1\b0  for safer and faster app installs.\
+\ls3\ilvl0
+\f4\fs18 {\listtext	\uc0\u8226 	}
+\f0\b\fs26 Kernel security hardening
+\f1\b0  with improved memory safety and patching.\
+\ls3\ilvl0
+\f4\fs18 {\listtext	\uc0\u8226 	}
+\f0\b\fs26 Identity Credential API
+\f1\b0  for secure digital IDs (e.g., mobile driver's licenses).\
+\pard\tx720\pardeftab560\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 ____________________________________________________________________________________\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 Most used devices
+\f1\b0\fs26 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+SELECT\cf6  \cb1 \
+\cb5   device_name,\cb1 \
+\cb5   \cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf4 AS\cf6  `count`,\cb1 \
+\cb5   os_version\cb1 \
+\cf4 \cb5 FROM\cf6  \cb1 \
+\cb5   `project---prod.firebase_performance.com_project_ANDROID`\cb1 \
+\cf4 \cb5 GROUP\cf6  \cf4 BY\cf6  \cf8 1\cf6 , \cf8 3\cf6 \cb1 \
+\cf4 \cb5 ORDER\cf6  \cf4 BY\cf6  \cf8 2\cf6  \cf4 DESC\cf6 \cb1 \
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 \kerning1\expnd0\expndtw0 \
+Top 10 are Samsung devices.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-05-22 at 17.00.23.png \width20360 \height11280 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+\
+____________________________________________________________________________________\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 Most used Manufacturers
+\f1\b0\fs26 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+SELECT\cf6  \cb1 \
+\cb5   \cf4 CASE\cf6  \cb1 \
+\cb5     \cf4 WHEN\cf6  \cf4 STRPOS\cf7 (\cf6 device_name, \cf9 ' '\cf7 )\cf6  \cf7 >\cf6  \cf8 0\cf6  \cf4 THEN\cf6  \cf4 SUBSTR\cf7 (\cf6 device_name, \cf8 1\cf6 , \cf4 STRPOS\cf7 (\cf6 device_name, \cf9 ' '\cf7 )\cf6  \cf7 -\cf6  \cf8 1\cf7 )\cf6 \cb1 \
+\cb5     \cf4 ELSE\cf6  device_name\cb1 \
+\cb5   \cf4 END\cf6  \cf4 AS\cf6  `manufacturer_name`,\cb1 \
+\cb5   \cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf4 AS\cf6  `count`,\cb1 \
+\cb5   \cf4 ROUND\cf7 (\cf6 \cb1 \
+\cb5     \cf7 (\cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf7 *\cf6  \cf8 100\cf7 )\cf6  \cf7 /\cf6  \cf7 (\cf4 SELECT\cf6  \cf4 COUNT\cf7 (*)\cf6  \cf4 AS\cf6  `total` \cf4 FROM\cf6  `project---prod.firebase_performance.com_project_ANDROID`\cf7 )\cf6 , \cf8 2\cf6 \cb1 \
+\cb5     \cf7 )\cf6  \cf4 AS\cf6  `percent`\cb1 \
+\cf4 \cb5 FROM\cf6  \cb1 \
+\cb5   `project---prod.firebase_performance.com_project_ANDROID`\cb1 \
+\cf4 \cb5 GROUP\cf6  \cf4 BY\cf6  \cf8 1\cf6 \cb1 \
+\cf4 \cb5 ORDER\cf6  \cf4 BY\cf6  \cf8 2\cf6  \cf4 DESC\cf6 \cb1 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screenshot 2025-05-23 at 12.51.27.png \width15080 \height5320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f4 \cf6 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-05-23 at 12.16.00.png \width22720 \height13120 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+Samsung accounts for 99.9% of all devices used. So devs should focus on optimising for Samsung as it has some implementations slightly different from standard Android.\
+\
+____________________________________________________________________________________\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 Country
+\f1\b0\fs26 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+SELECT\cf6  \cb1 \
+\cb5   country,\cb1 \
+\cb5   \cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf4 AS\cf6  `count`,\cb1 \
+\cb5   \cf4 ROUND\cf7 (\cf6 \cb1 \
+\cb5     \cf7 (\cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf7 *\cf6  \cf8 100\cf7 )\cf6  \cf7 /\cf6  \cf7 (\cf4 SELECT\cf6  \cf4 COUNT\cf7 (*)\cf6  \cf4 AS\cf6  `total` \cf4 FROM\cf6  `project---prod.firebase_performance.com_project_ANDROID`\cf7 )\cf6 , \cf8 2\cf6 \cb1 \
+\cb5     \cf7 )\cf6  \cf4 AS\cf6  `percent`\cb1 \
+\cf4 \cb5 FROM\cf6  \cb1 \
+\cb5   `project---prod.firebase_performance.com_project_ANDROID`\cb1 \
+\cf4 \cb5 GROUP\cf6  \cf4 BY\cf6  \cf8 1\cf6 \cb1 \
+\cf4 \cb5 ORDER\cf6  \cf4 BY\cf6  \cf8 2\cf6  \cf4 DESC\cf6 \cb1 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-05-23 at 12.55.43.png \width20480 \height12200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-05-23 at 12.55.58.png \width27120 \height16520 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+99.9 % usage is in US unsurprisingly.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 \expnd0\expndtw0\kerning0
+Firebase uses the IP address of the device
+\f1\b0  making the request to infer the 
+\f0\b country, region, and city
+\f1\b0 , using standard IP geolocation services. If a user in India uses a VPN server located in Germany, Firebase will likely report the country as Germany for that session. This method respects user privacy because it doesn\'92t use GPS or device-based location services\'97only the IP address, which is considered less precise and more privacy-preserving. This IP-based geolocation is part of the default behavior and can\'92t be disabled selectively.\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \kerning1\expnd0\expndtw0 Top 3 are United Staes, Mexico, Colombia. It\'92s interesting that this is being used in other countries as well as I thought Retail Outlet had stores only in US. Firebase's country detection is based on IP address and can be manipulated using a VPN.\
+\
+____________________________________________________________________________________\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 Country Vs OS
+\f1\b0\fs26 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+SELECT\cf6  \cb1 \
+\cb5   country,\cb1 \
+\cb5   \cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf4 AS\cf6  `count`,\cb1 \
+\cb5   os_version\cb1 \
+\cf4 \cb5 FROM\cf6  \cb1 \
+\cb5   `project---prod.firebase_performance.com_project_ANDROID`\cb1 \
+\cf4 \cb5 GROUP\cf6  \cf4 BY\cf6  \cf8 1\cf6 , \cf8 3\cf6 \cb1 \
+\cf4 \cb5 ORDER\cf6  \cf4 BY\cf6  \cf8 2\cf6  \cf4 DESC\cf6 \cb1 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 \kerning1\expnd0\expndtw0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-05-22 at 17.13.17.png \width20040 \height11320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+In US almost all devices are using Android 30 and above.\
+\
+____________________________________________________________________________________\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 Carrier usage
+\f1\b0\fs26 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+SELECT\cf6  \cb1 \
+\cb5   \cf4 CASE\cf6 \cb1 \
+\cb5   \cf4 WHEN\cf6  carrier = \cf9 "[MISSING]"\cf6  \cf4 THEN\cf6  \cf9 "Wifi"\cf6  \cb1 \
+\cb5   \cf4 ELSE\cf6  carrier\cb1 \
+\cb5   \cf4 END\cf6  \cf4 AS\cf6  network,\cb1 \
+\cb5   \cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf4 AS\cf6  `count`,\cb1 \
+\cb5    \cf4 ROUND\cf7 (\cf6 \cb1 \
+\cb5     \cf7 (\cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf7 *\cf6  \cf8 100\cf7 )\cf6  \cf7 /\cf6  \cf7 (\cf4 SELECT\cf6  \cf4 COUNT\cf7 (*)\cf6  \cf4 AS\cf6  `total` \cf4 FROM\cf6  `project---prod.firebase_performance.com_project_ANDROID`\cf7 )\cf6 , \cf8 2\cf6 \cb1 \
+\cb5     \cf7 )\cf6  \cf4 AS\cf6  `percent`\cb1 \
+\cf4 \cb5 FROM\cf6  \cb1 \
+\cb5   `project---prod.firebase_performance.com_project_ANDROID`\cb1 \
+\cf4 \cb5 GROUP\cf6  \cf4 BY\cf6  \cf8 1\cf6 \cb1 \
+\cf4 \cb5 ORDER\cf6  \cf4 BY\cf6  \cf8 2\cf6  \cf4 DESC\cf6 \cb1 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screenshot 2025-05-23 at 13.14.27.png \width15880 \height9280 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-05-23 at 13.15.04.png \width27120 \height14840 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+93.5% use Wifi to connect. Others used mobile network to connect. I am not sure why they did that given this is PROD data, I was under the assumption it will all be through Wifi.\
+\
+____________________________________________________________________________________\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 Network Type usage
+\f1\b0\fs26 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+SELECT\cf6  \cb1 \
+\cb5   radio_type,\cb1 \
+\cb5   \cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf4 AS\cf6  `count`,\cb1 \
+\cb5    \cf4 ROUND\cf7 (\cf6 \cb1 \
+\cb5     \cf7 (\cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf7 *\cf6  \cf8 100\cf7 )\cf6  \cf7 /\cf6  \cf7 (\cf4 SELECT\cf6  \cf4 COUNT\cf7 (*)\cf6  \cf4 AS\cf6  `total` \cf4 FROM\cf6  `project---prod.firebase_performance.com_project_ANDROID`\cf7 )\cf6 , \cf8 2\cf6 \cb1 \
+\cb5     \cf7 )\cf6  \cf4 AS\cf6  `percent`\cb1 \
+\cf4 \cb5 FROM\cf6  \cb1 \
+\cb5   `project---prod.firebase_performance.com_project_ANDROID`\cb1 \
+\cf4 \cb5 GROUP\cf6  \cf4 BY\cf6  \cf8 1\cf6 \cb1 \
+\cf4 \cb5 ORDER\cf6  \cf4 BY\cf6  \cf8 2\cf6  \cf4 DESC\cf6 \cb1 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screenshot 2025-05-23 at 13.21.25.png \width14160 \height5240 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+\cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+\cf0 {{\NeXTGraphic Screenshot 2025-05-23 at 13.23.27.png \width27160 \height16320 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 99.97 % are using Wifi to connect. However it\'92s important to note 0.02% are using some other network.\
+\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+The radio_type field typically refers to the 
+\f0\b type of network connection
+\f1\b0  the user\'92s device was on during the event, such as:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls4\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+wifi\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+cell\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+ethernet\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 {\listtext	\uc0\u8226 	}\expnd0\expndtw0\kerning0
+4g, 5g, etc.\kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 ____________________________________________________________________________________\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 Missing Network Type
+\f1\b0\fs26 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+SELECT\cf6  \cb1 \
+\cb5   radio_type,\cb1 \
+\cb5   \cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf4 AS\cf6  `count`,\cb1 \
+\cb5   os_version,\cb1 \
+\cb5   device_name\cb1 \
+\cf4 \cb5 FROM\cf6  \cb1 \
+\cb5   `project---prod.firebase_performance.com_project_ANDROID`\cb1 \
+\cf4 \cb5 GROUP\cf6  \cf4 BY\cf6  \cf8 1\cf6 , \cf8 3\cf6 , \cf8 4\cf6 \cb1 \
+\cf4 \cb5 HAVING\cf6 \cb1 \
+\cb5   radio_type \cf4 LIKE\cf6  \cf9 "[MISSING]"\cf6 \cb1 \
+\cf4 \cb5 ORDER\cf6  \cf4 BY\cf6  \cf8 2\cf6  \cf4 DESC\cf6 \cb1 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-05-22 at 19.03.26.png \width20000 \height13240 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\cf0 Not sure when network would be missing.\
+\pard\pardeftab720\sa240\partightenfactor0
+\cf0 \expnd0\expndtw0\kerning0
+In BigQuery GA4 export data, [MISSING] in a field like radio_type means:\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls5\ilvl0
+\f0\b \cf0 \kerning1\expnd0\expndtw0 {\listtext	1	}\expnd0\expndtw0\kerning0
+The parameter was not set at all
+\f1\b0  in that event.\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sa240\partightenfactor0
+\ls5\ilvl0\cf0 \kerning1\expnd0\expndtw0 {\listtext	2	}\expnd0\expndtw0\kerning0
+GA4/Firebase SDK didn\'92t collect that data due to:\
+\pard\tx940\tx1440\pardeftab720\li1440\fi-1440\sa240\partightenfactor0
+\ls5\ilvl1\cf0 \kerning1\expnd0\expndtw0 {\listtext	
+\f3 \uc0\u9702 
+\f1 	}\expnd0\expndtw0\kerning0
+Platform limitations (e.g., iOS restrictions).\
+\ls5\ilvl1\kerning1\expnd0\expndtw0 {\listtext	
+\f3 \uc0\u9702 
+\f1 	}\expnd0\expndtw0\kerning0
+User permission settings (e.g., limited data collection).\
+\ls5\ilvl1\kerning1\expnd0\expndtw0 {\listtext	
+\f3 \uc0\u9702 
+\f1 	}\expnd0\expndtw0\kerning0
+App SDK not initialized properly at the time of event.\
+\ls5\ilvl1\kerning1\expnd0\expndtw0 {\listtext	
+\f3 \uc0\u9702 
+\f1 	}\expnd0\expndtw0\kerning0
+Offline events being batched and uploaded without network context.\kerning1\expnd0\expndtw0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 ____________________________________________________________________________________\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 Event Volume over time
+\f1\b0\fs26 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+SELECT\cf6  \cb1 \
+\cb5   \cf4 EXTRACT\cf7 (\cf4 DATE\cf6  \cf4 FROM\cf6  event_timestamp\cf7 )\cf6  \cf4 AS\cf6  `date`,\cb1 \
+\cb5   \cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf4 AS\cf6  `count`\cb1 \
+\cf4 \cb5 FROM\cf6  \cb1 \
+\cb5   `project---prod.firebase_performance.com_project_ANDROID` \cb1 \
+\cf4 \cb5 GROUP\cf6  \cf4 BY\cf6  \cf8 1\cf6 \cb1 \
+\cf4 \cb5 ORDER\cf6  \cf4 BY\cf6  \cf8 1\cf6 \cb1 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screenshot 2025-05-22 at 18.53.19.png \width12000 \height11120 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-05-22 at 18.53.08.png \width33760 \height13480 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+Peaked on March 25, 2025. Probably launch of a new store.\
+\
+____________________________________________________________________________________\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 Peak usage period by Hour
+\f1\b0\fs26 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf10 \cb5 \expnd0\expndtw0\kerning0
+-- %l:%M %p\cf6 \
+\cf10 -- %I = zero-padded 12-hour (e.g., 07)\cf6 \
+\cf10 -- %l = non-padded 12-hour (e.g., 7)\cf6 \
+\cf10 -- %p = AM/PM\cf6 \
+\cf10 -- %M = minutes (always zero-padded)\cf6 \
+\pard\pardeftab720\partightenfactor0
+\cf4 SELECT\cf6  \
+  \cf4 FORMAT_DATETIME\cf7 (\cf9 '%l %p'\cf6 , \cf4 DATETIME\cf7 (\cf6 event_timestamp\cf7 ))\cf6  \cf4 AS\cf6  `time_hr`,\
+  \cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf4 AS\cf6  `count`\
+\cf4 FROM\cf6  \
+  `project---prod.firebase_performance.com_project_ANDROID`\
+\cf4 GROUP\cf6  \cf4 BY\cf6  \cf8 1\cf6 \
+\cf4 ORDER\cf6  \cf4 BY\cf6  \cf8 2\cf6  \cf4 DESC\cf6 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screenshot 2025-05-23 at 15.18.23.png \width15360 \height11200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-05-23 at 15.18.58.png \width27120 \height15760 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+Peak usage is at 3PM.\
+\
+____________________________________________________________________________________\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 Peak usage period by Day
+\f1\b0\fs26 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+SELECT\cf6  \cb1 \
+\cb5   \cf4 EXTRACT\cf7 (\cf4 DATE\cf6  \cf4 FROM\cf6  event_timestamp\cf7 )\cf6  \cf4 AS\cf6  `time_day`,\cb1 \
+\cb5   \cf4 COUNT\cf7 (\cf4 EXTRACT\cf7 (\cf4 DATE\cf6  \cf4 FROM\cf6  event_timestamp\cf7 ))\cf6  \cf4 AS\cf6  `count`\cb1 \
+\cf4 \cb5 FROM\cf6  \cb1 \
+\cb5   `project---prod.firebase_performance.com_project_ANDROID`\cb1 \
+\cf4 \cb5 GROUP\cf6  \cf4 BY\cf6  \cf8 1\cf6 \cb1 \
+\cf4 \cb5 ORDER\cf6  \cf4 BY\cf6  \cf8 2\cf6  \cf4 DESC\cf6 \cb1 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-05-22 at 19.23.48.png \width12320 \height11280 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-05-22 at 19.24.16.png \width22720 \height15880 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+____________________________________________________________________________________\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 Peak usage period by Week
+\f1\b0\fs26 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+SELECT\cf6  \cb1 \
+\cb5   \cf4 EXTRACT\cf7 (\cf6 WEEK \cf4 FROM\cf6  event_timestamp\cf7 )\cf6  \cf4 AS\cf6  `time_week`,\cb1 \
+\cb5   \cf4 COUNT\cf7 (\cf4 EXTRACT\cf7 (\cf6 WEEK \cf4 FROM\cf6  event_timestamp\cf7 ))\cf6  \cf4 AS\cf6  `count`\cb1 \
+\cf4 \cb5 FROM\cf6  \cb1 \
+\cb5   `project---prod.firebase_performance.com_project_ANDROID`\cb1 \
+\cf4 \cb5 GROUP\cf6  \cf4 BY\cf6  \cf8 1\cf6 \cb1 \
+\cf4 \cb5 ORDER\cf6  \cf4 BY\cf6  \cf8 2\cf6  \cf4 DESC\cf6 \cb1 \
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 \kerning1\expnd0\expndtw0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-05-22 at 19.33.42.png \width12320 \height11200 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf0 {{\NeXTGraphic Screenshot 2025-05-22 at 19.33.58.png \width22800 \height14680 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 \
+\
+\
+There are 52 weeks per year. It looks like it peak in the 12th week. Which is on March.\
+\
+____________________________________________________________________________________\
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\b\fs36 \cf0 Event frequency
+\f1\b0\fs26 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs24 \cf4 \cb5 \expnd0\expndtw0\kerning0
+SELECT\cf6  \cb1 \
+\cb5   event_name,\cb1 \
+\cb5   \cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf4 AS\cf6  `count`,\cb1 \
+\cb5   \cf4 ROUND\cf7 (\cf6 \cb1 \
+\cb5     \cf7 (\cf4 COUNT\cf7 (\cf8 1\cf7 )\cf6  \cf7 *\cf6  \cf8 100\cf7 )\cf6  \cf7 /\cf6  \cf7 (\cf4 SELECT\cf6  \cf4 COUNT\cf7 (*)\cf6  \cf4 AS\cf6  `total` \cf4 FROM\cf6  `project---prod.firebase_performance.com_project_ANDROID`\cf7 )\cf6 , \cf8 2\cf6 \cb1 \
+\cb5   \cf7 )\cf6  \cf4 AS\cf6  `percent`\cb1 \
+\cf4 \cb5 FROM\cf6  \cb1 \
+\cb5   `project---prod.firebase_performance.com_project_ANDROID`\cb1 \
+\cf4 \cb5 GROUP\cf6  \cf4 BY\cf6  \cf8 1\cf6 \cb1 \
+\cf4 \cb5 ORDER\cf6  \cf4 BY\cf6  \cf8 2\cf6  \cf4 DESC\cf6 \cb1 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f2 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Screenshot 2025-05-23 at 15.47.58.png \width21840 \height11240 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab560\pardirnatural\partightenfactor0
+
+\f4 \cf6 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f1\fs26 \cf0 \kerning1\expnd0\expndtw0 \
+Interestingly 10% of the time App is in Background.\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+}

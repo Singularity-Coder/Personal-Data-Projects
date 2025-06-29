@@ -391,21 +391,6 @@ Add the 1 bit values:      64 + 8 + 2 + 1 = 75
 
 ------------------------------------------------------------------------------------------------------------------------
 
-# Telusu
-* Searching: Linear Search
-* Array Rotation
-* Sorting: Bubble Sort
-* Matrix Addition, Subtraction, Multiplication, Division
-
-# Telusu Later
-* Searching: Linear Search, Binary Search, DFS, BFS
-* Array Rotation
-* Sorting: Bubble Sort, Insertion Sort, Selection Sort, Merge Sort, Quick Sort, Counting Sort, Heap Sort
-* Matrix Addition, Subtraction, Multiplication, Division
-* In, Pre, Postorder Tree Traversals
-
-------------------------------------------------------------------------------------------------------------------------
-
 # 🙏 References
 * [Scaler - Data Structures and Algorithms Full Course with Interview Q & A](https://www.youtube.com/watch?v=PlJHXayxQzE)
 * [Difference between Bottom-Up and Top-Down](https://stackoverflow.com/questions/6164629/what-is-the-difference-between-bottom-up-and-top-down)

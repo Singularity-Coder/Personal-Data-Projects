@@ -1,4 +1,4 @@
-![alt text](https://github.com/Singularity-Coder/Git-Commands/blob/main/assets/banner_git.png)
+![alt text](https://github.com/Singularity-Coder/Personal-Data-Projects/blob/main/assets/banner_git.png)
 # Git-Commands
 Common Git Commands!
 
@@ -217,3 +217,90 @@ git commit --amend --reset-author
 
 * Push all tags
 ``git push --tags``
+
+
+## Merge 2 Github Repos
+To merge two GitHub repositories, there are a few different methods depending on your goal. Here's a **common and safe approach** to **merge RepoB into RepoA**, preserving the commit history of both. Let's call the repositories:
+
+* **RepoA** = target repository (the one you want to keep as the main)
+* **RepoB** = source repository (the one you want to merge into RepoA)
+
+### 🔧 Steps to Merge RepoB into RepoA
+
+#### 1. Clone RepoA locally
+
+```bash
+git clone https://github.com/your-username/RepoA.git
+cd RepoA
+```
+
+#### 2. Add RepoB as a remote
+
+```bash
+git remote add repo-b https://github.com/your-username/RepoB.git
+git fetch repo-b
+```
+
+#### 3. Create a new branch to merge RepoB into
+
+```bash
+git checkout -b merge-repo-b
+```
+
+#### 4. Merge RepoB’s main branch into this branch, allowing unrelated histories
+
+```bash
+git merge repo-b/main --allow-unrelated-histories
+```
+
+> Replace `main` with the correct branch name if it's different.
+
+You may encounter merge conflicts here—resolve them as needed.
+
+#### 5. Commit and push changes
+
+```bash
+git commit -am "Merged RepoB into RepoA"
+git push origin merge-repo-b
+```
+
+#### 6. Open a pull request on GitHub
+
+Go to your GitHub repo (RepoA), and you’ll see the option to open a PR from the `merge-repo-b` branch.
+
+### 💡 Optional Cleanup
+
+* Once merged, you can delete the `merge-repo-b` branch.
+* You can also delete RepoB if it's no longer needed.
+
+### 💡 More 
+* **combine codebases without preserving history**
+* **move a folder from one repo to another**
+
+### 💡 If Error
+ **URL you used to add the remote is malformed**. Specifically, this error occurs mixing two different URL formats: `git@github.com:` (SSH) and `https://github.com/` (HTTPS).
+
+
+### ✅ Correct Remote URL Formats
+
+**1. HTTPS (easiest for most people)**
+
+```bash
+git remote add repo-b https://github.com/your-username/RepoB.git
+```
+
+**2. SSH (if you’ve set up SSH keys with GitHub)**
+
+```bash
+git remote add repo-b git@github.com:your-username/RepoB.git
+```
+
+### 🧹 To Fix the Error
+
+If you already added the broken remote, you can remove it:
+
+```bash
+git remote remove repo-b
+```
+
+Then re-add it with the correct format.

@@ -1,4 +1,4 @@
-![alt text](https://github.com/Singularity-Coder/Instant-SQL/blob/main/sql/Projects/Multi%20National%20Retail%20Store%20Case%20Study/sc1.png)
+![alt text](https://github.com/Singularity-Coder/Personal-Data-Projects/blob/main/sql/Projects/Multi%20National%20Retail%20Store%20Case%20Study/sc1.png)
 # Multi-National Retail Store
 Exploratory Data Analysis of a large multi-national retail store with ~120K+ records.
 

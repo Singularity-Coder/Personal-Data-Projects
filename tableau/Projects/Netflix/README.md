@@ -1,4 +1,4 @@
-![alt text](https://github.com/Singularity-Coder/Code-Snippets-SQL/blob/main/tableau/Projects/Netflix/sc1.png)
+![alt text](https://github.com/Singularity-Coder/Personal-Data-Projects/blob/main/tableau/Projects/Netflix/sc1.png)
 # Netflix Dashboard 
 
 ### Project Link

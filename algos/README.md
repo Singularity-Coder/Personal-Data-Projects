@@ -1,4 +1,4 @@
-![alt text](https://github.com/Singularity-Coder/Instant-Algorithms/blob/main/assets/banner_algorithm.png)
+![alt text](https://github.com/Singularity-Coder/Personal-Data-Projects/blob/main/assets/banner_algorithm.png)
 # Instant Algorithms
 List of Algorithm topics and their code snippets!
 
